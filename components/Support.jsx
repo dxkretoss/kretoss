@@ -11,7 +11,7 @@ export default function Support() {
 
     return (
         <div
-            className="container section h-[690px] rounded-[24px] overflow-hidden"
+            className="relative container section h-[690px] rounded-[24px]"
             style={{
                 background: "linear-gradient(96.57deg, rgba(255, 255, 255, 0.8) 0.24%, #FCE6FF 99.76%)",
             }}
@@ -42,6 +42,24 @@ export default function Support() {
                     </div>
                 ))}
             </div>
+
+            <div className="absolute -top-5 -left-5">
+
+                <div className="relative">
+                    <div
+                        className="w-[182px] h-[80px] bg-[#FFFFFF] rounded-[10px] flex flex-col items-center justify-center gap-2"
+                        style={{
+                            boxShadow: "13px 14px 40px 0px #27628326",
+                        }}
+                    >
+                        <img src="/Qsupport.svg" alt="Quick Support" className="absolute -top-5" />
+                        <span className="text-[20px] font-semibold text-[#020817] text-center absolute top-10">
+                            Quick Support
+                        </span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }

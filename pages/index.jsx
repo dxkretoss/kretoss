@@ -7,6 +7,8 @@ import Solution from '../components/Solution'
 import Support from '../components/Support'
 import Plans from '../components/Plans'
 import GlobalExp from '../components/GlobalExp'
+import Devlopment from '../components/Devlopment'
+import Footer from '../components/Footer'
 
 export default function index() {
   return (
@@ -19,6 +21,8 @@ export default function index() {
       <Support />
       <Plans />
       <GlobalExp />
+      <Devlopment />
+      <Footer />
     </>
   )
 }
