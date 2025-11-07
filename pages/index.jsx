@@ -2,6 +2,9 @@ import React from 'react'
 import TopHeader from '../components/TopHeader'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import ScalableSection from '../components/ScalableSection'
+import Solution from '../components/Solution'
+import Support from '../components/Support'
 
 export default function index() {
   return (
@@ -9,6 +12,9 @@ export default function index() {
       <TopHeader />
       <Header />
       <Hero />
+      <ScalableSection />
+      <Solution />
+      <Support />
     </>
   )
 }

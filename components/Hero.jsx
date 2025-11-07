@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="container relative z-10 w-full  px-6 flex flex-col md:flex-row items-center justify-between gap-12">
                 {/* LEFT SECTION */}
                 <div className="max-w-[771px]">
-                    <h1 className="text-[56px]  leading-tight mb-6">
+                    <h1 className="text-[56px] leading-tight mb-6">
                         Hire{" "}
                         <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-5 py-4">
                             Mobile App
@@ -139,11 +139,8 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.6 }}
-                            className="absolute  w-[700px] max-h-[500px] border border-[#22222224] rounded-2xl p-8 shadow-xl text-center"
-                            style={{
-                                background:
-                                    "linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)",
-                            }}
+                            className="absolute  w-[700px] max-h-[500px] border border-[#22222224] rounded-2xl p-8 shadow-xl text-center bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] "
+
                         >
                             <div className="flex justify-between w-full">
                                 <img
