@@ -53,7 +53,7 @@ export default function ScalableSection() {
                                 </div>
                             </div>
                         </div>
-                        <button className="w-[230px] h-[61px] mt-[58px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
+                        <button className="w-[256px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
                             style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
                             Hire App Developer
                             <MoveRight />

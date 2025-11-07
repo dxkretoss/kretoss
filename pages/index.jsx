@@ -6,6 +6,7 @@ import ScalableSection from '../components/ScalableSection'
 import Solution from '../components/Solution'
 import Support from '../components/Support'
 import Plans from '../components/Plans'
+import GlobalExp from '../components/GlobalExp'
 
 export default function index() {
   return (
@@ -17,6 +18,7 @@ export default function index() {
       <Solution />
       <Support />
       <Plans />
+      <GlobalExp />
     </>
   )
 }
