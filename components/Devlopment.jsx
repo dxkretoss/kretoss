@@ -48,17 +48,17 @@ export default function Devlopment() {
             </h1>
 
             {/* Table */}
-            <div className="w-[1460px] mx-auto mt-[80px] rounded-[12px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
-                <table className="w-full border-collapse text-left text-[#02021E] text-[18px]">
+            <div className="w-[1460px] mx-auto mt-[80px] rounded-[12px] border border-[#C2C0F4] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
+                <table className="w-full border-collapse text-left text-[#02021E] text-[18px] ]">
                     <thead>
                         <tr className="bg-[#5D59EA] text-white text-[18px]">
-                            <th className="p-4 font-semibold">Category</th>
-                            <th className="p-4 font-semibold">Approx Cost</th>
-                            <th className="p-4 font-semibold">Years of Experience</th>
-                            <th className="p-4 font-semibold">Methodology</th>
-                            <th className="p-4 font-semibold">Project Manager</th>
-                            <th className="p-4 font-semibold">Time Zone Flexibility</th>
-                            <th className="p-4 font-semibold">Working Hours</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Category</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Approx Cost</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Years of Experience</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Methodology</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Project Manager</th>
+                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Time Zone Flexibility</th>
+                            <th className="p-4 font-semibold ">Working Hours</th>
                         </tr>
                     </thead>
 
@@ -70,13 +70,13 @@ export default function Devlopment() {
                                 className={`border-b text-[18px] border-[#C2C0F4] ${index === developers.length - 1 ? "border-b-0" : ""
                                     }`}
                             >
-                                <td className="p-4 font-semibold bg-[#E6F0FF]">{dev.category}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.cost}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.experience}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.methodology}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.manager}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.timezone}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.hours}</td>
+                                <td className="p-4 font-semibold bg-[#E6F0FF] text-[#02021E]  border-r border-[#C2C0F4] ">{dev.category}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.cost}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.experience}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.methodology}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.manager}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.timezone}</td>
+                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] ">{dev.hours}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className="section h-[494px]"
+        <div className="h-[494px]"
             style={{
                 background: "linear-gradient(99.21deg, #343284 0.29%, #5D59EA 99.71%)",
             }}>
 
-            <div className=' w-[1620px] mx-auto'>
+            <div className='w-[1620px] mx-auto'>
                 <div className='pt-[85px] flex gap-20 '>
                     <div className='bg-[#FFFFFF1A] p-[30px] border border-[#FFFFFF4D] rounded-[24px] w-[538px] h-[232px]'>
                         <img src='/footerlogo.svg' />

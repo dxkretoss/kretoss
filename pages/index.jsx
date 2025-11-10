@@ -9,7 +9,13 @@ import Plans from '../components/Plans'
 import GlobalExp from '../components/GlobalExp'
 import Devlopment from '../components/Devlopment'
 import Footer from '../components/Footer'
-
+import SkillsSolutions from '../components/SkillsSolutions'
+import IntoSuccess from '@/components/IntoSuccess'
+import SuccessTogather from '@/components/SuccessTogather'
+import Faqs from '@/components/Faqs'
+import Contact from '@/components/Contact'
+import ProcessHire from '@/components/ProcessHire'
+import WhyKretoss from '@/components/WhyKretoss'
 export default function index() {
   return (
     <>
@@ -22,6 +28,14 @@ export default function index() {
       <Plans />
       <GlobalExp />
       <Devlopment />
+      <SkillsSolutions />
+      <IntoSuccess />
+      <SuccessTogather />
+      <ProcessHire />
+      <WhyKretoss />
+      <Faqs />
+      <Contact />
+
       <Footer />
     </>
   )
