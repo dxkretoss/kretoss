@@ -1,45 +1,44 @@
-import React from 'react'
-import { MoveRight } from 'lucide-react'
+import React from 'react';
+import { MoveRight } from 'lucide-react';
 
 export default function GlobalExp() {
     return (
         <div
-            className="container section container_content mx-auto h-[640px] rounded-[24px] overflow-hidden"
-            style={{
-                background: "linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)",
-            }}
+            className="container mx-auto section container_content rounded-[24px] overflow-hidden bg-gradient-to-b from-[#EEF0FF80] to-[#CFE6FF] px-4 sm:px-6 lg:px-16 py-12"
         >
+            <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-5 lg:p-[40px] 2xl:p-[70px]">
+                {/* Left Section */}
+                <div className="flex-1 text-center lg:text-left lg:w-[679px]">
+                    <img src="logo.svg" className="mx-auto lg:mx-0" alt="Logo" />
 
-            <div className='flex'>
-                <div className='w-[679px] pt-[112px] pl-[50px]'>
-                    <img src='logo.svg' />
-
-                    <h1 className='text-[48px] font-semibold text-[#02021E] mt-[40px]'
-                        style={{ fontFamily: "'Funnel Display', sans-serif" }}>
-                        Tap Into  {" "}
-                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-2 py-3">
+                    <h1
+                        className="text-[36px] 2xl:text-[48px] font-semibold text-[#02021E] mt-8 sm:mt-10"
+                        style={{ fontFamily: "'Funnel Display', sans-serif" }}
+                    >
+                        Tap Into{" "}
+                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-2 py-1 sm:py-2">
                             Global Expertise
-                        </span>{" "}
+                        </span>
                     </h1>
 
-                    <div className=' mt-[30px]'>
-                        <span className='text-[24px] text-[#02021E]'>
-                            Our team of experts brings deep domain knowledge and innovative thinking to every project. Their dynamic, out of the box approach sets us apart in the market.
-                        </span>
-                    </div>
+                    <p className="mt-4 2xl:mt-8 text-[16px] 2xl:text-[20px] text-[#02021E] leading-relaxed">
+                        Our team of experts brings deep domain knowledge and innovative thinking to every project. Their dynamic, out of the box approach sets us apart in the market.
+                    </p>
 
-                    <button className="w-[256px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
-                        style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
+                    <button
+                        className="mt-4 2xl:mt-10 w-full sm:w-[256px] lg:h-[41px] 2xl:h-[61px] flex items-center justify-center gap-2 rounded-full bg-[#5D59EA] text-white text-[16px] 2xl:text-[20px] font-medium hover:opacity-90 transition-shadow shadow-md sm:shadow-lg mx-auto lg:mx-0"
+                        style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}
+                    >
                         Hire App Developer
                         <MoveRight />
                     </button>
                 </div>
 
-                <div className='p-[70px]'>
-                    <img src='/GlobalExp.svg' />
+                {/* Right Section */}
+                <div className="flex-1 flex justify-center lg:justify-end w-full lg:w-auto">
+                    <img src="/GlobalExp.svg" className="w-full max-w-[500px] sm:max-w-[550px] lg:max-w-[600px]" alt="Global Expertise" />
                 </div>
             </div>
-
         </div>
-    )
+    );
 }

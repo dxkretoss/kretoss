@@ -50,7 +50,7 @@ export default function ProcessHire() {
             </div>
 
             {/* Process Cards */}
-            <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center gap-8 sm:gap-10 lg:gap-[60px] xl:gap-[90px] 2xl:gap-[105px]">
+            <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center">
                 {Process.map((item, index) => (
                     <div
                         key={index}

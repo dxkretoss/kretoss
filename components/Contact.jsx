@@ -128,7 +128,7 @@ export default function Contact() {
                             {/* Visit Us */}
                             <div className="flex gap-[16px] items-start">
                                 <img src="/loc.svg" alt="location" />
-                                <div className="flex flex-col sm:flex-row gap-[20px] w-full">
+                                <div className="flex flex-col sm:flex-row gap-[20px] w-full items-end">
                                     <div className="flex flex-col">
                                         <p className="text-[18px] font-semibold text-[#000]">Visit Us</p>
                                         <div className="flex items-center gap-2 mt-1">

@@ -62,9 +62,9 @@ export default function ClientReviews() {
 
     const review = reviews[current];
     return (
-        <div className="container section">
+        <div className="container section max-auto container_content">
             <h1
-                className="w-[1100px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
+                className="max-w-[1100px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
                 style={{ fontFamily: "'Funnel Display', sans-serif" }}
             >
                 A Showcase of Our {" "}
