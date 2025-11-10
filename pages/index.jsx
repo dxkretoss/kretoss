@@ -30,8 +30,9 @@ export default function index() {
       <GlobalExp />
       <Devlopment />
       <SkillsSolutions />
-      <ClientReviews />
       <IntoSuccess />
+      <ClientReviews />
+
       <SuccessTogather />
       <ProcessHire />
       <WhyKretoss />

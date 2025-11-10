@@ -81,7 +81,7 @@ export default function Hero() {
                                 <span className="text-[22px] text-[#222222] ml-1">hour</span>
                             </div>
 
-                            <button className="w-[299px] h-[47px] flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
+                            <button className="w-[299px] h-[47px] flex gap-2 cursor-pointer rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
                                 style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
                                 Hire Mobile App Developer
                                 <MoveRight />

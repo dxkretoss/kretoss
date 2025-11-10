@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Contact() {
+    const [showThankYou, setShowThankYou] = useState(false);
+
+    const handleSend = () => {
+        setShowThankYou(true);
+    };
+
+    const closePopup = () => {
+        setShowThankYou(false);
+    };
     return (
         <div className="section h-[776px]"
             style={{
@@ -13,7 +22,7 @@ export default function Contact() {
                         <h2 className="text-[24px] font-bold text-[#5D59EA] mb-[30px]">Let’s Talk</h2>
 
 
-                        <form className="flex flex-col gap-[20px]">
+                        <div className="flex flex-col gap-[20px]">
                             {/* Name & Email */}
                             <div className="grid grid-cols-2 gap-[20px]">
                                 <div>
@@ -79,12 +88,41 @@ export default function Contact() {
 
                             {/* Button */}
                             <button
+                                onClick={() => { handleSend(); }}
                                 className="w-[180px] h-[50px] rounded-[8px] bg-[#5D59EA] text-[#FFFFFF] font-semibold hover:bg-[#4a46d4] transition-all shadow-[0_4px_10px_rgba(93,89,234,0.4)] cursor-pointer"
                             >
                                 Send Message
                             </button>
-                        </form>
+                        </div>
                     </div>
+
+                    {showThankYou && (
+                        <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50">
+                            <div className="bg-white w-[450px] rounded-[12px] p-8 shadow-lg relative">
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => { closePopup(); }}
+                                    className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
+                                >
+                                    ✕
+                                </button>
+                                <div className="text-center py-10">
+                                    <img
+                                        src="/logo.svg"
+                                        alt="Thank You"
+                                        className="mx-auto w-[80px] mb-4"
+                                    />
+                                    <h3 className="text-[22px] font-semibold text-[#02021E]">
+                                        Thank You!
+                                    </h3>
+                                    <p className="text-gray-600 mt-2">
+                                        We’ll get back to you shortly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     <div className='w-[782px] h-[535px]'>
                         <h2 className="text-[24px] font-bold text-[#5D59EA] mb-[30px]">Get in Touch</h2>
                         <p className='text-[#000000B2] text-[18px] w-[723px]'>Our skilled mobile app developers are ready to help you streamline your processes and elevate your business performance.</p>
