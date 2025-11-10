@@ -16,6 +16,7 @@ import Faqs from '@/components/Faqs'
 import Contact from '@/components/Contact'
 import ProcessHire from '@/components/ProcessHire'
 import WhyKretoss from '@/components/WhyKretoss'
+import ClientReviews from '@/components/ClientReviews'
 export default function index() {
   return (
     <>
@@ -29,6 +30,7 @@ export default function index() {
       <GlobalExp />
       <Devlopment />
       <SkillsSolutions />
+      <ClientReviews />
       <IntoSuccess />
       <SuccessTogather />
       <ProcessHire />
