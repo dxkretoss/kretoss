@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 export default function ScalableSection() {
     return (
         <div
-            className="container section h-[800px] rounded-[24px] overflow-hidden"
+            className="container section container_content h-[800px] rounded-[24px] overflow-hidden"
             style={{
                 background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #F8F8F8 99.76%)",
             }}

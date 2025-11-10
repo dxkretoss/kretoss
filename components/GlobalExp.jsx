@@ -4,7 +4,7 @@ import { MoveRight } from 'lucide-react'
 export default function GlobalExp() {
     return (
         <div
-            className="container section h-[640px] rounded-[24px] overflow-hidden"
+            className="container section container_content mx-auto h-[640px] rounded-[24px] overflow-hidden"
             style={{
                 background: "linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)",
             }}

@@ -1,131 +1,155 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 export default function Footer() {
     const [showThankYou, setShowThankYou] = useState(false);
 
-    const handleSend = () => {
-        setShowThankYou(true);
-    };
+    const handleSend = () => setShowThankYou(true);
+    const closePopup = () => setShowThankYou(false);
 
-    const closePopup = () => {
-        setShowThankYou(false);
-    };
     return (
-        <div className="h-[494px]"
+        <footer
+            className="w-full py-12 md:py-16 lg:py-20"
             style={{
                 background: "linear-gradient(99.21deg, #343284 0.29%, #5D59EA 99.71%)",
-            }}>
-
-            <div className='w-[1620px] mx-auto'>
-                <div className='pt-[85px] flex gap-20 '>
-                    <div className='bg-[#FFFFFF1A] p-[30px] border border-[#FFFFFF4D] rounded-[24px] w-[538px] h-[232px]'>
-                        <img src='/footerlogo.svg' />
-                        <div className='mt-[25px]'>
-                            <span className=' text-[#FFFFFF] text-[20px]'>Have a great idea? We're here to bring it to life with innovative & digital solutions</span>
-                        </div>
+            }}
+        >
+            <div className="container mx-auto px-6 sm:px-8 md:px-10 lg:px-14 xl:px-20 2xl:px-32">
+                {/* Top Section */}
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-20 2xl:gap-24">
+                    {/* Left Card */}
+                    <div className="bg-[#FFFFFF1A] p-6 sm:p-8 md:p-10 border border-[#FFFFFF4D] rounded-[24px] flex-shrink-0 w-full md:w-[90%] lg:w-[420px] xl:w-[460px] 2xl:w-[500px]">
+                        <img src="/footerlogo.svg" alt="Kretoss Logo" className="w-[160px] sm:w-[180px]" />
+                        <p className="mt-4 sm:mt-6 text-[#FFFFFF] text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed">
+                            Have a great idea? We're here to bring it to life with innovative & digital solutions.
+                        </p>
                     </div>
 
-                    <div className='mt-[20px]'>
-                        <div className='flex gap-[85px]'>
-                            <span className='text-[24px] text-[#FFFFFF]'>About Us</span>
-                            <span className='text-[24px] text-[#FFFFFF]'>Services</span>
-                            <span className='text-[24px] text-[#FFFFFF]'>Hire Resources</span>
-                            <span className='text-[24px] text-[#FFFFFF]'>Industries</span>
-                            <span className='text-[24px] text-[#FFFFFF]'>Contact Us</span>
-                        </div>
+                    {/* Right Content */}
+                    <div className="flex-1">
+                        {/* Nav Links */}
+                        <nav className="flex flex-wrap justify-start md:justify-between lg:justify-start gap-4 sm:gap-6 md:gap-10 xl:gap-14 2xl:gap-20 mt-2 md:mt-4">
+                            {["About Us", "Services", "Hire Resources", "Industries", "Contact Us"].map((link, i) => (
+                                <a
+                                    key={i}
+                                    href="#"
+                                    className="text-white text-[18px] sm:text-[20px] md:text-[22px] hover:text-[#A9A7FF] transition-all"
+                                >
+                                    {link}
+                                </a>
+                            ))}
+                        </nav>
 
-                        <hr className='mt-[26px] text-[#FFFFFF4D]' />
+                        <hr className="mt-6 sm:mt-8 border-t border-[#FFFFFF4D]" />
 
-                        <div>
-                            <div className='flex gap-[88px]'>
-                                <div className='mt-[26px] '>
-                                    <span className='text-[24px] text-[#FFFFFF] font-medium '>Social Media</span>
-                                    <div className="flex gap-[30px] mt-[15px]">
-                                        <a
-                                            href="https://www.linkedin.com/company/kretoss"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <img src="/footer/linkedin.svg" className="cursor-pointer" alt="LinkedIn" />
-                                        </a>
-
-                                        <a
-                                            href="https://www.facebook.com/kretosstechnology"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <img src="/footer/facebook.svg" className="cursor-pointer" alt="Facebook" />
-                                        </a>
-
-                                        <a
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <img src="/footer/x.svg" className="cursor-pointer" alt="Twitter / X" />
-                                        </a>
-
-                                        <a
-                                            href="https://www.instagram.com/kretoss_technology_/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <img src="/footer/insta.svg" className="cursor-pointer" alt="Instagram" />
-                                        </a>
-                                    </div>
+                        {/* Bottom Section */}
+                        <div className="mt-6 sm:mt-8 flex flex-col xl:flex-row justify-between gap-8 sm:gap-10 xl:gap-16 2xl:gap-20">
+                            {/* Social Media */}
+                            <div>
+                                <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-white">
+                                    Social Media
+                                </h3>
+                                <div className="flex gap-5 sm:gap-6 mt-3 sm:mt-4">
+                                    <a
+                                        href="https://www.linkedin.com/company/kretoss"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="/footer/linkedin.svg"
+                                            alt="LinkedIn"
+                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/kretosstechnology"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="/footer/facebook.svg"
+                                            alt="Facebook"
+                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                        />
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src="/footer/x.svg"
+                                            alt="X / Twitter"
+                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                        />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/kretoss_technology_/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="/footer/insta.svg"
+                                            alt="Instagram"
+                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                        />
+                                    </a>
                                 </div>
-                                <div className='mt-[26px] '>
-                                    <span className='text-[24px] text-[#FFFFFF] font-medium '>Subscribe To Our Newsletter</span>
-                                    <div className='flex gap-[10px] mt-[15px]'>
-                                        <input
-                                            type='text'
-                                            placeholder='Enter your email'
-                                            className='border border-[#FFFFFF4D] rounded-full w-[454px] pl-[20px] placeholder-[#FFFFFFCC] text-white' />
-                                        <button
-                                            onClick={() => { handleSend(); }}
-                                            className='bg-[#FFFFFF] rounded-full h-[52px] px-6 text-[20px] text-[#5D59EA] font-medium'>
-                                            Submit
-                                        </button>
-                                    </div>
-                                </div>
+                            </div>
 
-                                {showThankYou && (
-                                    <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50">
-                                        <div className="bg-white w-[450px] rounded-[12px] p-8 shadow-lg relative">
-                                            {/* Close Button */}
-                                            <button
-                                                onClick={() => { closePopup(); }}
-                                                className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
-                                            >
-                                                ✕
-                                            </button>
-                                            <div className="text-center py-10">
-                                                <img
-                                                    src="/logo.svg"
-                                                    alt="Thank You"
-                                                    className="mx-auto w-[80px] mb-4"
-                                                />
-                                                <h3 className="text-[22px] font-semibold text-[#02021E]">
-                                                    Thank You!
-                                                </h3>
-                                                <p className="text-gray-600 mt-2">
-                                                    We’ll get back to you shortly.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
+                            {/* Newsletter */}
+                            <div className="flex flex-col w-full xl:w-auto">
+                                <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-white">
+                                    Subscribe To Our Newsletter
+                                </h3>
+                                <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        className="border border-[#FFFFFF4D] bg-transparent rounded-full w-full sm:w-[280px] md:w-[320px] xl:w-[380px] 2xl:w-[420px] h-[46px] sm:h-[52px] pl-4 placeholder-[#FFFFFFCC] text-white focus:outline-none"
+                                    />
+                                    <button
+                                        onClick={handleSend}
+                                        className="bg-white rounded-full w-full h-[46px] sm:h-[52px] sm:w-[158px] px-6 sm:px-8 text-[16px] sm:text-[18px] md:text-[20px] text-[#5D59EA] font-medium hover:bg-[#eaeaff] transition-all"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
+                        {/* Thank You Popup */}
+                        {showThankYou && (
+                            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                                <div className="bg-white w-[90%] sm:w-[400px] md:w-[450px] rounded-[12px] p-6 sm:p-8 shadow-lg relative">
+                                    <button
+                                        onClick={closePopup}
+                                        className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
+                                    >
+                                        ✕
+                                    </button>
+                                    <div className="text-center py-8 sm:py-10">
+                                        <img
+                                            src="/logo.svg"
+                                            alt="Thank You"
+                                            className="mx-auto w-[60px] sm:w-[80px] mb-4"
+                                        />
+                                        <h3 className="text-[20px] sm:text-[22px] font-semibold text-[#02021E]">
+                                            Thank You!
+                                        </h3>
+                                        <p className="text-gray-600 mt-2 text-[15px] sm:text-[16px]">
+                                            We’ll get back to you shortly.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
-                <hr className='text-[#FFFFFF4D] mt-[85px]' />
-                <div className='mt-[30px] flex justify-center'>
-                    <span className='text-center text-[20px] text-[#FFFFFF] '>Copyright © 2025 | Designed By Kretoss Technology.</span>
+
+                {/* Divider & Copyright */}
+                <hr className="mt-10 sm:mt-12 border-t border-[#FFFFFF4D]" />
+                <div className="mt-6 sm:mt-8 text-center">
+                    <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
+                        © 2025 | Designed By Kretoss Technology.
+                    </p>
                 </div>
-
             </div>
-
-        </div>
-    )
+        </footer>
+    );
 }

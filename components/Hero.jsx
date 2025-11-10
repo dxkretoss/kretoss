@@ -56,7 +56,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-black/50"></div>
             {/* Content */}
             <div>
-                <div className="container relative z-10 w-full  px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+                <div className="container relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
                     {/* LEFT SECTION */}
                     <div className="w-[771px]">
                         <h1 className="text-[56px] leading-tight mb-6">
@@ -81,7 +81,7 @@ export default function Hero() {
                                 <span className="text-[22px] text-[#222222] ml-1">hour</span>
                             </div>
 
-                            <button className="w-[299px] h-[47px] flex gap-2 cursor-pointer rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
+                            <button className="w-[299px] h-[47px] flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
                                 style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
                                 Hire Mobile App Developer
                                 <MoveRight />
@@ -177,7 +177,7 @@ export default function Hero() {
                             ].map((src, index) => (
                                 <div
                                     key={index}
-                                    className={`flex items-center px-[40px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
+                                    className={`flex items-center px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
                                         }`}
                                 >
                                     <img src={src} className="w-[100px] h-[50px]" alt="trusted brand" />

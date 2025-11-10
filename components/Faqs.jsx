@@ -36,11 +36,12 @@ export default function Faqs() {
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
-    return (
-        <div className="container section">
 
-            <div className="w-[886px] mx-auto mt-[80px] mb-[100px] px-4">
-                <h2 className="text-center text-[48px] font-semibold text-[#000000] mb-[40px]">
+    return (
+        <div className="container section mx-auto px-4 py-16">
+            {/* FAQ Section */}
+            <div className="max-w-[900px] mx-auto mb-20">
+                <h2 className="text-center text-[36px] sm:text-[42px] md:text-[48px] font-semibold text-[#000000] mb-10">
                     FAQs
                 </h2>
 
@@ -48,22 +49,26 @@ export default function Faqs() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="bg-[#FFFFFFCC] border border-[#E5E9F2E5] rounded-[12px] shadow-sm"
+                            className="bg-white/80 border border-[#E5E9F2E5] rounded-[12px] shadow-sm"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full text-left px-6 py-5 flex justify-between items-center text-[18px] font-medium text-[#02021E]"
+                                className="w-full text-left px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center text-[16px] sm:text-[18px] font-medium text-[#02021E]"
                             >
-                                <span className='text-[#02021E] text-[16px] font-semibold'>{faq.question}</span>
-                                <span
-                                    className={`transition-transform duration-300`}
-                                >
-                                    {activeIndex === index ? <img src='/downaero.svg' /> : <img src='/rightaero.svg' />}
+                                <span className="text-[#02021E] text-[16px] sm:text-[18px] font-semibold">
+                                    {faq.question}
+                                </span>
+                                <span className="transition-transform duration-300 ml-4 flex-shrink-0">
+                                    {activeIndex === index ? (
+                                        <img src="/downaero.svg" alt="collapse" />
+                                    ) : (
+                                        <img src="/rightaero.svg" alt="expand" />
+                                    )}
                                 </span>
                             </button>
 
                             {activeIndex === index && (
-                                <div className="px-6 pb-5 text-[#323233] text-[16px] leading-relaxed">
+                                <div className="px-4 sm:px-6 pb-5 text-[#323233] text-[15px] sm:text-[16px] leading-relaxed">
                                     {faq.answer}
                                 </div>
                             )}
@@ -72,22 +77,30 @@ export default function Faqs() {
                 </div>
             </div>
 
-            <div className=' mt-111px] w-[1620px] h-[300px] p-[59px] border border-[#5D59EACC] rounded-[24px]'
-                style={{ background: "linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)" }}>
-                <div className='w-[1007px] mx-auto'>
-                    <h1 className='text-[48px] text-[#000000] font-semibold'>Mobile App Development At Your{" "}
-                        <span className='text-[#5D59EA]'>Fingertips</span></h1>
+            {/* Contact Section */}
+            <div
+                className="w-full max-w-[1620px] mx-auto border border-[#5D59EACC] rounded-[24px] p-6 sm:p-10 md:p-14 flex flex-col items-center justify-between gap-6 md:gap-10 text-center md:text-left"
+                style={{
+                    background: "linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)",
+                }}
+            >
+                {/* Text Section */}
+                <div className="flex-1 flex-col max-w-[1000px]">
+                    <h1 className="text-center text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] text-[#000000] font-semibold leading-snug">
+                        Mobile App Development At Your{" "}
+                        <span className="text-[#5D59EA]">Fingertips</span>
+                    </h1>
                 </div>
 
-                <div className='flex justify-center items-center mt-[50px]'>
+                {/* Button Section */}
+                <div className="flex justify-center md:justify-end w-full md:w-auto">
                     <button
-                        className='bg-[#5D59EA] text-[20px] rounded-full text-white px-5 py-2  h-[61px] w-[427px]'
-                        style={{ boxShadow: '0px 0px 18px 0px #5D59EA99' }}
+                        className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-[15px] h-auto w-full sm:w-[350px] md:w-[400px] lg:w-[427px] transition-transform hover:scale-105 duration-300"
+                        style={{ boxShadow: "0px 0px 18px 0px #5D59EA99" }}
                     >
                         Get in touch with us today
                     </button>
                 </div>
-
             </div>
         </div>
     )

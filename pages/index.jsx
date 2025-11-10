@@ -32,13 +32,11 @@ export default function index() {
       <SkillsSolutions />
       <IntoSuccess />
       <ClientReviews />
-
       <SuccessTogather />
       <ProcessHire />
       <WhyKretoss />
       <Faqs />
       <Contact />
-
       <Footer />
     </>
   )

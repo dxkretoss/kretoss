@@ -40,15 +40,14 @@ export default function Plans() {
         },
     ];
 
-    // Active plan (default = Quarterly)
     const [activePlan, setActivePlan] = useState("Quarterly Plan");
 
     return (
-        <div className="container section">
+        <div className="container section container_content mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
             {/* Heading */}
-            <div className="w-[1200px] mx-auto flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <h1
-                    className="text-[48px] font-semibold text-[#02021ECC] text-center relative"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#02021ECC] relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     <span className="relative inline-block text-[#5D59EA]">
@@ -56,26 +55,25 @@ export default function Plans() {
                         <img
                             src="/underline.svg"
                             alt=""
-                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
+                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3"
                         />
                     </span>{" "}
                     to Hire Mobile App Developers
                 </h1>
-                <span className="text-center mt-[20px] text-[24px]">
-                    Hire Mobile App Developers in India from{" "}
-                    <b>Kretoss Technology</b> Starting at
-                </span>
+                <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl">
+                    Hire Mobile App Developers in India from <b>Kretoss Technology</b> Starting at
+                </p>
             </div>
 
             {/* Plans Grid */}
-            <div className="mt-[60px] flex justify-center gap-[24px] flex-wrap">
+            <div className="mt-10 sm:mt-16 flex flex-wrap justify-center gap-6">
                 {plans.map((plan) => {
                     const isActive = plan.name === activePlan;
                     return (
                         <div
                             key={plan.id}
-                            className={`w-[487px] h-[636px] rounded-[24px] bg-[#FFFFFF] border p-[30px] flex flex-col items-center justify-center transition-all duration-300 
-                ${isActive
+                            className={`w-full sm:w-[300px] md:w-[360px] lg:w-[400px] xl:w-[400px] 2xl:w-[487px] rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
+                                ${isActive
                                     ? "border-[#5D59EA80] shadow-[0px_0px_25px_0px_#5D59EA99]"
                                     : "border-[#02021E33]"
                                 }`}
@@ -83,30 +81,30 @@ export default function Plans() {
                             <img
                                 src={plan.img}
                                 alt={plan.name}
-                                className="bg-[#E1E0FF] rounded-full p-5"
+                                className="bg-[#E1E0FF] rounded-full p-4 sm:p-5 w-20 h-20 "
                             />
-                            <span className="text-[38px] text-[#02021E] font-semibold mt-[15px]">
+                            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#02021E] font-semibold mt-4 sm:mt-5">
                                 {plan.name}
                             </span>
 
                             {/* Price Section */}
                             <div
+                                className="h-20 sm:h-[83px] w-full mt-4 sm:mt-5 flex items-center justify-center"
                                 style={{
                                     background:
                                         "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(93, 89, 234, 0.2) 50.23%, rgba(255, 255, 255, 0) 100%)",
                                 }}
-                                className="h-[83px] w-full mt-[15px] justify-center flex items-center"
                             >
-                                <span className="text-[38px] font-bold text-[#5D59EA] ml-[15px]">
+                                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5D59EA]">
                                     {plan.price}
                                 </span>
-                                <span className="text-[22px] font-medium text-[#02021E] ml-1">
+                                <span className="text-lg sm:text-xl md:text-2xl font-medium text-[#02021E] ml-1">
                                     {plan.duration}
                                 </span>
                             </div>
 
                             {/* Features */}
-                            <ul className="list-disc pl-6 space-y-3 mt-[30px] text-[#4C586F] text-[20px]">
+                            <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-sm sm:text-base md:text-lg">
                                 {plan.features.map((feature, index) => (
                                     <li key={index}>{feature}</li>
                                 ))}
@@ -115,20 +113,17 @@ export default function Plans() {
                             {/* Button */}
                             <button
                                 onClick={() => setActivePlan(plan.name)}
-                                className={`mt-[30px] w-full h-[60px] text-[20px] rounded-full transition-all duration-300 ${isActive
-                                    ? "bg-[#5D59EA] text-white"
-                                    : "border border-[#5D59EA] text-[#5D59EA] bg-transparent"
+                                className={`mt-4 sm:mt-6 w-full h-12 sm:h-[60px] text-sm sm:text-[20px] rounded-full transition-all duration-300 flex items-center justify-center
+                                    ${isActive
+                                        ? "bg-[#5D59EA] text-white"
+                                        : "border border-[#5D59EA] text-[#5D59EA] bg-transparent"
                                     }`}
-                                style={
-                                    isActive
-                                        ? { boxShadow: "0px 0px 22px 0px #5D59EA99" }
-                                        : undefined
-                                }
+                                style={isActive ? { boxShadow: "0px 0px 22px 0px #5D59EA99" } : undefined}
                             >
                                 Hire {plan.name.split(" ")[0]}
                             </button>
 
-                            <span className="text-[#02021ECC] text-[16px] mt-[20px] text-center">
+                            <span className="text-[#02021ECC] text-xs sm:text-sm mt-3 text-center">
                                 * Prices are starting estimates and may vary based on scope.
                             </span>
                         </div>

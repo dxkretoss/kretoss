@@ -80,14 +80,14 @@ export default function SkillsSolutions() {
     const [activeTab, setActiveTab] = useState("App Development");
     return (
         <div
-            className="relative container section h-[777px] rounded-[24px]"
+            className="relative container mx-auto container_content section h-[777px] rounded-[24px]"
             style={{
                 background: "linear-gradient(96.57deg, #FFFFFF 0.24%, #ECE6FF 99.76%)",
             }}
         >
-            <div className='w-[1290px] mx-auto pt-[113px]'>
+            <div className='max-w-[1290px] mx-auto pt-[113px]'>
                 <h1
-                    className="w-[1290px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
+                    className="max-w-[1290px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     Our Skilled Developers Use Their Technical Expertise To Deliver {" "}
@@ -104,7 +104,7 @@ export default function SkillsSolutions() {
             </div>
 
             <div className="relative">
-                <div className='relative z-10 w-[1460px] gap-2 px-[30px] py-[19px] mx-auto h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center'>
+                <div className='relative z-10 max-w-[1460px] gap-2 px-[30px] py-[19px] mx-auto h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center'>
                     {Object.keys(categories).map((tab) => (
                         <button
                             key={tab}
@@ -119,7 +119,7 @@ export default function SkillsSolutions() {
                     ))}
                 </div>
 
-                <div className="relative z-0 w-[1397px] h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
+                <div className="relative z-0 w-[1197px] 2xl:w-[1397px] h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
                     {categories[activeTab].map((item) => (
                         <div
                             key={item.name}
@@ -134,7 +134,7 @@ export default function SkillsSolutions() {
                 </div>
             </div>
 
-            <div className="absolute -top-5 -left-5">
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 lg:left-20 2xl:-top-5 2xl:left-20">
                 <div className="relative">
                     <div
                         className="w-[182px] h-[80px] bg-[#FFFFFF] rounded-[10px] flex flex-col items-center justify-center gap-2"

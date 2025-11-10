@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Devlopment() {
     const developers = [
@@ -30,58 +30,60 @@ export default function Devlopment() {
             hours: "40 hours/Week",
         },
     ];
+
     return (
-        <div className="container section">
+        <div className="container section mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20">
+            {/* Heading */}
             <h1
-                className="w-[1200px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center text-[#02021E] leading-snug md:leading-tight relative mb-12"
                 style={{ fontFamily: "'Funnel Display', sans-serif" }}
             >
-                Hire  App Developers to Empower Your Business with Our Proven Development {" "}
+                Hire App Developers to Empower Your Business with Our Proven Development{" "}
                 <span className="relative inline-block text-[#5D59EA]">
                     Expertise and Quality
                     <img
                         src="/underline.svg"
                         alt=""
-                        className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
+                        className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[6px] sm:translate-y-[8px] md:translate-y-[12px] w-20 sm:w-24 md:w-28"
                     />
                 </span>
             </h1>
 
-            {/* Table */}
-            <div className="w-[1460px] mx-auto mt-[80px] rounded-[12px] border border-[#C2C0F4] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
-                <table className="w-full border-collapse text-left text-[#02021E] text-[18px] ]">
+            {/* Table Container */}
+            <div className="overflow-x-auto rounded-[12px]">
+                <table className="min-w-full border-collapse text-left text-[#02021E] text-sm sm:text-base md:text-lg lg:text-xl">
                     <thead>
-                        <tr className="bg-[#5D59EA] text-white text-[18px]">
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Category</th>
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Approx Cost</th>
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Years of Experience</th>
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Methodology</th>
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Project Manager</th>
-                            <th className="p-4 font-semibold border-r border-[#C2C0F4]">Time Zone Flexibility</th>
-                            <th className="p-4 font-semibold ">Working Hours</th>
+                        <tr className="bg-[#5D59EA] text-white text-[16px] sm:text-[18px]">
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Category</th>
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Approx Cost</th>
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Years of Experience</th>
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Methodology</th>
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Project Manager</th>
+                            <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Time Zone Flexibility</th>
+                            <th className="p-3 sm:p-4 font-semibold">Working Hours</th>
                         </tr>
                     </thead>
 
-                    {/* ✅ Dynamic rows */}
                     <tbody className="bg-white">
                         {developers.map((dev, index) => (
                             <tr
                                 key={index}
-                                className={`border-b text-[18px] border-[#C2C0F4] ${index === developers.length - 1 ? "border-b-0" : ""
-                                    }`}
+                                className={`border-b border-[#C2C0F4] ${index === developers.length - 1 ? "border-b-0" : ""}`}
                             >
-                                <td className="p-4 font-semibold bg-[#E6F0FF] text-[#02021E]  border-r border-[#C2C0F4] ">{dev.category}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.cost}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.experience}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.methodology}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.manager}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.timezone}</td>
-                                <td className="p-4 bg-[#FBFAFF] text-[#4C586F] ">{dev.hours}</td>
+                                <td className="p-3 sm:p-4 font-semibold bg-[#E6F0FF] text-[#02021E] border-r border-[#C2C0F4]">
+                                    {dev.category}
+                                </td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.cost}</td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.experience}</td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.methodology}</td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.manager}</td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F] border-r border-[#C2C0F4]">{dev.timezone}</td>
+                                <td className="p-3 sm:p-4 bg-[#FBFAFF] text-[#4C586F]">{dev.hours}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
         </div>
-    )
+    );
 }

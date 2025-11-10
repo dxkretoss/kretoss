@@ -12,7 +12,7 @@ export default function WhyKretoss() {
     ]
 
     const keypointsTwo = [
-        "Access a Diverse Pool of Multi - Tech Experts",
+        "Access a Diverse Pool of Multi-Tech Experts",
         "Reduce Training and Retention Costs",
         "Optimize Your IT Capabilities",
         "Enjoy Flexible Engagement Plans",
@@ -20,49 +20,94 @@ export default function WhyKretoss() {
         "Foster Continuous Knowledge Exchange",
         "Communicate Directly with Your Team"
     ]
+
     return (
-        <div className="container section">
-            <div className="h-[839px] w-[1620px] mx-auto rounded-[26px]" style={{ background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #FFFFFF 99.76%)" }}>
-                <div className='p-[60px] flex gap-[40px]'>
-                    <div className='relative bg-[#FFFFFF] border p-[30px] border-[#22222233] h-[719px] w-[730px] rounded-[24px]'>
-                        <h1 className='text-[38px] text-[#02021E] w-[600px]'>Why Hire Mobile App Developers from {" "}
-                            <span className='font-bold'>Kretoss Technology</span>
-                        </h1>
+        <div className="container section mx-auto px-4 py-16">
+            <div
+                className="w-full max-w-[1620px] mx-auto rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-14"
+                style={{
+                    background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #FFFFFF 99.76%)",
+                }}
+            >
+                {/* Wrapper */}
+                <div className="flex flex-col lg:flex-row gap-8 xl:gap-[40px] justify-center items-stretch">
+                    {/* Left Card */}
+                    <div className="relative bg-white border border-[#22222233] p-5 sm:p-8 md:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <h1 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
+                                Why Hire Mobile App Developers from{" "}
+                                <span className="font-bold">Kretoss Technology</span>
+                            </h1>
 
-                        <div className='mt-[30px] flex flex-col gap-[12px]'>
-                            {keypointsOne?.map((items, index) => (
-                                <div key={index} className='flex gap-[12px] h-[63px] items-center'
-                                    style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(93, 89, 234, 0.1) 50.23%, rgba(255, 255, 255, 0) 100%)' }}>
-                                    <img src='/points.svg' className='w-[32px] h-[32px]' />
-
-                                    <p className='text-[20px] text-[#000000]'>{items}</p>
-
-                                </div>
-                            ))}
+                            <div className="mt-[20px] flex flex-col gap-3">
+                                {keypointsOne.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-[12px]"
+                                        style={{
+                                            background:
+                                                "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(93,89,234,0.1) 50.23%, rgba(255,255,255,0) 100%)",
+                                        }}
+                                    >
+                                        <img
+                                            src="/points.svg"
+                                            className="w-[24px] sm:w-[28px] md:w-[32px] h-[24px] sm:h-[28px] md:h-[32px]"
+                                            alt="point"
+                                        />
+                                        <p className="text-[16px] sm:text-[18px] md:text-[20px] text-[#000000] leading-snug">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
 
-                        <img src='/points2.svg' className='absolute -top-15 -right-20' />
+                        {/* Decorative Image */}
+                        <img
+                            src="/points2.svg"
+                            className="absolute hidden md:block -top-6 -right-10 w-[100px] h-[100px]"
+                            alt=""
+                        />
                     </div>
 
-                    <div className='relative bg-[#FFFFFF] border p-[30px] border-[#22222233] h-[719px] w-[730px] rounded-[24px]'>
-                        <h1 className='text-[38px] text-[#02021E] w-[600px]'>Kretoss Technology’s Dedicated Team Your Partner in {" "}
-                            <span className='font-bold'>Excellence</span>
-                        </h1>
+                    {/* Right Card */}
+                    <div className="relative bg-white border border-[#22222233] p-5 sm:p-8 md:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <h1 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
+                                Kretoss Technology’s Dedicated Team — Your Partner in{" "}
+                                <span className="font-bold">Excellence</span>
+                            </h1>
 
-                        <div className='mt-[30px] flex flex-col gap-[12px]'>
-                            {keypointsTwo?.map((items, index) => (
-                                <div key={index} className='flex gap-[12px] h-[63px] items-center'
-                                    style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(93, 89, 234, 0.1) 50.23%, rgba(255, 255, 255, 0) 100%)' }}>
-                                    <img src='/points.svg' className='w-[32px] h-[32px]' />
-
-                                    <p className='text-[20px] text-[#000000]'>{items}</p>
-
-                                </div>
-                            ))}
+                            <div className="mt-[20px] flex flex-col gap-3">
+                                {keypointsTwo.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-[12px]"
+                                        style={{
+                                            background:
+                                                "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(93,89,234,0.1) 50.23%, rgba(255,255,255,0) 100%)",
+                                        }}
+                                    >
+                                        <img
+                                            src="/points.svg"
+                                            className="w-[24px] sm:w-[28px] md:w-[32px] h-[24px] sm:h-[28px] md:h-[32px]"
+                                            alt="point"
+                                        />
+                                        <p className="text-[16px] sm:text-[18px] md:text-[20px] text-[#000000] leading-snug">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <img src='/points1.svg' className='absolute -top-15 -right-20' />
-                    </div>
 
+                        {/* Decorative Image */}
+                        <img
+                            src="/points1.svg"
+                            className="absolute hidden md:block -top-6 -right-10 w-[100px] h-[100px]"
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
         </div>
