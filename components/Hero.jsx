@@ -35,6 +35,24 @@ const countryData = [
     },
 ];
 
+const stats = [
+    {
+        icon: "/exp.svg",
+        value: "10+",
+        label: "Experience",
+    },
+    {
+        icon: "/dev.svg",
+        value: "2k+",
+        label: "Developers",
+    },
+    {
+        icon: "/client.svg",
+        value: "210+",
+        label: "Clients",
+    },
+];
+
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -49,126 +67,93 @@ export default function Hero() {
     const currentCountry = countryData[currentIndex];
     return (
         <section
-            className="relative bg-cover bg-center bg-no-repeat h-[800px] flex items-center justify-center text-white"
-            style={{ backgroundImage: "url('/herobg.svg')" }}
+            className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center text-white py-16 md:py-24 lg:py-0"
+            style={{
+                backgroundImage: "url('/herobg.svg')",
+                minHeight: "800px",
+            }}
         >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
-            {/* Content */}
-            <div>
-                <div className="container relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-                    {/* LEFT SECTION */}
-                    <div className="lg:w-[650px] 2xl:w-[771px]">
-                        <h1 className="lg:text-[36px] 2xl:text-[56px] leading-tight mb-6">
-                            Hire{" "}
-                            <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-5 py-4">
-                                Mobile App
-                            </span>{" "}
-                            Developers
-                        </h1>
 
-                        <p className="text-[#FFFFFF] lg:text-[18px] 2xl:text-[24px] mt-[40px] mb-[40px]">
-                            Hire a skilled team of app developers to deliver top-quality,
-                            user-friendly app solutions tailored to your project needs.
-                        </p>
+            <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-36 gap-10 md:gap-14">
+                <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
+                    <h1 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold">
+                        Hire{" "}
+                        <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 sm:px-4 md:px-5 py-2 sm:py-3">
+                            Mobile App
+                        </span>{" "}
+                        Developers
+                    </h1>
 
-                        {/* Pricing & Button */}
-                        <div className="lg:w-[600px] 2xl:w-[729px] lg:h-[70px] 2xl:h-[85px] flex flex-wrap items-center gap-4 mb-10 bg-white rounded-full  border border-[#E4E3FF]">
-                            <div className="flex items-center  px-6 py-3">
-                                <span className="lg:text-[16px] 2xl:text-[22px] font-medium text-[#222222]">Starting at</span>
-                                <img src="/clock.svg" className="ml-[19px] lg:w-[30px]" />
-                                <span className="lg:text-[26px] 2xl:text-[32px] font-semibold text-[#02021E] ml-[15px]">$22.00/</span>
-                                <span className="lg:text-[16px] 2xl:text-[22px] text-[#222222] ml-1">hour</span>
-                            </div>
+                    <p className="text-[#FFFFFF] text-[16px] sm:text-[18px] md:text-[20px] 2xl:text-[24px] mt-4 sm:mt-6 mb-8 sm:mb-10 max-w-[600px]">
+                        Hire a skilled team of app developers to deliver top-quality,
+                        user-friendly app solutions tailored to your project needs.
+                    </p>
 
-                            <button className="lg:w-[260px] 2xl:w-[299px] lg:h-[40px] 2xl:h-[47px] lg:text-[14px] 2xl:text-[16px] flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 py-3 font-semibold  hover:opacity-90 transition"
-                                style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
-                                Hire Mobile App Developer
-                                <MoveRight />
-                            </button>
-                        </div>
+                    <div className="sm:w-auto flex flex-wrap items-center mb-10 bg-white rounded-full border border-[#E4E3FF] px-4 sm:px-6 py-3 sm:py-4">
+                        <span className="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] font-medium">
+                            Starting at
+                        </span>
+                        <img
+                            src="/clock.svg"
+                            className="ml-[8px] sm:ml-[15px] w-[20px] sm:w-[28px]"
+                        />
+                        <span className="text-[#02021E] text-[22px] sm:text-[28px] md:text-[32px] font-semibold ml-2">
+                            $22.00/
+                        </span>
+                        <span className="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] ml-1">
+                            hour
+                        </span>
+                        <button
+                            className="hidden ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 sm:flex gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
+                            style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
+                        >
+                            Hire Mobile App Developer
+                            <MoveRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                        </button>
 
-                        {/* Stats */}
-                        <div className="flex flex-wrap items-center gap-8 text-gray-200 mb-10">
-                            <div className="flex  items-center justify-center gap-4 w-[190px] h-[74px] border-[0.5px] border-[#FFFFFF] rounded-md"
-                                style={{
-                                    background: "#FFFFFF1F",
-                                    backdropFilter: "blur(12px)",
-                                }}>
-                                <img src="/exp.svg" alt="" />
-                                <div className="flex flex-col">
-                                    <span className="text-[#FFFFFF] text-[26px] font-semibold">10+</span>
-                                    <span className="text-[#FFFFFF] text-[17px] ">Experience</span>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-center gap-4 w-[190px] h-[74px] border-[0.5px] border-[#FFFFFF] rounded-md "
-                                style={{
-                                    background: "#FFFFFF1F",
-                                    backdropFilter: "blur(12px)",
-                                }}>
-                                <img src="/dev.svg" alt="" />
-                                <div className="flex flex-col">
-                                    <span className="text-[#FFFFFF] text-[26px] font-semibold">2k+</span>
-                                    <span className="text-[#FFFFFF] text-[17px] ">Developers</span>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-center gap-4 w-[190px] h-[74px] border-[0.5px] border-[#FFFFFF] rounded-md"
-                                style={{
-                                    background: "#FFFFFF1F",
-                                    backdropFilter: "blur(12px)",
-                                }}>
-                                <img src="/client.svg" alt="" />
-                                <div className="flex flex-col">
-                                    <span className="text-[#FFFFFF] text-[26px] font-semibold">210+</span>
-                                    <span className="text-[#FFFFFF] text-[17px] ">Clients</span>
-                                </div>
-                            </div>
-                        </div>
+                        <button
+                            className="flex ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 sm:hidden gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
+                            style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
+                        >
+                            Hire
+                            <MoveRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                        </button>
                     </div>
 
-                    <div className="relative lg:w-[550px] 2xl:w-[700px] h-[500px] overflow-hidden flex items-center justify-center">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={currentCountry.countryName}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -50 }}
-                                transition={{ duration: 0.6 }}
-                                className="absolute lg:w-[450px] 2xl:w-[700px] max-h-[500px] border border-[#22222224] rounded-2xl p-8 shadow-xl text-center bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] "
-
+                    {/* Stats */}
+                    <div className="flex flex-wrap items-center justify-start gap-5 sm:gap-8 text-gray-200 mb-10">
+                        {stats.map((item, index) => (
+                            <div
+                                key={index}
+                                className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-[180px] md:w-[190px] h-[64px] sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                style={{
+                                    background: "#FFFFFF1F",
+                                    backdropFilter: "blur(12px)",
+                                }}
                             >
-                                <div className="flex justify-between w-full">
-                                    <img
-                                        src={currentCountry.smallLogo}
-                                    />
-                                    <img src="/logo.svg" className="w-[137px] h-[44px]" />
+                                <img
+                                    src={item.icon}
+                                    alt={item.label}
+                                    className="w-[24px] sm:w-[32px]"
+                                />
+                                <div className="flex flex-col text-center sm:text-left">
+                                    <span className="text-[#FFFFFF] text-[20px] sm:text-[26px] font-semibold">
+                                        {item.value}
+                                    </span>
+                                    <span className="text-[#FFFFFF] text-[14px] sm:text-[17px]">
+                                        {item.label}
+                                    </span>
                                 </div>
-                                <div className="flex justify-between items-center mt-[53px] ml-[69px] mr-[69px]">
-                                    <img src={currentCountry.mapLogo} className="lg:w-[80px] 2xl:w-[137px] lg:g-[20px] 2xl:h-[44px]" />
-                                    <div className="flex flex-col">
-                                        <span className="text-[32px] text-[#02021E] font-medium">
-                                            {currentCountry.countryName}
-                                        </span>
-                                        <div>
-                                            <span className="2xl:text-[32px] text-[#02021E] font-bold">
-                                                {currentCountry.hourlyPrice}/
-                                            </span>
-                                            <span className="2xl:text-[22px] text-[#02021E] ml-1">
-                                                hour
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </AnimatePresence>
+                            </div>
+                        ))}
                     </div>
-                </div>
-                <div className="relative mt-[50px] z-10">
-                    <div className="flex flex-wrap items-center gap-8 text-[#FFFFFF]">
-                        <p className="text-[#FFFFFF] text-[28px]"><span className=" font-bold ">Trusted</span> by:</p>
-                        <div className="flex items-center">
+
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-8 text-[#FFFFFF]">
+                        <p className="text-[20px] sm:text-[24px] md:text-[28px] font-light">
+                            <span className="font-bold">Trusted</span> by:
+                        </p>
+                        <div className="flex flex-wrap items-center">
                             {[
                                 "/trusted/emaar.png",
                                 "/trusted/google.png",
@@ -177,14 +162,65 @@ export default function Hero() {
                             ].map((src, index) => (
                                 <div
                                     key={index}
-                                    className={`flex items-center px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
+                                    className={`flex items-center px-[10px] sm:px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
                                         }`}
                                 >
-                                    <img src={src} className="w-[100px] h-[50px]" alt="trusted brand" />
+                                    <img
+                                        src={src}
+                                        className="w-[70px] sm:w-[100px] h-[35px] sm:h-[50px]"
+                                        alt="trusted brand"
+                                    />
                                 </div>
                             ))}
                         </div>
                     </div>
+                </div>
+
+                <div className="relative w-full sm:w-[80%] md:w-[70%] lg:w-[45%] flex justify-center items-center mt-8 lg:mt-0">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentCountry.countryName}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -50 }}
+                            transition={{ duration: 0.6 }}
+                            className="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[600px] xl:max-w-[700px] bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] border border-[#22222224] rounded-2xl p-6 sm:p-8 shadow-xl text-center"
+                        >
+                            <div className="flex justify-between items-center">
+                                <img
+                                    src={currentCountry.smallLogo}
+                                    alt={currentCountry.countryName}
+                                    className="w-[60px] sm:w-[70px]"
+                                />
+                                <img
+                                    src="/logo.svg"
+                                    className="w-[100px] sm:w-[130px] md:w-[150px]"
+                                    alt="logo"
+                                />
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mt-[40px] sm:mt-[50px] gap-6 sm:gap-8">
+                                <img
+                                    src={currentCountry.mapLogo}
+                                    alt={currentCountry.countryName}
+                                    className="w-[150px] sm:w-[180px] md:w-[200px]"
+                                />
+                                <div className="flex flex-col text-center sm:text-left">
+                                    <span className="text-[26px] sm:text-[32px] text-[#02021E] font-medium">
+                                        {currentCountry.countryName}
+                                    </span>
+                                    <div>
+                                        <span className="text-[26px] sm:text-[32px] text-[#02021E] font-bold">
+                                            {currentCountry.hourlyPrice}/
+                                        </span>
+                                        <span className="text-[18px] sm:text-[22px] text-[#02021E] ml-1">
+                                            hour
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
         </section>

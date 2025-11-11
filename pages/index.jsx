@@ -22,7 +22,7 @@ export default function index() {
     <>
       <TopHeader />
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <ScalableSection />
       <Solution />
       <Support />
