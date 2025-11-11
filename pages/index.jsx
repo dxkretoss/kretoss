@@ -31,7 +31,7 @@ export default function index() {
       <Devlopment />
       {/* <SkillsSolutions /> */}
       <IntoSuccess />
-      {/* <ClientReviews /> */}
+      <ClientReviews />
       <SuccessTogather />
       <ProcessHire />
       <WhyKretoss />

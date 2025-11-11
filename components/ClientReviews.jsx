@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ClientReviews() {
-
     const reviews = [
         {
             title: (
@@ -51,23 +51,44 @@ export default function ClientReviews() {
     ];
 
     const [current, setCurrent] = useState(0);
+    const [direction, setDirection] = useState(0); // for slide direction
 
     const handleNext = () => {
+        setDirection(1);
         setCurrent((prev) => (prev + 1) % reviews.length);
     };
 
     const handlePrev = () => {
+        setDirection(-1);
         setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
     };
 
     const review = reviews[current];
+
+    const variants = {
+        enter: (direction) => ({
+            opacity: 0,
+            x: direction > 0 ? 80 : -80,
+        }),
+        center: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.6, ease: "easeInOut" },
+        },
+        exit: (direction) => ({
+            opacity: 0,
+            x: direction < 0 ? 80 : -80,
+            transition: { duration: 0.5, ease: "easeInOut" },
+        }),
+    };
+
     return (
         <div className="container section max-auto container_content">
             <h1
                 className="max-w-[1100px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
                 style={{ fontFamily: "'Funnel Display', sans-serif" }}
             >
-                A Showcase of Our {" "}
+                A Showcase of Our{" "}
                 <span className="relative inline-block text-[#5D59EA]">
                     Global Client
                     <img
@@ -80,76 +101,89 @@ export default function ClientReviews() {
             </h1>
 
             {/* Review Card */}
-            <div
-                className="relative mt-[60px] h-[654px] rounded-[16px] transition-all duration-500 ease-in-out"
-                style={{
-                    background:
-                        "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
-                }}
-            >
-                <div className="flex">
-                    {/* Left Text Section */}
-                    <div className="w-[748px] px-[70px] py-[90px] flex flex-col justify-center">
-                        <h1 className="text-[36px] text-[#02021E] leading-[46px]">
-                            {review.title}
-                        </h1>
+            <div className="relative mt-[60px] flex justify-center">
+                <div
+                    className="min-h-[654px] rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
+                    style={{
+                        background:
+                            "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
+                    }}
+                >
+                    <AnimatePresence custom={direction} mode="wait">
+                        <motion.div
+                            key={current}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            className="flex flex-col md:flex-row"
+                        >
+                            {/* Left Text Section */}
+                            <div className="w-full md:w-[55%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
+                                <h1 className="text-[36px] text-[#02021E] leading-[46px]">
+                                    {review.title}
+                                </h1>
 
-                        <div className="flex items-center mt-[9px]">
-                            <p className="text-[16px] font-bold">
-                                Apps we used:{" "}
-                                <span className="text-[20px] text-[#486FEB]">
-                                    {review.appUsed}
-                                </span>
-                            </p>
-                        </div>
+                                <div className="flex items-center mt-[9px]">
+                                    <p className="text-[16px] font-bold">
+                                        Apps we used:{" "}
+                                        <span className="text-[20px] text-[#486FEB]">
+                                            {review.appUsed}
+                                        </span>
+                                    </p>
+                                </div>
 
-                        <div className="mt-[22px]">
-                            <p className="text-[16px] text-[#000000CC] w-[480px] leading-[28px]">
-                                “{review.description}”
-                            </p>
-                        </div>
+                                <div className="mt-[22px]">
+                                    <p className="text-[14px] md:text-[16px] text-[#000000CC] max-w-[480px] leading-[28px]">
+                                        “{review.description}”
+                                    </p>
+                                </div>
 
-                        {/* Stars */}
-                        <div className="mt-[20px] flex gap-2">
-                            {[...Array(5)].map((_, i) => (
-                                <img
-                                    key={i}
-                                    src={
-                                        i < review.rating
-                                            ? "/reviews/fillstar.svg"
-                                            : "/reviews/unfillstar.svg"
-                                    }
-                                    alt="star"
-                                    className="w-[24px] h-[24px]"
-                                />
-                            ))}
-                        </div>
+                                {/* Stars */}
+                                <div className="flex justify-center md:justify-start mt-[20px] gap-2">
+                                    {[...Array(5)].map((_, i) => (
+                                        <img
+                                            key={i}
+                                            src={
+                                                i < review.rating
+                                                    ? "/reviews/fillstar.svg"
+                                                    : "/reviews/unfillstar.svg"
+                                            }
+                                            alt="star"
+                                            className="w-[24px] h-[24px]"
+                                        />
+                                    ))}
+                                </div>
 
-                        {/* Client Info */}
-                        <div className="mt-[20px] flex gap-[10px] items-center">
-                            <img
-                                src={review.clientImage}
-                                className="w-[45px] border-2 border-[#FFFFFF] rounded-full"
-                            />
-                            <div className="flex flex-col">
-                                <p className="text-[16px] font-semibold text-[#000000]">
-                                    {review.clientName}
-                                </p>
-                                <span className="text-[14px] text-[#000000CC]">
-                                    {review.clientPosition}
-                                </span>
+                                {/* Client Info */}
+                                <div className="mt-[20px] flex justify-center md:justify-start gap-[10px] items-center">
+                                    <img
+                                        src={review.clientImage}
+                                        className="w-[45px] border-2 border-[#FFFFFF] rounded-full"
+                                        alt={review.clientName}
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="text-[16px] font-semibold text-[#000000]">
+                                            {review.clientName}
+                                        </p>
+                                        <span className="text-[14px] text-[#000000CC]">
+                                            {review.clientPosition}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Right Image */}
-                    <div className="w-[872px] h-[654px]">
-                        <img
-                            src={review.reviewImage}
-                            className="rounded-[16px] h-full w-full object-cover"
-                            alt={review.clientName}
-                        />
-                    </div>
+                            {/* Right Image */}
+                            <div className="max-w-[872px] h-[354px] md:h-[654px]">
+                                <img
+                                    src={review.reviewImage}
+                                    className="rounded-[16px] h-full w-full object-cover"
+                                    alt={review.clientName}
+                                />
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
 
                 {/* Left Arrow */}
@@ -173,8 +207,8 @@ export default function ClientReviews() {
                 >
                     <img src="/reviews/right.svg" alt="Next" />
                 </button>
-            </div>
 
+            </div>
         </div>
-    )
+    );
 }
