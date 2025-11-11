@@ -30,7 +30,7 @@ export default function Solution() {
             </h1>
 
             {/* Solution Cards */}
-            <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 2xl:grid-cols-8 gap-6 sm:gap-8 lg:gap-5 justify-items-center">
+            <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 2xl:grid-cols-8 gap-[10px] justify-items-center">
                 {solutionData.map((item, index) => (
                     <div
                         key={index}

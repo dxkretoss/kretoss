@@ -27,7 +27,7 @@ export default function ProcessHire() {
     return (
         <div className="container section mx-auto container_content px-4 py-16">
             {/* Header Section */}
-            <div className="relative flex flex-col items-center text-center xl:w-[900px] 2xl:w-[1200px] mx-auto">
+            <div className="relative flex flex-col items-center text-center xl:w-[900px] 2xl:w-[900px] mx-auto">
                 <h1
                     className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] leading-snug relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
@@ -49,7 +49,7 @@ export default function ProcessHire() {
                 </p>
 
                 {/* Vision Floating Card */}
-                <div className="absolute xl:-right-40 2xl:-right-50 hidden xl:block">
+                <div className="absolute xl:-right-50 -top-5 hidden xl:block">
                     <div
                         className="relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[218px] h-[90px] lg:h-[95px] xl:h-[100px] 2xl:h-[122px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
