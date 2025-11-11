@@ -22,7 +22,7 @@ export default function WhyKretoss() {
     ]
 
     return (
-        <div className="container section mx-auto px-4 py-16">
+        <div className="container section mx-auto container_content px-4 py-16">
             <div
                 className="w-full max-w-[1620px] mx-auto rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-14"
                 style={{
@@ -32,9 +32,9 @@ export default function WhyKretoss() {
                 {/* Wrapper */}
                 <div className="flex flex-col lg:flex-row gap-8 xl:gap-[40px] justify-center items-stretch">
                     {/* Left Card */}
-                    <div className="relative bg-white border border-[#22222233] p-5 sm:p-8 md:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                    <div className="relative bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
                         <div>
-                            <h1 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
+                            <h1 className="text-[20px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
                                 Why Hire Mobile App Developers from{" "}
                                 <span className="font-bold">Kretoss Technology</span>
                             </h1>
@@ -51,10 +51,10 @@ export default function WhyKretoss() {
                                     >
                                         <img
                                             src="/points.svg"
-                                            className="w-[24px] sm:w-[28px] md:w-[32px] h-[24px] sm:h-[28px] md:h-[32px]"
+                                            className="w-[24px] xl:w-[28px] 2xl:w-[32px] h-[24px] xl:h-[28px] 2xl:h-[32px]"
                                             alt="point"
                                         />
-                                        <p className="text-[16px] sm:text-[18px] md:text-[20px] text-[#000000] leading-snug">
+                                        <p className="text-[16px] xl:text-[18px] 2xl:text-[20px] text-[#000000] leading-snug">
                                             {item}
                                         </p>
                                     </div>
@@ -65,15 +65,15 @@ export default function WhyKretoss() {
                         {/* Decorative Image */}
                         <img
                             src="/points2.svg"
-                            className="absolute hidden md:block -top-6 -right-10 w-[100px] h-[100px]"
+                            className="absolute -top-6 -right-10 w-[100px] h-[100px]"
                             alt=""
                         />
                     </div>
 
                     {/* Right Card */}
-                    <div className="relative bg-white border border-[#22222233] p-5 sm:p-8 md:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                    <div className="relative bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
                         <div>
-                            <h1 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
+                            <h1 className="text-[20px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
                                 Kretoss Technology’s Dedicated Team — Your Partner in{" "}
                                 <span className="font-bold">Excellence</span>
                             </h1>
@@ -90,10 +90,10 @@ export default function WhyKretoss() {
                                     >
                                         <img
                                             src="/points.svg"
-                                            className="w-[24px] sm:w-[28px] md:w-[32px] h-[24px] sm:h-[28px] md:h-[32px]"
+                                            className="w-[24px] xl:w-[28px] 2xl:w-[32px] h-[24px] xl:h-[28px] 2xl:h-[32px]"
                                             alt="point"
                                         />
-                                        <p className="text-[16px] sm:text-[18px] md:text-[20px] text-[#000000] leading-snug">
+                                        <p className="text-[16px] xl:text-[18px] 2xl:text-[20px] text-[#000000] leading-snug">
                                             {item}
                                         </p>
                                     </div>
@@ -104,7 +104,7 @@ export default function WhyKretoss() {
                         {/* Decorative Image */}
                         <img
                             src="/points1.svg"
-                            className="absolute hidden md:block -top-6 -right-10 w-[100px] h-[100px]"
+                            className="absolute -top-6 -right-10 w-[100px] h-[100px]"
                             alt=""
                         />
                     </div>

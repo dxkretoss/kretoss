@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="w-full py-12 md:py-16 lg:py-20"
+            className="w-full py-6 xl:py-14 2xl:py-20"
             style={{
                 background: "linear-gradient(99.21deg, #343284 0.29%, #5D59EA 99.71%)",
             }}
@@ -32,7 +32,7 @@ export default function Footer() {
                                 <a
                                     key={i}
                                     href="#"
-                                    className="text-white text-[18px] sm:text-[20px] md:text-[22px] hover:text-[#A9A7FF] transition-all"
+                                    className="text-white text-[14px] lg:text-[18px] 2xl:text-[22px] hover:text-[#A9A7FF] transition-all"
                                 >
                                     {link}
                                 </a>
@@ -45,10 +45,10 @@ export default function Footer() {
                         <div className="mt-6 sm:mt-8 flex flex-col xl:flex-row justify-between gap-8 sm:gap-10 xl:gap-16 2xl:gap-20">
                             {/* Social Media */}
                             <div>
-                                <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-white">
+                                <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px] font-medium text-white">
                                     Social Media
                                 </h3>
-                                <div className="flex gap-5 sm:gap-6 mt-3 sm:mt-4">
+                                <div className="flex gap-2 2xl:gap-6 mt-3 sm:mt-4">
                                     <a
                                         href="https://www.linkedin.com/company/kretoss"
                                         target="_blank"
@@ -57,7 +57,7 @@ export default function Footer() {
                                         <img
                                             src="/footer/linkedin.svg"
                                             alt="LinkedIn"
-                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
                                     <a
@@ -68,14 +68,14 @@ export default function Footer() {
                                         <img
                                             src="/footer/facebook.svg"
                                             alt="Facebook"
-                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
                                     <a href="#" target="_blank" rel="noopener noreferrer">
                                         <img
                                             src="/footer/x.svg"
                                             alt="X / Twitter"
-                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
                                     <a
@@ -86,7 +86,7 @@ export default function Footer() {
                                         <img
                                             src="/footer/insta.svg"
                                             alt="Instagram"
-                                            className="w-6 sm:w-7 md:w-8 cursor-pointer hover:scale-110 transition-transform"
+                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
                                 </div>
@@ -94,18 +94,18 @@ export default function Footer() {
 
                             {/* Newsletter */}
                             <div className="flex flex-col w-full xl:w-auto">
-                                <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-white">
+                                <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px]  font-medium text-white">
                                     Subscribe To Our Newsletter
                                 </h3>
                                 <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
                                     <input
                                         type="email"
                                         placeholder="Enter your email"
-                                        className="border border-[#FFFFFF4D] bg-transparent rounded-full w-full sm:w-[280px] md:w-[320px] xl:w-[380px] 2xl:w-[420px] h-[46px] sm:h-[52px] pl-4 placeholder-[#FFFFFFCC] text-white focus:outline-none"
+                                        className="border border-[#FFFFFF4D] bg-transparent rounded-full w-full sm:w-[240px] md:w-[280px] xl:w-[280px] 2xl:w-[420px] h-[36px] xl:h-[46px] 2xl:h-[52px] pl-4 placeholder-[#FFFFFFCC] text-white focus:outline-none"
                                     />
                                     <button
                                         onClick={handleSend}
-                                        className="bg-white rounded-full w-full h-[46px] sm:h-[52px] sm:w-[158px] px-6 sm:px-8 text-[16px] sm:text-[18px] md:text-[20px] text-[#5D59EA] font-medium hover:bg-[#eaeaff] transition-all"
+                                        className="bg-white rounded-full w-full  h-[36px] xl:h-[46px] 2xl:h-[52px] sm:w-[120px] 2xl:w-[158px] px-6 sm:px-8 text-[14px] xl:text-[18px] 2xl:text-[20px] text-[#5D59EA] font-medium hover:bg-[#eaeaff] transition-all"
                                     >
                                         Submit
                                     </button>

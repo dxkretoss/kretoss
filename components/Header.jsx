@@ -28,7 +28,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-[#FFFFFF] h-[100px] flex items-center relative shadow-sm w-full z-50">
+        <header className="bg-[#FFFFFF] h-[80px] 2xl:h-[100px] flex items-center relative shadow-sm w-full z-50">
             <div className="container mx-auto px-4 flex justify-between items-center w-full">
                 {/* Logo */}
                 <div className="flex items-center">
@@ -79,7 +79,7 @@ export default function Header() {
             {/* Sidebar for Mobile */}
             {isSidebarOpen && (
                 <div className="fixed inset-0 bg-black/40 z-50">
-                    <div className="fixed right-0 top-0 h-[100px] w-[260px] bg-white shadow-lg p-6 flex flex-col  transition-transform duration-300 ease-in-out">
+                    <div className="fixed right-0 top-0 h-full w-[260px] bg-white shadow-lg p-6 flex flex-col  transition-transform duration-300 ease-in-out">
                         {/* Header */}
                         <div className="flex justify-between items-center mb-6">
                             <img src="/logo.svg" alt="Kretoss" className="w-[130px]" />

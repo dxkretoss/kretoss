@@ -25,11 +25,11 @@ export default function ProcessHire() {
     ]
 
     return (
-        <div className="container section mx-auto px-4 py-16">
+        <div className="container section mx-auto container_content px-4 py-16">
             {/* Header Section */}
-            <div className="flex flex-col items-center text-center max-w-[1200px] mx-auto">
+            <div className="relative flex flex-col items-center text-center xl:w-[900px] 2xl:w-[1200px] mx-auto">
                 <h1
-                    className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-semibold text-[#02021E] leading-snug relative"
+                    className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] leading-snug relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     A Streamlined{" "}
@@ -38,19 +38,41 @@ export default function ProcessHire() {
                         <img
                             src="/underline.svg"
                             alt=""
-                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px] w-[120px] sm:w-[150px] md:w-[180px]"
+                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
                         />
                     </span>{" "}
                     App Developers
                 </h1>
 
-                <p className="mt-4 sm:mt-6 text-[#191919] text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed max-w-[900px]">
+                <p className="mt-4 sm:mt-6 text-[#191919] text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed max-w-[600px] 2xl:max-w-[900px]">
                     Looking to strengthen your development team with top talent? Follow our quick and simple process to hire expert app developers from our skilled team.
                 </p>
+
+                {/* Vision Floating Card */}
+                <div className="absolute xl:-right-40 2xl:-right-50 hidden xl:block">
+                    <div
+                        className="relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[218px] h-[90px] lg:h-[95px] xl:h-[100px] 2xl:h-[122px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
+                        style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
+                    >
+                        <img
+                            src="/Vision.svg"
+                            alt="Vision"
+                            className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
+                        />
+                        <div className="absolute top-8 flex flex-col items-center">
+                            <span className="text-[14px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
+                                Vision
+                            </span>
+                            <span className="text-[#4B4D4C] text-[12px] xl:text-[14px] 2xl:text-[15px]">
+                                Empower Businesses With Innovative
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Process Cards */}
-            <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center">
+            <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-start">
                 {Process.map((item, index) => (
                     <div
                         key={index}

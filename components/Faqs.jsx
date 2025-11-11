@@ -38,7 +38,7 @@ export default function Faqs() {
     };
 
     return (
-        <div className="container section mx-auto px-4 py-16">
+        <div className="container section mx-auto container_content px-4 py-16">
             {/* FAQ Section */}
             <div className="max-w-[900px] mx-auto mb-20">
                 <h2 className="text-center text-[36px] sm:text-[42px] md:text-[48px] font-semibold text-[#000000] mb-10">

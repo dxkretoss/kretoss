@@ -32,26 +32,28 @@ export default function Devlopment() {
     ];
 
     return (
-        <div className="container section mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20">
+        <div className="container section container_content mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20">
             {/* Heading */}
-            <h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center text-[#02021E] leading-snug md:leading-tight relative mb-12"
-                style={{ fontFamily: "'Funnel Display', sans-serif" }}
-            >
-                Hire App Developers to Empower Your Business with Our Proven Development{" "}
-                <span className="relative inline-block text-[#5D59EA]">
-                    Expertise and Quality
-                    <img
-                        src="/underline.svg"
-                        alt=""
-                        className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[6px] sm:translate-y-[8px] md:translate-y-[12px] w-20 sm:w-24 md:w-28"
-                    />
-                </span>
-            </h1>
+            <div className="max-w-[900px] 2xl:max-w-[1300px] mx-auto text-center px-2">
+                <h1
+                    className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-center text-[#02021E] leading-snug md:leading-tight relative mb-12"
+                    style={{ fontFamily: "'Funnel Display', sans-serif" }}
+                >
+                    Hire App Developers to Empower Your Business with Our Proven Development{" "}
+                    <span className="relative inline-block text-[#5D59EA]">
+                        Expertise and Quality
+                        <img
+                            src="/underline.svg"
+                            alt=""
+                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[6px] sm:translate-y-[8px] md:translate-y-[12px]"
+                        />
+                    </span>
+                </h1>
+            </div>
 
             {/* Table Container */}
-            <div className="overflow-x-auto rounded-[12px]">
-                <table className="min-w-full border-collapse text-left text-[#02021E] text-sm sm:text-base md:text-lg lg:text-xl">
+            <div className="overflow-x-auto rounded-[12px] border border-[#C2C0F4]">
+                <table className="min-w-full border-collapse text-left text-[#02021E] text-sm lg:text-base xl:text-lg 2xl:text-xl">
                     <thead>
                         <tr className="bg-[#5D59EA] text-white text-[16px] sm:text-[18px]">
                             <th className="p-3 sm:p-4 font-semibold border-r border-[#C2C0F4]">Category</th>

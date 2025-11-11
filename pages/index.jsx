@@ -22,16 +22,16 @@ export default function index() {
     <>
       <TopHeader />
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <ScalableSection />
       <Solution />
       <Support />
       <Plans />
       <GlobalExp />
       <Devlopment />
-      <SkillsSolutions />
+      {/* <SkillsSolutions /> */}
       <IntoSuccess />
-      <ClientReviews />
+      {/* <ClientReviews /> */}
       <SuccessTogather />
       <ProcessHire />
       <WhyKretoss />

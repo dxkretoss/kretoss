@@ -10,7 +10,7 @@ export default function Contact() {
         <div
             className="section w-full py-[80px] md:py-[100px] bg-gradient-to-r from-[#F8F8F8] to-[#E6F0FF]"
         >
-            <div className="container mx-auto px-4">
+            <div className="container container_content mx-auto px-4">
                 {/* Main Layout */}
                 <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[56px] items-start justify-center">
 
@@ -128,26 +128,31 @@ export default function Contact() {
                             {/* Visit Us */}
                             <div className="flex gap-[16px] items-start">
                                 <img src="/loc.svg" alt="location" />
-                                <div className="flex flex-col sm:flex-row gap-[20px] w-full items-end">
+                                <div className="flex flex-col gap-[10px] w-full">
                                     <div className="flex flex-col">
                                         <p className="text-[18px] font-semibold text-[#000]">Visit Us</p>
-                                        <div className="flex items-center gap-2 mt-1">
-                                            <img src="/india.svg" alt="india" />
-                                            <span className="text-[#323233] text-[16px]">India</span>
-                                        </div>
-                                        <span className="text-[#323233] text-[15px] mt-1 max-w-[400px]">
-                                            B-1007, Shilp Corporate Park, Near Rajpath Club, Rajpath-Rangoli Road, Ahmedabad. 380054
-                                        </span>
                                     </div>
 
-                                    <div className="flex flex-col">
-                                        <div className="flex items-center gap-2 mt-[25px] sm:mt-0">
-                                            <img src="/usa.svg" alt="usa" />
-                                            <span className="text-[#323233] text-[16px]">United States</span>
+                                    <div className='flex flex-col xl:flex-row gap-[15px]'>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-center gap-2 mt-1">
+                                                <img src="/india.svg" alt="india" />
+                                                <span className="text-[#323233] text-[16px]">India</span>
+                                            </div>
+                                            <span className="text-[#323233] text-[15px] mt-1 max-w-[400px]">
+                                                B-1007, Shilp Corporate Park, Near Rajpath Club, Rajpath-Rangoli Road, Ahmedabad. 380054
+                                            </span>
                                         </div>
-                                        <span className="text-[#323233] text-[15px] mt-1 max-w-[400px]">
-                                            9245 East Wood Drive, SCOTTSDALE, AZ 85260
-                                        </span>
+
+                                        <div className="flex flex-col">
+                                            <div className="flex items-center gap-2 mt-[25px] sm:mt-0">
+                                                <img src="/usa.svg" alt="usa" />
+                                                <span className="text-[#323233] text-[16px]">United States</span>
+                                            </div>
+                                            <span className="text-[#323233] text-[15px] mt-1 max-w-[400px]">
+                                                9245 East Wood Drive, SCOTTSDALE, AZ 85260
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

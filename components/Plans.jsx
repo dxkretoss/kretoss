@@ -47,7 +47,7 @@ export default function Plans() {
             {/* Heading */}
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <h1
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#02021ECC] relative"
+                    className="text-[28px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] font-semibold text-[#02021ECC] relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     <span className="relative inline-block text-[#5D59EA]">
@@ -72,7 +72,7 @@ export default function Plans() {
                     return (
                         <div
                             key={plan.id}
-                            className={`w-full sm:w-[300px] md:w-[360px] lg:w-[400px] xl:w-[400px] 2xl:w-[487px] rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
+                            className={`w-full lg:w-[30%] rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
                                 ${isActive
                                     ? "border-[#5D59EA80] shadow-[0px_0px_25px_0px_#5D59EA99]"
                                     : "border-[#02021E33]"
@@ -83,19 +83,19 @@ export default function Plans() {
                                 alt={plan.name}
                                 className="bg-[#E1E0FF] rounded-full p-4 sm:p-5 w-20 h-20 "
                             />
-                            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#02021E] font-semibold mt-4 sm:mt-5">
+                            <span className="text-[18px] sm:text-[22px] md:text-[28px] 2xl:text-[38px] text-[#02021E] font-semibold mt-4 sm:mt-5">
                                 {plan.name}
                             </span>
 
                             {/* Price Section */}
                             <div
-                                className="h-20 sm:h-[83px] w-full mt-4 sm:mt-5 flex items-center justify-center"
+                                className="h-20 xl:h-[50px] 2xl:h-[83px] w-full mt-4 sm:mt-5 flex items-center justify-center"
                                 style={{
                                     background:
                                         "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(93, 89, 234, 0.2) 50.23%, rgba(255, 255, 255, 0) 100%)",
                                 }}
                             >
-                                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5D59EA]">
+                                <span className="text-[18px] sm:text-[22px] md:text-[28px] 2xl:text-[38px] font-bold text-[#5D59EA]">
                                     {plan.price}
                                 </span>
                                 <span className="text-lg sm:text-xl md:text-2xl font-medium text-[#02021E] ml-1">

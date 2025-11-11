@@ -11,9 +11,22 @@ export default function SuccessTogather() {
                 }}
             >
                 {/* Mission Floating Card */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 sm:-translate-x-0 sm:left-8 md:left-10 xl:-left-10">
+                <div
+                    className="
+                            absolute 
+                            -top-8 
+                            left-1/2 
+                            -translate-x-1/2 
+
+                            sm:left-8 sm:translate-x-0
+                            md:left-10
+                            lg:top-auto lg:-bottom-8
+                            xl:-left-10 xl:-translate-x-0
+                        "
+                >
+
                     <div
-                        className="relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[218px] h-[90px] sm:h-[95px] md:h-[100px] lg:h-[103px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
+                        className="relative w-[160px] lg:w-[180px] xl:w-[200px] 2xl:w-[218px] h-[65px] md:h-[80px] lg:h-[103px] bg-white rounded-[10px] flex flex-col items-center justify-center shadow-lg"
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
                     >
                         <img
@@ -21,11 +34,11 @@ export default function SuccessTogather() {
                             alt="Mission"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
-                        <div className="absolute top-8 flex flex-col items-center">
-                            <span className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[23px] font-bold text-[#020817] text-center">
+                        <div className="absolute top-5 md:top-8 flex flex-col items-center">
+                            <span className="text-[14px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
                                 Mission
                             </span>
-                            <span className="text-[#4B4D4C] text-[13px] sm:text-[14px] md:text-[15px]">
+                            <span className="text-[#4B4D4C] text-[12px] xl:text-[14px] 2xl:text-[15px]">
                                 Innovate. Develop. Deliver.
                             </span>
                         </div>

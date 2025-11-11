@@ -2,13 +2,11 @@ import React from "react";
 
 export default function TopHeader() {
     return (
-        <div className="bg-[#E6F0FF] h-[60px] flex items-center relative w-full">
+        <div className="bg-[#E6F0FF] h-[40px] xl:h-[50px] 2xl:h-[60px] flex items-center relative w-full">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center w-full relative">
 
-                    {/* Left Section */}
                     <div className="flex gap-4 items-center">
-                        {/* India */}
                         <div className="flex items-center gap-2">
                             <img src="/india.svg" alt="India" className="w-[20px] h-[20px]" />
                             <span className="text-[#222222] text-[13px] sm:text-[12px] whitespace-nowrap">
@@ -16,10 +14,8 @@ export default function TopHeader() {
                             </span>
                         </div>
 
-                        {/* Divider */}
                         <div className="h-6 w-[1px] bg-[#4C586F4D] hidden sm:block"></div>
 
-                        {/* USA */}
                         <div className="flex items-center gap-2">
                             <img src="/usa.svg" alt="USA" className="w-[20px] h-[20px]" />
                             <span className="text-[#222222] text-[13px] sm:text-[12px] whitespace-nowrap">
@@ -28,14 +24,12 @@ export default function TopHeader() {
                         </div>
                     </div>
 
-                    {/* Center Text (perfectly centered) */}
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 text-center max-w-[80%] md:max-w-none">
                         <span className="text-[#222222] text-[18px] md:text-[16px] sm:text-[14px] font-medium whitespace-nowrap">
                             “User Friendly Apps Tailored To Your Project”
                         </span>
                     </div>
 
-                    {/* Right Section */}
                     <div className="flex items-center gap-3">
                         <img
                             src="/call.svg"
