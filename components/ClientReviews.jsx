@@ -85,7 +85,7 @@ export default function ClientReviews() {
     return (
         <div className="container section max-auto container_content">
             <h1
-                className="max-w-[1100px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
+                className="max-w-[1100px] mx-auto text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] text-center relative"
                 style={{ fontFamily: "'Funnel Display', sans-serif" }}
             >
                 A Showcase of Our{" "}
@@ -121,7 +121,7 @@ export default function ClientReviews() {
                         >
                             {/* Left Text Section */}
                             <div className="w-full md:w-[55%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
-                                <h1 className="text-[36px] text-[#02021E] leading-[46px]">
+                                <h1 className="w-[65%] mx-auto md:w-full text-[26px] md:text-[36px] text-[#02021E] leading-[46px]">
                                     {review.title}
                                 </h1>
 
@@ -187,9 +187,10 @@ export default function ClientReviews() {
                 </div>
 
                 {/* Left Arrow */}
+                {/* Left Arrow */}
                 <button
                     onClick={handlePrev}
-                    className="absolute -left-8 top-1/2 -translate-y-1/2 bg-[#1A1A1A] border-5 border-[#FFFFFF] rounded-full p-5 cursor-pointer hover:scale-105 transition-transform"
+                    className="absolute top-10 left-4 md:top-1/2 md:-translate-y-1/2 md:-left-10 bg-[#1A1A1A] border-4 border-[#FFFFFF] rounded-full p-4 md:p-5 cursor-pointer hover:scale-105 transition-transform"
                     style={{
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
@@ -200,13 +201,14 @@ export default function ClientReviews() {
                 {/* Right Arrow */}
                 <button
                     onClick={handleNext}
-                    className="absolute -right-10 top-1/2 -translate-y-1/2 bg-[#1A1A1A] border-5 border-[#FFFFFF] rounded-full p-5 cursor-pointer hover:scale-105 transition-transform"
+                    className="absolute top-10 right-4 md:top-1/2 md:-translate-y-1/2 md:-right-10 bg-[#1A1A1A] border-4 border-[#FFFFFF] rounded-full p-4 md:p-5 cursor-pointer hover:scale-105 transition-transform"
                     style={{
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
                 >
                     <img src="/reviews/right.svg" alt="Next" />
                 </button>
+
 
             </div>
         </div>
