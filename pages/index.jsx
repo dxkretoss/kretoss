@@ -29,7 +29,7 @@ export default function index() {
       <Plans />
       <GlobalExp />
       <Devlopment />
-      {/* <SkillsSolutions /> */}
+      <SkillsSolutions />
       <IntoSuccess />
       <ClientReviews />
       <SuccessTogather />

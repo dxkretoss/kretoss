@@ -80,14 +80,14 @@ export default function SkillsSolutions() {
     const [activeTab, setActiveTab] = useState("App Development");
     return (
         <div
-            className="relative container mx-auto container_content section h-[777px] rounded-[24px]"
+            className="relative container mx-auto container_content section h-auto 2xl:h-[750px] rounded-[24px]"
             style={{
                 background: "linear-gradient(96.57deg, #FFFFFF 0.24%, #ECE6FF 99.76%)",
             }}
         >
-            <div className='max-w-[1290px] mx-auto pt-[113px]'>
+            <div className='max-w-[900px] 2xl:max-w-[1300px] mx-auto pt-[50px] 2xl:pt-[113px]'>
                 <h1
-                    className="max-w-[1290px] mx-auto text-[48px] font-semibold text-[#02021E] text-center relative"
+                    className="mx-auto text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] text-center relative"
                     style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     Our Skilled Developers Use Their Technical Expertise To Deliver {" "}
@@ -101,37 +101,6 @@ export default function SkillsSolutions() {
                     </span>{" "}
                     Solutions.
                 </h1>
-            </div>
-
-            <div className="relative">
-                <div className='relative z-10 max-w-[1460px] gap-2 px-[30px] py-[19px] mx-auto h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center'>
-                    {Object.keys(categories).map((tab) => (
-                        <button
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            className={`h-[61px] px-4 py-2 rounded-full text-[18px] cursor-pointer font-medium transition-all duration-300 ${activeTab === tab
-                                ? "bg-white text-[#5D59EA] shadow-md"
-                                : "hover:bg-[#6C68F5] text-white"
-                                }`}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-                </div>
-
-                <div className="relative z-0 w-[1197px] 2xl:w-[1397px] h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
-                    {categories[activeTab].map((item) => (
-                        <div
-                            key={item.name}
-                            className="flex flex-col items-center gap-2 text-gray-700"
-                        >
-                            <div className='w-[80px] h-[80px] flex justify-center items-center bg-[#FFFFFF] border border-[#02021E33] shadow-[#9E9E9E40] rounded-full px-5 py-4'>
-                                <img src={item.icon} />
-                            </div>
-                            <span className="text-[20px] font-medium text-[#02021E] mt-[11px]">{item.name}</span>
-                        </div>
-                    ))}
-                </div>
             </div>
 
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 lg:left-20 2xl:-top-5 2xl:left-20">
@@ -150,6 +119,37 @@ export default function SkillsSolutions() {
                 </div>
             </div>
 
+            <div className="relative pb-[50px] overflow-visible">
+                <div className="relative z-10 max-w-[1460px] gap-2 px-[30px] py-[19px] mx-auto h-[80px] 2xl:h-[100px] rounded-[100px] bg-[#5D59EA] mt-[50px] flex justify-between items-center overflow-x-auto overflow-y-hidden scrollbar-hide">
+                    {Object.keys(categories).map((tab) => (
+                        <button
+                            key={tab}
+                            onClick={() => setActiveTab(tab)}
+                            className={`h-[51px] 2xl:h-[61px] px-4 py-2 rounded-full text-[14px] xl:text-[16px] 2xl:text-[18px] cursor-pointer font-medium whitespace-nowrap transition-all duration-300 ${activeTab === tab
+                                ? "bg-white text-[#5D59EA] shadow-md"
+                                : "hover:bg-[#6C68F5] text-white"
+                                }`}
+                        >
+                            {tab}
+                        </button>
+                    ))}
+                </div>
+
+
+                <div className="relative z-0 w-[85%] 2xl:w-[85%] h-auto 2xl:h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
+                    {categories[activeTab].map((item) => (
+                        <div
+                            key={item.name}
+                            className="flex flex-col items-center gap-2 text-gray-700"
+                        >
+                            <div className='w-[60px] h-[60px] 2xl:w-[80px] 2xl:h-[80px] flex justify-center items-center bg-[#FFFFFF] border border-[#02021E33] shadow-[#9E9E9E40] rounded-full px-3 py-2 2xl:px-5 2xl:py-4'>
+                                <img src={item.icon} />
+                            </div>
+                            <span className="text-[14px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px]">{item.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
