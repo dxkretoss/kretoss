@@ -66,79 +66,13 @@ button {
   cursor: pointer;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  display: flex;
-  width: max-content;
-  animation: scroll 10s linear infinite;
-}
-
-.scroll-container {
-  overflow: hidden;
-  width: 100%;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-}
-
-.scroll-content {
-  display: flex;
-  width: max-content;
-  animation: scroll 10s linear infinite;
-}
-
-.scroll-content::after {
-  content: attr(data-duplicate);
-  display: flex;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll 10s linear infinite;
-}
-
-.scroll-track {
-  width: max-content;
-  display: flex;
-  align-items: start;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-height: 136px;
-  padding: 20px;
-}
-
 .right-aero {
-  top: 370px;
+  top: 280px;
   left: -30px;
 }
 
 .left-aero {
-  top: 370px;
+  top: 280px;
   right: -30px;
 }
 
@@ -164,4 +98,30 @@ button {
     format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-seamless 20s linear infinite;
+  will-change: transform;
+}
+
+/* The secret: translate full width, not 50% */
+@keyframes scroll-seamless {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

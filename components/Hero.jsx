@@ -96,16 +96,16 @@ export default function Hero() {
                         <img
                             src="/assets/images/mobile-app/clock.svg"
                             loading="lazy"
-                            className="ml-[3px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
+                            className="ml-[5px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
                         />
-                        <span className="text-[#02021E] text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-2">
+                        <span className="text-[#02021E] text-[16px] md:text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-1">
                             $22.00/
                         </span>
-                        <span className="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] ml-1">
+                        <span className="text-[#222222] text-[14px] 2xl:text-[18px] ml-1 items-end">
                             hour
                         </span>
                         <button
-                            className="hidden ml-[5px] 2xl:ml-[15px] sm:w-auto sm:mt-0 xl:flex gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
+                            className="hidden ml-[10px] 2xl:ml-[15px] sm:w-auto sm:mt-0 xl:flex gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
                             style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
                         >
                             Hire Mobile App Developer
@@ -149,7 +149,7 @@ export default function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-8 text-[#FFFFFF]">
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-8 mt-[30px] text-[#FFFFFF]">
                         <p className="text-[20px] sm:text-[24px] md:text-[28px] font-light">
                             <span className="font-bold">Trusted</span> by:
                         </p>
@@ -162,7 +162,7 @@ export default function Hero() {
                             ].map((src, index) => (
                                 <div
                                     key={index}
-                                    className={`flex items-center px-[10px] sm:px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
+                                    className={`flex items-center p-[5px] sm:px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
                                         }`}
                                 >
                                     <img

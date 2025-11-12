@@ -43,7 +43,7 @@ export default function ScalableSection() {
         <div
             className="container section container_content overflow-hidden"
         >
-            <div className='flex flex-col lg:flex-row gap-5 h-[800px] rounded-[24px]'
+            <div className='flex flex-col lg:flex-row gap-5 h-[1000px] sm:h-[800px] rounded-[24px]'
                 style={{
                     background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #F8F8F8 99.76%)",
                 }}>
@@ -73,13 +73,22 @@ export default function ScalableSection() {
                     </div>
 
                     <div className='lg:hidden flex overflow-hidden'>
-                        <div className="scroll-container mt-[20px]">
-                            <div className="scroll-content">
-                                {stats.map((item, index) => (
-                                    <div key={index} className="item">
-                                        <img src={item.icon} alt="" loading="lazy" />
-                                        <p className="text-[28px] font-semibold text[#000000] mt-[5px] value">{item.prefix}{item.value}{item.suffix}</p>
-                                        <p className="label text-[#000000] text-[15px]">{item.label}</p>
+                        <div className="overflow-hidden">
+                            <div className="flex gap-6 mt-[40px] marquee-track">
+                                {[...stats, ...stats].map((item, index) => (
+                                    <div key={index} className="flex flex-col items-center shrink-0">
+                                        <img
+                                            src={item.icon}
+                                            alt=""
+                                            loading="lazy"
+                                            className="w-12 h-12"
+                                        />
+                                        <p className="text-[28px] font-semibold text-[#000000] mt-[5px]">
+                                            {item.prefix}
+                                            {item.value}
+                                            {item.suffix}
+                                        </p>
+                                        <p className="text-[#000000] text-[15px]">{item.label}</p>
                                     </div>
                                 ))}
                             </div>
@@ -87,7 +96,7 @@ export default function ScalableSection() {
                     </div>
 
                     <div className='lg:hidden  flex justify-center'>
-                        <button className="w-[270px] h-[61px] mt-[10px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
+                        <button className="w-[270px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
                             style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
                             Hire App Developer
                             <MoveRight />
@@ -138,13 +147,17 @@ export default function ScalableSection() {
                 </div>
 
                 <div className="flex lg:hidden justify-center overflow-hidden">
-                    <div className="scroll-track flex gap-4 animate-scroll">
-                        {images.map((src, i) => (
-                            <img key={i} src={src} loading="lazy" alt={`mobile-${i}`} className="w-auto h-[400px]" />
-                        ))}
-                        {images.map((src, i) => (
-                            <img key={`dup-${i}`} loading="lazy" src={src} alt={`mobile-dup-${i}`} className="w-auto h-[400px]" />
-                        ))}
+                    <div className="relative w-full overflow-hidden h-[400px]">
+                        <div className="marquee-track">
+                            {[...images, ...images,].map((src, i) => (
+                                <img
+                                    key={i}
+                                    src={src}
+                                    alt={`scroll-${i}`}
+                                    className="h-[400px] w-auto shrink-0"
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 

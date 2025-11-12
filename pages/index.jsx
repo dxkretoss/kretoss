@@ -23,9 +23,13 @@ export default function index() {
       <TopHeader />
       <Header />
       <Hero />
-      <ScalableSection />
+      <div id="about">
+        <ScalableSection />
+      </div>
       <Solution />
-      <Support />
+      <div id="services">
+        <Support />
+      </div>
       <Plans />
       <GlobalExp />
       <Devlopment />
@@ -36,7 +40,9 @@ export default function index() {
       <ProcessHire />
       <WhyKretoss />
       <Faqs />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </>
   )

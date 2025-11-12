@@ -11,7 +11,7 @@ export default function ClientReviews() {
             ),
             appUsed: ["Flutter", "NodeJS", "GCP", "Socket.IO"],
             description:
-                "Our fashion app came out better than we could have imagined. The performance is smooth, the UI stunning, and the checkout flow flawless. The Kretoss team went above and beyond — we got constant updates and quick responses. Highly recommended!",
+                "The Kretoss team transformed our fashion vision into a smooth, high-performing app. The design feels premium, checkout is seamless, and performance is flawless. We appreciated their communication and commitment throughout the project.",
             rating: 5,
             clientImage: "/assets/images/mobile-app/reviews/client-2.jpg",
             clientName: "Samantha Miller",
@@ -21,12 +21,12 @@ export default function ClientReviews() {
         {
             title: (
                 <>
-                    Modern <b>App Store Experience</b> Designed for <b>Drawn Dating</b>
+                    Modern <b>App Experience</b> Designed for <b>Drawn Dating</b>
                 </>
             ),
             appUsed: ["React Native"],
             description:
-                "The design is clean, user-friendly, and perfectly aligns with our brand vision. Everything was executed with attention to detail, and the functionality works seamlessly. The team was professional, responsive, and delivered the project on time. We couldn't be happier with the outcome—thank you for bringing our ideas to life!",
+                "Working with Kretoss was a great experience. The app design is modern, clean, and perfectly matches our brand. Every feature works seamlessly, and the delivery was right on schedule. Highly recommended for reliable development work.",
             rating: 4,
             clientImage: "/assets/images/mobile-app/reviews/client-1.jpg",
             clientName: "Ethan Collins",
@@ -41,7 +41,7 @@ export default function ClientReviews() {
             ),
             appUsed: ["Flutter", "NodeJS", "MongoDB", "Socket.IO"],
             description:
-                "This is by far the best app experience I've had! The design is sleek, user- friendly, and truly captures the essence of my brand. The team was incredibly professional, attentive to details, and delivered beyond my expectations. I no longer need to look for another team—they are simply the best! Highly recommended for anyone looking to build a stunning App! 👏👏👏",
+                "Kretoss built a luxury e-commerce app that perfectly represents our brand. The visuals are elegant, navigation is intuitive, and performance is top-notch. Their team’s professionalism and attention to detail made the process effortless.",
             rating: 4,
             clientImage: "/assets/images/mobile-app/reviews/client-4.jpg",
             clientName: "Rebekah Johnson",
@@ -51,12 +51,12 @@ export default function ClientReviews() {
         {
             title: (
                 <>
-                    Innovative <b>Mobile Store</b> Built for <b>Roamaly Travel App</b>
+                    Innovative <b>Mobile App</b> Built for <b>Roamaly Travel App</b>
                 </>
             ),
             appUsed: ["Flutter", "Shopify"],
             description:
-                "Kretoss technology did an EXCEPTIONAL job with my website—professional, bug-free, and detailed to perfection! Their quick responsiveness and going above and beyond made the entire process smooth and stress- free.Highly recommend working with them! 🙌",
+                "The Kretoss team exceeded our expectations with a creative and high-quality travel app. Every detail was handled professionally, from UI design to backend setup. The experience was smooth, responsive, and truly impressive.",
             rating: 4,
             clientImage: "/assets/images/mobile-app/reviews/client-5.jpg",
             clientName: "Lucas Bennett",
@@ -71,7 +71,7 @@ export default function ClientReviews() {
             ),
             appUsed: ["Flutter", "Laravel", "MySQL"],
             description:
-                "I have been working more than 10 years and this is the first time I have work with this amazing team and I can say is I never have to find another team again for any future task this is a team from heaven.I highly recommend anyone to put your trust in this team absolutely the best 👏👏👏",
+                "Kretoss delivered a flawless wellness app that perfectly captures our mission. Their expertise, communication, and design approach made development effortless. I’m confident this is the team for all our future projects.",
             rating: 4,
             clientImage: "/assets/images/mobile-app/reviews/client-2.jpg",
             clientName: "Olivia Carter",
@@ -79,6 +79,7 @@ export default function ClientReviews() {
             reviewImage: "/assets/images/mobile-app/reviews/review6.png",
         },
     ];
+
 
 
     const [current, setCurrent] = useState(0);
@@ -133,7 +134,7 @@ export default function ClientReviews() {
 
             <div className="relative mt-[60px] flex justify-center">
                 <div
-                    className="rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
+                    className="h-[350px] md:h-[600px] rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
                     style={{
                         background:
                             "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
@@ -149,13 +150,13 @@ export default function ClientReviews() {
                             exit="exit"
                             className="flex flex-col lg:flex-row"
                         >
-                            <div className="w-full lg:w-[55%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
-                                <h1 className="w-[65%] mx-auto lg:w-full text-[26px] md:text-[36px] text-[#02021E] leading-[46px]">
+                            <div className="w-full lg:w-[45%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
+                                <h1 className="w-[65%] mx-auto lg:w-full text-[22px] md:text-[32px] text-[#02021E] leading-[46px]">
                                     {review.title}
                                 </h1>
 
                                 <div className="flex items-center mt-[9px]">
-                                    <p className="text-[16px] font-bold flex flex-wrap gap-2 mt-2">
+                                    <p className="text-[14px] font-bold flex flex-wrap gap-2 mt-2">
                                         {review.appUsed.map((tech, index) => (
                                             <span
                                                 key={index}
@@ -169,7 +170,7 @@ export default function ClientReviews() {
                                 </div>
 
                                 <div className="mt-[22px]">
-                                    <p className="text-[14px] md:text-[16px] text-[#000000CC] max-w-[480px] leading-[28px]">
+                                    <p className="text-[14px] 2xl:text-[16px] text-[#000000CC] max-w-[480px] leading-[28px]">
                                         “{review.description}”
                                     </p>
                                 </div>
@@ -185,7 +186,7 @@ export default function ClientReviews() {
                                                     : "/assets/images/mobile-app/reviews/unfillstar.svg"
                                             }
                                             alt="star"
-                                            className="w-[24px] h-[24px]"
+                                            className="w-[20px] h-[20px]"
                                         />
                                     ))}
                                 </div>
@@ -208,7 +209,7 @@ export default function ClientReviews() {
                                 </div>
                             </div>
 
-                            <div className="max-w-[872px] h-[354px] md:h-[754px]">
+                            <div className="w-full lg:w-[60%]">
                                 <img
                                     src={review.reviewImage}
                                     loading="lazy"

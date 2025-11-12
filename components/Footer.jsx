@@ -26,16 +26,26 @@ export default function Footer() {
 
                     {/* Right Content */}
                     <div className="flex-1">
-                        {/* Nav Links */}
                         <nav className="flex flex-wrap justify-start md:justify-between lg:justify-start gap-4 sm:gap-6 md:gap-10 xl:gap-14 2xl:gap-20 mt-2 md:mt-4">
-                            {["About Us", "Services", "Hire Resources", "Industries", "Contact Us"].map((link, i) => (
-                                <a
+                            {[
+                                { label: "About Us", target: "about" },
+                                { label: "Services", target: "services" },
+                                { label: "Hire Resources", target: "hire" },
+                                { label: "Industries", target: "industries" },
+                                { label: "Contact Us", target: "contact" },
+                            ].map((link, i) => (
+                                <button
                                     key={i}
-                                    href="#"
-                                    className="text-white text-[14px] lg:text-[18px] 2xl:text-[22px] hover:text-[#A9A7FF] transition-all"
+                                    onClick={() => {
+                                        const section = document.getElementById(link.target);
+                                        if (section) {
+                                            section.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                    }}
+                                    className="text-white text-[14px] lg:text-[18px] 2xl:text-[22px] hover:text-[#A9A7FF] transition-all bg-transparent border-none outline-none cursor-pointer"
                                 >
-                                    {link}
-                                </a>
+                                    {link.label}
+                                </button>
                             ))}
                         </nav>
 
@@ -44,7 +54,7 @@ export default function Footer() {
                         {/* Bottom Section */}
                         <div className="mt-6 sm:mt-8 flex flex-col xl:flex-row justify-between gap-8 sm:gap-10 xl:gap-16 2xl:gap-20">
                             {/* Social Media */}
-                            <div>
+                            <div className="flex flex-col items-center lg:items-start">
                                 <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px] font-medium text-white">
                                     Social Media
                                 </h3>
@@ -71,13 +81,13 @@ export default function Footer() {
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    {/* <a href="#" target="_blank" rel="noopener noreferrer">
                                         <img
                                             src="/assets/images/mobile-app//footer/x.svg"
                                             alt="X / Twitter"
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
-                                    </a>
+                                    </a> */}
                                     <a
                                         href="https://www.instagram.com/kretoss_technology_/"
                                         target="_blank"
@@ -94,10 +104,15 @@ export default function Footer() {
 
                             {/* Newsletter */}
                             <div className="flex flex-col w-full xl:w-auto">
-                                <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px]  font-medium text-white">
+                                {/* <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px]  font-medium text-white">
                                     Subscribe To Our Newsletter
-                                </h3>
-                                <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
+                                </h3> */}
+                                <div className="mt-6 sm:mt-12 text-center">
+                                    <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
+                                        © 2025 | Designed By Kretoss Technology.
+                                    </p>
+                                </div>
+                                {/* <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
                                     <input
                                         type="email"
                                         placeholder="Enter your email"
@@ -109,7 +124,7 @@ export default function Footer() {
                                     >
                                         Submit
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -143,12 +158,12 @@ export default function Footer() {
                 </div>
 
                 {/* Divider & Copyright */}
-                <hr className="mt-10 sm:mt-12 border-t border-[#FFFFFF4D]" />
+                {/* <hr className="mt-10 sm:mt-12 border-t border-[#FFFFFF4D]" />
                 <div className="mt-6 sm:mt-8 text-center">
                     <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
                         © 2025 | Designed By Kretoss Technology.
                     </p>
-                </div>
+                </div> */}
             </div>
         </footer>
     );

@@ -35,19 +35,28 @@ export default function Header() {
 
                 <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 text-center">
                     <ul className="flex items-center gap-8 text-[#222222] text-[16px] font-medium">
-                        {["About Us", "Services", "Hire Resources", "Industries", "Contact Us"].map(
-                            (item, index) => (
-                                <li key={index}>
-                                    <a
-                                        href="#"
-                                        className="relative group transition"
-                                    >
-                                        {item}
-                                        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
-                                    </a>
-                                </li>
-                            )
-                        )}
+                        {[
+                            { label: "About Us", target: "about" },
+                            { label: "Services", target: "services" },
+                            { label: "Hire Resources", target: "hire" },
+                            { label: "Industries", target: "industries" },
+                            { label: "Contact Us", target: "contact" },
+                        ].map((item, index) => (
+                            <li key={index}>
+                                <button
+                                    onClick={() => {
+                                        const section = document.getElementById(item.target);
+                                        if (section) {
+                                            section.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                    }}
+                                    className="relative group transition bg-transparent border-none outline-none cursor-pointer"
+                                >
+                                    {item.label}
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+                                </button>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
