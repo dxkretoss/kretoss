@@ -78,13 +78,13 @@ button {
 
 @media (max-width: 1024px) {
   .right-aero {
-    top: 50px;
-    left: 20px;
+    top: -30px;
+    left: 50px;
   }
 
   .left-aero {
-    top: 50px;
-    right: 20px;
+    top: -30px;
+    right: 50px;
   }
 }
 

@@ -134,7 +134,7 @@ export default function ClientReviews() {
 
             <div className="relative mt-[60px] flex justify-center">
                 <div
-                    className="h-[350px] md:h-[600px] rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
+                    className="h-full md:h-[600px] rounded-[16px] transition-all duration-500 ease-in-out overflow-hidden"
                     style={{
                         background:
                             "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
@@ -151,7 +151,7 @@ export default function ClientReviews() {
                             className="flex flex-col lg:flex-row"
                         >
                             <div className="w-full lg:w-[45%] px-[20px] py-[30px] md:px-[70px] md:py-[90px] flex flex-col justify-center">
-                                <h1 className="w-[65%] mx-auto lg:w-full text-[22px] md:text-[32px] text-[#02021E] leading-[46px]">
+                                <h1 className="w-full text-[22px] md:text-[32px] text-[#02021E] leading-[46px]">
                                     {review.title}
                                 </h1>
 
