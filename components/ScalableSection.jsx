@@ -64,7 +64,13 @@ export default function ScalableSection() {
                         Apps
                     </h1>
 
-                    <span className='mt-[10px] text-center md:text-left'>Hire mobile app developers who bring expertise, creativity, and technical excellence to every project. Our team builds scalable, innovative apps designed to grow with your business. Turn your vision into a high-performance digital solution.</span>
+                    <div className='mt-[20px]'>
+                        <span className='text-center md:text-left'>
+                            Hire mobile app developers who bring expertise, creativity, and technical
+                            excellence to every project. Our team builds scalable, innovative apps designed to
+                            grow with your business. Turn your vision into a high-performance digital solution.
+                        </span>
+                    </div>
 
                     <div className='lg:hidden flex overflow-hidden'>
                         <div className="scroll-container mt-[20px]">

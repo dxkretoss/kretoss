@@ -1,10 +1,11 @@
 import { useState } from 'react';
-
+import { useRouter } from 'next/router';
 export default function Contact() {
-    const [showThankYou, setShowThankYou] = useState(false);
+    const router = useRouter();
+    // const [showThankYou, setShowThankYou] = useState(false);
 
-    const handleSend = () => setShowThankYou(true);
-    const closePopup = () => setShowThankYou(false);
+    // const handleSend = () => setShowThankYou(true);
+    // const closePopup = () => setShowThankYou(false);
 
     return (
         <div
@@ -82,7 +83,7 @@ export default function Contact() {
                             </div>
 
                             <button
-                                onClick={handleSend}
+                                onClick={() => router.push('thankyou')}
                                 className="w-[160px] sm:w-[180px] h-[48px] sm:h-[50px] rounded-[8px] bg-[#5D59EA] text-white font-semibold hover:bg-[#4a46d4] transition-all shadow-[0_4px_10px_rgba(93,89,234,0.4)] cursor-pointer"
                             >
                                 Send Message
@@ -157,32 +158,6 @@ export default function Contact() {
                 </div>
             </div>
 
-            {showThankYou && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-                    <div className="bg-white w-[90%] sm:w-[450px] rounded-[12px] p-8 shadow-lg relative">
-                        <button
-                            onClick={closePopup}
-                            className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
-                        >
-                            ✕
-                        </button>
-                        <div className="text-center py-6 sm:py-10">
-                            <img
-                                src="/assets/images/mobile-app/thanks.svg"
-                                alt="Thank You"
-                                loading="lazy"
-                                className="mx-auto w-[60px] sm:w-[80px] mb-4"
-                            />
-                            {/* <h3 className="text-[20px] sm:text-[22px] font-semibold text-[#02021E]">
-                                Thank You!
-                            </h3> */}
-                            <p className="text-gray-600 mt-2 text-[15px] sm:text-[16px]">
-                                We’ll get back to you shortly.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

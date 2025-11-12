@@ -76,7 +76,7 @@ export default function Support() {
 
                 </div>
 
-                <div className="max-w-[700px] mx-auto text-center mt-[20px]">
+                <div className="max-w-[850px] mx-auto text-center mt-[20px]">
                     <span>
                         Hire mobile app Developers  with expertise in custom app development, end-to-end full-stack solutions,
                         enterprise applications, and cross-platform mobile development. We deliver reliable, efficient,

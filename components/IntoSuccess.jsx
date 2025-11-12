@@ -57,11 +57,11 @@ export default function IntoSuccess() {
                             <h2 className="text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[26px] text-white font-bold uppercase">
                                 {card.title}
                             </h2>
-                            <p className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
+                            <p className="text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[22px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
                                 {card.subtitle}
                             </p>
 
-                            <p className="text-[14px] 2xl:text-[16px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
+                            <p className="text-[14px] xl:text-[15px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
                                 {card.shortDesc}
                             </p>
                         </div>

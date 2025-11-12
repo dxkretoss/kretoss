@@ -155,10 +155,10 @@ export default function Hero() {
                         </p>
                         <div className="flex flex-wrap items-center">
                             {[
-                                "/assets/images/mobile-app/trusted/emaar.png",
-                                "/assets/images/mobile-app/trusted/google.png",
-                                "/assets/images/mobile-app/trusted/npci.png",
-                                "/assets/images/mobile-app/trusted/astral.png",
+                                "/assets/images/mobile-app/trusted/trusted-1.svg",
+                                "/assets/images/mobile-app/trusted/trusted-2.svg",
+                                "/assets/images/mobile-app/trusted/trusted-3.svg",
+                                "/assets/images/mobile-app/trusted/trusted-4.svg",
                             ].map((src, index) => (
                                 <div
                                     key={index}

@@ -104,7 +104,7 @@ export default function Plans() {
                                 </span>
                             </div>
 
-                            <span className="mt-4 text-center text-[14px] 2xl:text-[16px]">
+                            <span className="mt-4 text-center text-[16px]">
                                 {plan.shortDesc}
                             </span>
 
