@@ -114,14 +114,27 @@ html {
   width: max-content;
   animation: scroll-seamless 20s linear infinite;
   will-change: transform;
+  -webkit-transform: translateZ(0); /* Force GPU rendering */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-/* The secret: translate full width, not 50% */
 @keyframes scroll-seamless {
   from {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(
+      -50%
+    ); /* Use -50% instead of -100% for doubled content */
+    -webkit-transform: translateX(-50%);
+  }
+}
+
+@supports not (width: max-content) {
+  .marquee-track {
+    width: fit-content; /* Fallback for Safari */
   }
 }

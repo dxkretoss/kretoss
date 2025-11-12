@@ -149,7 +149,7 @@ export default function ScalableSection() {
                 <div className="flex lg:hidden justify-center overflow-hidden">
                     <div className="relative w-full overflow-hidden h-[400px]">
                         <div className="marquee-track">
-                            {[...images, ...images,].map((src, i) => (
+                            {[...images, ...images].map((src, i) => (
                                 <img
                                     key={i}
                                     src={src}

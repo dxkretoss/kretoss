@@ -149,11 +149,11 @@ export default function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-8 mt-[30px] text-[#FFFFFF]">
-                        <p className="text-[20px] sm:text-[24px] md:text-[28px] font-light">
+                    <div className="flex  items-center gap-4 mt-[30px] text-[#FFFFFF]">
+                        <p className="text-[14px] sm:text-[24px] md:text-[28px] font-light">
                             <span className="font-bold">Trusted</span> by:
                         </p>
-                        <div className="flex flex-wrap items-center">
+                        <div className="flex  items-center">
                             {[
                                 "/assets/images/mobile-app/trusted/trusted-1.svg",
                                 "/assets/images/mobile-app/trusted/trusted-2.svg",
@@ -168,7 +168,7 @@ export default function Hero() {
                                     <img
                                         src={src}
                                         loading="lazy"
-                                        className="w-[70px] sm:w-[100px] h-[35px] sm:h-[50px]"
+                                        className="w-[50px] sm:w-[100px] h-[35px] sm:h-[50px]"
                                         alt="trusted brand"
                                     />
                                 </div>
