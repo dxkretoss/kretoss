@@ -7,7 +7,8 @@ export default function Plans() {
             name: "Monthly Plan",
             price: "$2499.00",
             duration: "/Month",
-            img: "/plans/monthly.svg",
+            shortDesc: "Hire best app developers on a flexible monthly plan designed to support ongoing development, updates, and feature enhancements. Ideal for businesses that need continuous support without long-term commitments.",
+            img: "/assets/images/mobile-app/plans/monthly.svg",
             features: [
                 "Dedicated developer time",
                 "Weekly sprints & demos",
@@ -19,7 +20,8 @@ export default function Plans() {
             name: "Quarterly Plan",
             price: "$6999.00",
             duration: "/Quarter",
-            img: "/plans/qurter.svg",
+            shortDesc: "Hire mobile app developers on a quarterly basis for strategic development cycles, improved planning, and consistent progress. Perfect for scaling projects with predictable timelines and smooth execution.",
+            img: "/assets/images/mobile-app/plans/qurter.svg",
             features: [
                 "Product roadmap support",
                 "Bi-weekly milestones",
@@ -31,7 +33,8 @@ export default function Plans() {
             name: "Yearly Plan",
             price: "$19,999.00",
             duration: "/Year",
-            img: "/plans/yearly.svg",
+            shortDesc: "Hire mobile app developers with a yearly plan to maximize value, optimize performance, and ensure long-term stability. Best for businesses committed to continuous innovation and sustained growth.",
+            img: "/assets/images/mobile-app/plans/yearly.svg",
             features: [
                 "Dedicated team",
                 "Full-cycle delivery",
@@ -43,17 +46,16 @@ export default function Plans() {
     const [activePlan, setActivePlan] = useState("Quarterly Plan");
 
     return (
-        <div className="container section container_content mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
-            {/* Heading */}
+        <div className="relative container section container_content mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <h1
                     className="text-[28px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] font-semibold text-[#02021ECC] relative"
-                    style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     <span className="relative inline-block text-[#5D59EA]">
                         Estimated Cost
                         <img
-                            src="/underline.svg"
+                            src="/assets/images/mobile-app/underline.svg"
+                            loading="lazy"
                             alt=""
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3"
                         />
@@ -65,8 +67,7 @@ export default function Plans() {
                 </p>
             </div>
 
-            {/* Plans Grid */}
-            <div className="mt-10 sm:mt-16 flex flex-wrap justify-center gap-6">
+            <div className="relative z-10 mt-10 sm:mt-16 flex flex-wrap justify-center gap-6">
                 {plans.map((plan) => {
                     const isActive = plan.name === activePlan;
                     return (
@@ -81,13 +82,13 @@ export default function Plans() {
                             <img
                                 src={plan.img}
                                 alt={plan.name}
+                                loading="lazy"
                                 className="bg-[#E1E0FF] rounded-full p-4 sm:p-5 w-20 h-20 "
                             />
                             <span className="text-[18px] sm:text-[22px] md:text-[28px] 2xl:text-[38px] text-[#02021E] font-semibold mt-4 sm:mt-5">
                                 {plan.name}
                             </span>
 
-                            {/* Price Section */}
                             <div
                                 className="h-20 xl:h-[50px] 2xl:h-[83px] w-full mt-4 sm:mt-5 flex items-center justify-center"
                                 style={{
@@ -103,33 +104,37 @@ export default function Plans() {
                                 </span>
                             </div>
 
-                            {/* Features */}
+                            <span className="mt-4 text-center text-[14px] 2xl:text-[16px]">
+                                {plan.shortDesc}
+                            </span>
+
                             <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-sm sm:text-base md:text-lg">
                                 {plan.features.map((feature, index) => (
                                     <li key={index}>{feature}</li>
                                 ))}
                             </ul>
 
-                            {/* Button */}
                             <button
                                 onClick={() => setActivePlan(plan.name)}
                                 className={`mt-4 sm:mt-6 w-full h-12 sm:h-[60px] text-sm sm:text-[20px] rounded-full transition-all duration-300 flex items-center justify-center
                                     ${isActive
                                         ? "bg-[#5D59EA] text-white"
-                                        : "border border-[#5D59EA] text-[#5D59EA] bg-transparent"
+                                        : "button-border border border-[#5D59EA] text-[#5D59EA] bg-transparent"
                                     }`}
                                 style={isActive ? { boxShadow: "0px 0px 22px 0px #5D59EA99" } : undefined}
                             >
                                 Hire {plan.name.split(" ")[0]}
                             </button>
 
-                            <span className="text-[#02021ECC] text-xs sm:text-sm mt-3 text-center">
+                            {/* <span className="text-[#02021ECC] text-xs sm:text-sm mt-3 text-center">
                                 * Prices are starting estimates and may vary based on scope.
-                            </span>
+                            </span> */}
                         </div>
                     );
                 })}
             </div>
+
+            <div className=" w-[122px] h-[229px] bg-[#0060F0] rounded-[144px] blur-[182px] absolute bottom-[10px] right-0"></div>
         </div>
     );
 }

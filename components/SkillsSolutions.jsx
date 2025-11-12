@@ -4,76 +4,76 @@ export default function SkillsSolutions() {
 
     const categories = {
         "App Development": [
-            { name: "iOS", icon: "/skills/ios.svg" },
-            { name: "Android", icon: "/skills/android.svg" },
-            { name: "Swift", icon: "/skills/swift.svg" },
-            { name: "Kotlin", icon: "/skills/kotlin.svg" },
-            { name: "Flutter", icon: "/skills/flutter.svg" },
-            { name: "Python", icon: "/skills/python.svg" },
+            { name: "iOS", icon: "/assets/images/mobile-app/skills/ios.svg" },
+            { name: "Android", icon: "/assets/images/mobile-app/skills/android.svg" },
+            { name: "Swift", icon: "/assets/images/mobile-app/skills/swift.svg" },
+            { name: "Kotlin", icon: "/assets/images/mobile-app/skills/kotlin.svg" },
+            { name: "Flutter", icon: "/assets/images/mobile-app/skills/flutter.svg" },
+            { name: "Python", icon: "/assets/images/mobile-app/skills/python.svg" },
         ],
         "Web Development": [
-            { name: "NodeJS", icon: "/skills/nodejs.svg" },
-            { name: "PHP", icon: "/skills/php.svg" },
-            { name: "Codeigniter", icon: "/skills/codeigniter.svg" },
-            { name: "Laravel", icon: "/skills/laravel.svg" },
-            { name: "Java Spring Boot", icon: "/skills/spring.svg" },
-            { name: "Python", icon: "/skills/python1.svg" },
+            { name: "NodeJS", icon: "/assets/images/mobile-app/skills/nodejs.svg" },
+            { name: "PHP", icon: "/assets/images/mobile-app/skills/php.svg" },
+            { name: "Codeigniter", icon: "/assets/images/mobile-app/skills/codeIgniter.svg" },
+            { name: "Laravel", icon: "/assets/images/mobile-app/skills/laravel.svg" },
+            { name: "Java Spring Boot", icon: "/assets/images/mobile-app/skills/spring.svg" },
+            { name: "Python", icon: "/assets/images/mobile-app/skills/python1.svg" },
         ],
         "Front-End": [
-            { name: "Angular", icon: "/skills/angular.svg" },
-            { name: "React JS", icon: "/skills/React.svg" },
-            { name: "Knockout JS", icon: "/skills/knock.svg" },
-            { name: "Express JS", icon: "/skills/express.svg" },
-            { name: "Vue.js", icon: "/skills/Vue.js.svg" },
-            { name: "Svelte", icon: "/skills/Svelte.svg" },
+            { name: "Angular", icon: "/assets/images/mobile-app/skills/angular.svg" },
+            { name: "React JS", icon: "/assets/images/mobile-app/skills/React.svg" },
+            { name: "Knockout JS", icon: "/assets/images/mobile-app/skills/knock.svg" },
+            { name: "Express JS", icon: "/assets/images/mobile-app/skills/express.svg" },
+            { name: "Vue.js", icon: "/assets/images/mobile-app/skills/Vue.js.svg" },
+            { name: "Svelte", icon: "/assets/images/mobile-app/skills/Svelte.svg" },
         ],
         "Back-End": [
-            { name: "NodeJS", icon: "/skills/nodejs.svg" },
-            { name: "Python", icon: "/skills/python1.svg" },
-            { name: "Java", icon: "/skills/java.svg" },
-            { name: "Express JS", icon: "/skills/express.svg" },
-            { name: "Spring", icon: "/skills/spring.svg" },
-            { name: "Laravel", icon: "/skills/laravel.svg" },
+            { name: "NodeJS", icon: "/assets/images/mobile-app/skills/nodejs.svg" },
+            { name: "Python", icon: "/assets/images/mobile-app/skills/python1.svg" },
+            { name: "Java", icon: "/assets/images/mobile-app/skills/java.svg" },
+            { name: "Express JS", icon: "/assets/images/mobile-app/skills/express.svg" },
+            { name: "Spring", icon: "/assets/images/mobile-app/skills/spring.svg" },
+            { name: "Laravel", icon: "/assets/images/mobile-app/skills/laravel.svg" },
         ],
         Microsoft: [
-            { name: "ASP.NET", icon: "/skills/dontnet.svg" },
-            { name: "C#", icon: "/skills/c.svg" },
-            { name: "ASP.NET Core", icon: "/skills/NET_Core.svg" },
-            { name: "GitHub", icon: "/skills/git.svg" },
-            { name: "SQL", icon: "/skills/Sql_data.svg" },
-            { name: "Power Apps", icon: "/skills/Powerapps.svg" },
+            { name: "ASP.NET", icon: "/assets/images/mobile-app/skills/dontnet.svg" },
+            { name: "C#", icon: "/assets/images/mobile-app/skills/c.svg" },
+            { name: "ASP.NET Core", icon: "/assets/images/mobile-app/skills/NET_Core.svg" },
+            { name: "GitHub", icon: "/assets/images/mobile-app/skills/git.svg" },
+            { name: "SQL", icon: "/assets/images/mobile-app/skills/Sql_data.svg" },
+            { name: "Power Apps", icon: "/assets/images/mobile-app/skills/Powerapps.svg" },
         ],
         "Open Source": [
-            { name: "WordPress", icon: "/skills/wordpress.svg" },
-            { name: "Magento", icon: "/skills/magento.svg" },
-            { name: "WooCommerce", icon: "/skills/woo.svg" },
-            { name: "Shopify", icon: "/skills/shopify.svg" },
-            { name: "Drupal", icon: "/skills/drupal.svg" },
-            { name: "Bagisto", icon: "/skills/bagisto.svg" },
+            { name: "WordPress", icon: "/assets/images/mobile-app/skills/wordpress.svg" },
+            { name: "Magento", icon: "/assets/images/mobile-app/skills/magento.svg" },
+            { name: "WooCommerce", icon: "/assets/images/mobile-app/skills/woo.svg" },
+            { name: "Shopify", icon: "/assets/images/mobile-app/skills/shopify.svg" },
+            { name: "Drupal", icon: "/assets/images/mobile-app/skills/drupal.svg" },
+            { name: "Bagisto", icon: "/assets/images/mobile-app/skills/bagisto.svg" },
         ],
         Database: [
-            { name: "MySQL", icon: "/skills/Sql_data.svg" },
-            { name: "Oracle", icon: "/skills/oracle.svg" },
-            { name: "MongoDB", icon: "/skills/mongo.svg" },
-            { name: "MariaDB", icon: "/skills/maria.svg" },
-            { name: "SQLite", icon: "/skills/drupal.svg" },
-            { name: "Redis", icon: "/skills/bagisto.svg" },
+            { name: "MySQL", icon: "/assets/images/mobile-app/skills/Sql_data.svg" },
+            { name: "Oracle", icon: "/assets/images/mobile-app/skills/oracle.svg" },
+            { name: "MongoDB", icon: "/assets/images/mobile-app/skills/mongo.svg" },
+            { name: "MariaDB", icon: "/assets/images/mobile-app/skills/maria.svg" },
+            { name: "SQLite", icon: "/assets/images/mobile-app/skills/sqlite.svg" },
+            { name: "Redis", icon: "/assets/images/mobile-app/skills/redis.svg" },
         ],
         Servers: [
-            { name: "Amazon Web Services", icon: "/skills/aws.svg" },
-            { name: "Google Cloud", icon: "/skills/google.svg" },
-            { name: "Microsoft Azure", icon: "/skills/micro-azure.svg" },
-            { name: "IBM Cloud", icon: "/skills/ibm.svg" },
-            { name: "Oracle Cloud", icon: "/skills/oracle-cloud.svg" },
-            { name: "DigitalOcean", icon: "/skills/digitalocean.svg" },
+            { name: "Amazon Web Services", icon: "/assets/images/mobile-app/skills/aws.svg" },
+            { name: "Google Cloud", icon: "/assets/images/mobile-app/skills/google.svg" },
+            { name: "Microsoft Azure", icon: "/assets/images/mobile-app/skills/micro-azure.svg" },
+            { name: "IBM Cloud", icon: "/assets/images/mobile-app/skills/ibm.svg" },
+            { name: "Oracle Cloud", icon: "/assets/images/mobile-app/skills/oracle-cloud.svg" },
+            { name: "DigitalOcean", icon: "/assets/images/mobile-app/skills/digitalocean.svg" },
         ],
         DevOps: [
-            { name: "Kubernetes", icon: "/skills/kuber.svg" },
-            { name: "Jenkins", icon: "/skills/jenkins.svg" },
-            { name: "Chef", icon: "/skills/chef.svg" },
-            { name: "Maven", icon: "/skills/maven.svg" },
-            { name: "Docker", icon: "/skills/docer.svg" },
-            { name: "OpenShift", icon: "/skills/openswift.svg" },
+            { name: "Kubernetes", icon: "/assets/images/mobile-app/skills/kuber.svg" },
+            { name: "Jenkins", icon: "/assets/images/mobile-app/skills/jenkins.svg" },
+            { name: "Chef", icon: "/assets/images/mobile-app/skills/chef.svg" },
+            { name: "Maven", icon: "/assets/images/mobile-app/skills/maven.svg" },
+            { name: "Docker", icon: "/assets/images/mobile-app/skills/docer.svg" },
+            { name: "OpenShift", icon: "/assets/images/mobile-app/skills/openswift.svg" },
         ],
     };
 
@@ -87,16 +87,16 @@ export default function SkillsSolutions() {
         >
             <div className='max-w-[900px] 2xl:max-w-[1300px] mx-auto pt-[50px] 2xl:pt-[113px]'>
                 <h1
-                    className="mx-auto text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] text-center relative"
-                    style={{ fontFamily: "'Funnel Display', sans-serif" }}
+                    className="mx-auto text-[24px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] text-center relative"
                 >
                     Our Skilled Developers Use Their Technical Expertise To Deliver {" "}
                     <span className="relative inline-block text-[#5D59EA]">
                         Top-Quality, High-Performing
                         <img
-                            src="/underline.svg"
+                            src="/assets/images/mobile-app/underline.svg"
                             alt=""
-                            className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
+                            loading="lazy"
+                            className="absolute left-1/2 -translate-x-1/2 -bottom-1 translate-y-[12px]"
                         />
                     </span>{" "}
                     Solutions.
@@ -111,7 +111,7 @@ export default function SkillsSolutions() {
                             boxShadow: "13px 14px 40px 0px #27628326",
                         }}
                     >
-                        <img src="/Highq.svg" alt="Quick Support" className="absolute -top-5" />
+                        <img src="/assets/images/mobile-app/Highq.svg" loading="lazy" alt="Quick Support" className="absolute -top-5" />
                         <span className="text-[20px] font-semibold text-[#020817] text-center absolute top-10">
                             Highly Qualified
                         </span>
@@ -143,9 +143,9 @@ export default function SkillsSolutions() {
                             className="flex flex-col items-center gap-2 text-gray-700"
                         >
                             <div className='w-[60px] h-[60px] 2xl:w-[80px] 2xl:h-[80px] flex justify-center items-center bg-[#FFFFFF] border border-[#02021E33] shadow-[#9E9E9E40] rounded-full px-3 py-2 2xl:px-5 2xl:py-4'>
-                                <img src={item.icon} />
+                                <img src={item.icon} loading="lazy" />
                             </div>
-                            <span className="text-[14px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px]">{item.name}</span>
+                            <span className="text-[14px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px] text-center">{item.name}</span>
                         </div>
                     ))}
                 </div>

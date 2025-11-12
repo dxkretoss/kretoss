@@ -4,32 +4,32 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const countryData = [
     {
-        smallLogo: "/maps/indiaCountry.svg",
-        mapLogo: "/maps/india.svg",
+        smallLogo: "/assets/images/mobile-app/maps/indiaCountry.svg",
+        mapLogo: "/assets/images/mobile-app/maps/india.svg",
         countryName: "India",
         hourlyPrice: "$23.00",
     },
     {
-        smallLogo: "/maps/austContry.svg",
-        mapLogo: "/maps/aust.svg",
+        smallLogo: "/assets/images/mobile-app/maps/austContry.svg",
+        mapLogo: "/assets/images/mobile-app/maps/aust.svg",
         countryName: "Australia",
         hourlyPrice: "AUD 150.00",
     },
     {
-        smallLogo: "/maps/newzealandContry.svg",
-        mapLogo: "/maps/newzealand.svg",
+        smallLogo: "/assets/images/mobile-app/maps/newzealandContry.svg",
+        mapLogo: "/assets/images/mobile-app/maps/newzealand.svg",
         countryName: "New Zealand",
         hourlyPrice: "NZD 170.00",
     },
     {
-        smallLogo: "/maps/usaCountry.svg",
-        mapLogo: "/maps/usamap.svg",
+        smallLogo: "/assets/images/mobile-app/maps/usaCountry.svg",
+        mapLogo: "/assets/images/mobile-app/maps/usamap.svg",
         countryName: "USA",
         hourlyPrice: "$150.00",
     },
     {
-        smallLogo: "/maps/europeCountry.svg",
-        mapLogo: "/maps/europe.svg",
+        smallLogo: "/assets/images/mobile-app/maps/europeCountry.svg",
+        mapLogo: "/assets/images/mobile-app/maps/europe.svg",
         countryName: "Europe",
         hourlyPrice: "€130.00",
     },
@@ -37,17 +37,17 @@ const countryData = [
 
 const stats = [
     {
-        icon: "/exp.svg",
+        icon: "/assets/images/mobile-app/exp.svg",
         value: "10+",
         label: "Experience",
     },
     {
-        icon: "/dev.svg",
+        icon: "/assets/images/mobile-app/dev.svg",
         value: "2k+",
         label: "Developers",
     },
     {
-        icon: "/client.svg",
+        icon: "/assets/images/mobile-app/client.svg",
         value: "210+",
         label: "Clients",
     },
@@ -56,7 +56,6 @@ const stats = [
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Change country every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % countryData.length);
@@ -69,7 +68,7 @@ export default function Hero() {
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center text-white py-16 md:py-24 lg:py-0"
             style={{
-                backgroundImage: "url('/herobg.svg')",
+                backgroundImage: "url('/assets/images/mobile-app/herobg.svg')",
                 minHeight: "800px",
             }}
         >
@@ -77,7 +76,7 @@ export default function Hero() {
 
             <div className="container container_content relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-36 gap-10 md:gap-14">
                 <div className="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left">
-                    <h1 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold">
+                    <h1 className="text-[40px] lg:text-[44px] 2xl:text-[56px] leading-tight mb-6 font-semibold text-white">
                         Hire{" "}
                         <span className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] font-bold text-white rounded-md px-3 sm:px-4 md:px-5 py-2 sm:py-3">
                             Mobile App
@@ -95,17 +94,18 @@ export default function Hero() {
                             Starting at
                         </span>
                         <img
-                            src="/clock.svg"
-                            className="ml-[8px] sm:ml-[15px] w-[20px] sm:w-[28px]"
+                            src="/assets/images/mobile-app/clock.svg"
+                            loading="lazy"
+                            className="ml-[3px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
                         />
-                        <span className="text-[#02021E] text-[22px] sm:text-[28px] md:text-[32px] font-semibold ml-2">
+                        <span className="text-[#02021E] text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-2">
                             $22.00/
                         </span>
                         <span className="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] ml-1">
                             hour
                         </span>
                         <button
-                            className="hidden ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 sm:flex gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
+                            className="hidden ml-[5px] 2xl:ml-[15px] sm:w-auto sm:mt-0 xl:flex gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
                             style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
                         >
                             Hire Mobile App Developer
@@ -113,7 +113,7 @@ export default function Hero() {
                         </button>
 
                         <button
-                            className="flex ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 sm:hidden gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
+                            className="flex ml-[8px] sm:ml-[15px] sm:w-auto sm:mt-0 xl:hidden gap-2 items-center justify-center bg-[#5D59EA] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-[14px] sm:text-[16px] hover:opacity-90 transition"
                             style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
                         >
                             Hire
@@ -121,12 +121,11 @@ export default function Hero() {
                         </button>
                     </div>
 
-                    {/* Stats */}
                     <div className="flex flex-wrap items-center justify-start gap-5 sm:gap-8 text-gray-200 mb-10">
                         {stats.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-[180px] md:w-[190px] h-[64px] sm:h-[74px] border border-[#FFFFFF80] rounded-md"
+                                className="flex items-center justify-center sm:gap-4 flex-col sm:flex-row w-[90px] h-auto p-[10px] gap-2 sm:w-[180px] md:w-[190px]  sm:h-[74px] border border-[#FFFFFF80] rounded-md"
                                 style={{
                                     background: "#FFFFFF1F",
                                     backdropFilter: "blur(12px)",
@@ -135,6 +134,7 @@ export default function Hero() {
                                 <img
                                     src={item.icon}
                                     alt={item.label}
+                                    loading="lazy"
                                     className="w-[24px] sm:w-[32px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">
@@ -155,10 +155,10 @@ export default function Hero() {
                         </p>
                         <div className="flex flex-wrap items-center">
                             {[
-                                "/trusted/emaar.png",
-                                "/trusted/google.png",
-                                "/trusted/npci.png",
-                                "/trusted/astral.png",
+                                "/assets/images/mobile-app/trusted/emaar.png",
+                                "/assets/images/mobile-app/trusted/google.png",
+                                "/assets/images/mobile-app/trusted/npci.png",
+                                "/assets/images/mobile-app/trusted/astral.png",
                             ].map((src, index) => (
                                 <div
                                     key={index}
@@ -167,6 +167,7 @@ export default function Hero() {
                                 >
                                     <img
                                         src={src}
+                                        loading="lazy"
                                         className="w-[70px] sm:w-[100px] h-[35px] sm:h-[50px]"
                                         alt="trusted brand"
                                     />
@@ -190,10 +191,12 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
+                                    loading="lazy"
                                     className="w-[60px] sm:w-[70px]"
                                 />
                                 <img
-                                    src="/logo.svg"
+                                    src="/assets/images/mobile-app/logo.svg"
+                                    loading="lazy"
                                     className="w-[100px] sm:w-[130px] md:w-[150px]"
                                     alt="logo"
                                 />
@@ -203,6 +206,7 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.mapLogo}
                                     alt={currentCountry.countryName}
+                                    loading="lazy"
                                     className="w-[150px] sm:w-[180px] md:w-[200px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">

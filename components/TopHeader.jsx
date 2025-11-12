@@ -8,7 +8,7 @@ export default function TopHeader() {
 
                     <div className="flex gap-4 items-center">
                         <div className="flex items-center gap-2">
-                            <img src="/india.svg" alt="India" className="w-[20px] h-[20px]" />
+                            <img src="/assets/images/mobile-app//india.svg" alt="India" className="w-[20px] h-[20px]" />
                             <span className="text-[#222222] text-[13px] sm:text-[12px] whitespace-nowrap">
                                 +91 123 456 7890
                             </span>
@@ -17,7 +17,7 @@ export default function TopHeader() {
                         <div className="h-6 w-[1px] bg-[#4C586F4D] hidden sm:block"></div>
 
                         <div className="flex items-center gap-2">
-                            <img src="/usa.svg" alt="USA" className="w-[20px] h-[20px]" />
+                            <img src="/assets/images/mobile-app//usa.svg" alt="USA" className="w-[20px] h-[20px]" />
                             <span className="text-[#222222] text-[13px] sm:text-[12px] whitespace-nowrap">
                                 +1 (309)123 4536
                             </span>
@@ -32,13 +32,13 @@ export default function TopHeader() {
 
                     <div className="flex items-center gap-3">
                         <img
-                            src="/call.svg"
+                            src="/assets/images/mobile-app//call.svg"
                             alt="Call"
                             className="w-[18px] h-[18px] cursor-pointer hover:opacity-80 transition"
                         />
                         <div className="h-6 w-[1px] bg-[#4C586F4D] hidden sm:block"></div>
                         <img
-                            src="/mail.svg"
+                            src="/assets/images/mobile-app//mail.svg"
                             alt="Mail"
                             className="w-[18px] h-[18px] cursor-pointer hover:opacity-80 transition"
                         />

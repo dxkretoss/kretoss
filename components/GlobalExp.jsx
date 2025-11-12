@@ -9,23 +9,23 @@ export default function GlobalExp() {
                 className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12 
                            p-5 sm:p-8 lg:p-10 2xl:p-[30px] bg-gradient-to-b from-[#EEF0FF80] to-[#CFE6FF] rounded-[24px]"
             >
-                {/* Left Section */}
                 <div className="flex-1 text-center lg:text-left max-w-full lg:max-w-[640px]">
                     <img
-                        src="logo.svg"
+                        src="/assets/images/mobile-app/logo.svg"
                         alt="Logo"
+                        loading="lazy"
                         className="mx-auto lg:mx-0 w-[120px] sm:w-[140px] lg:w-[160px]"
                     />
 
                     <h1
-                        className="mt-6 sm:mt-8 text-[28px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] 
+                        className="mt-6 sm:mt-8 text-[26px] sm:text-[34px] md:text-[40px] 2xl:text-[48px] 
                                    font-semibold text-[#02021E] leading-tight"
-                        style={{ fontFamily: "'Funnel Display', sans-serif" }}
                     >
                         Tap Into{" "}
                         <span
                             className="bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] 
-                                       font-bold text-white rounded-md px-2 sm:px-3 py-1 sm:py-1.5"
+                                       font-bold text-white rounded-md px-2 sm:px-3 py-1 sm:py-1.5
+                                       whitespace-nowrap"
                         >
                             Global Expertise
                         </span>
@@ -53,11 +53,11 @@ export default function GlobalExp() {
                     </button>
                 </div>
 
-                {/* Right Section */}
                 <div className="flex-1 flex justify-center lg:justify-end w-full">
                     <img
-                        src="/GlobalExp.svg"
+                        src="/assets/images/mobile-app/GlobalExp.svg"
                         alt="Global Expertise"
+                        loading="lazy"
                         className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-full max-w-[600px] 
                                    h-auto object-contain"
                     />

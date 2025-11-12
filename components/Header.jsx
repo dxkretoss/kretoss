@@ -32,7 +32,7 @@ export default function Header() {
             <div className="container mx-auto px-4 flex justify-between items-center w-full">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <img src="/logo.svg" alt="Kretoss" className="w-[160px]" />
+                    <img src="/assets/images/mobile-app//logo.svg" alt="Kretoss" className="w-[160px]" />
                 </div>
 
                 {/* Desktop Navigation */}
@@ -82,7 +82,7 @@ export default function Header() {
                     <div className="fixed right-0 top-0 h-full w-[260px] bg-white shadow-lg p-6 flex flex-col  transition-transform duration-300 ease-in-out">
                         {/* Header */}
                         <div className="flex justify-between items-center mb-6">
-                            <img src="/logo.svg" alt="Kretoss" className="w-[130px]" />
+                            <img src="/assets/images/mobile-app//logo.svg" alt="Kretoss" className="w-[130px]" />
                             <button
                                 onClick={() => setIsSidebarOpen(false)}
                                 className="text-gray-600 text-2xl"
@@ -188,7 +188,7 @@ export default function Header() {
                         ) : (
                             <div className="text-center py-10">
                                 <img
-                                    src="/logo.svg"
+                                    src="/assets/images/mobile-app//logo.svg"
                                     alt="Thank You"
                                     className="mx-auto w-[80px] mb-4"
                                 />

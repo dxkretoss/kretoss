@@ -2,40 +2,31 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 export default function Support() {
     const Services = [
-        { img: '/support/mobDev.svg', txt: 'Custom Mobile App Development', desc: 'We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK.' },
-        { img: '/support/fullstack.svg', txt: 'Full-stack App Development', desc: 'Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch.' },
-        { img: '/support/appSol.svg', txt: 'Enterprise App Solutions', desc: 'Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency.' },
-        { img: '/support/appdecv.svg', txt: 'Cross platform app Development ', desc: 'We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices..' },
-        { img: '/support/thirdparty.svg', txt: 'Third Party Integration', desc: 'Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality.' },
+        { img: '/assets/images/mobile-app/support/mobDev.svg', txt: 'Custom Mobile App Development', desc: 'We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK.' },
+        { img: '/assets/images/mobile-app/support/fullstack.svg', txt: 'Full-stack App Development', desc: 'Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch.' },
+        { img: '/assets/images/mobile-app/support/appSol.svg', txt: 'Enterprise App Solutions', desc: 'Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency.' },
+        { img: '/assets/images/mobile-app/support/appdecv.svg', txt: 'Cross platform app Development ', desc: 'We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices..' },
+        { img: '/assets/images/mobile-app/support/thirdparty.svg', txt: 'Third Party Integration', desc: 'Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality.' },
 
-        { img: '/support/mobDev.svg', txt: 'Custom Mobile App Development', desc: 'We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK.' },
-        { img: '/support/fullstack.svg', txt: 'Full-stack App Development', desc: 'Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch.' },
-        { img: '/support/appSol.svg', txt: 'Enterprise App Solutions', desc: 'Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency.' },
-        { img: '/support/appdecv.svg', txt: 'Cross platform app Development ', desc: 'We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices..' },
-        { img: '/support/thirdparty.svg', txt: 'Third Party Integration', desc: 'Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality.' },
-
-
-        { img: '/support/mobDev.svg', txt: 'Custom Mobile App Development', desc: 'We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK.' },
-        { img: '/support/fullstack.svg', txt: 'Full-stack App Development', desc: 'Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch.' },
-        { img: '/support/appSol.svg', txt: 'Enterprise App Solutions', desc: 'Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency.' },
-        { img: '/support/appdecv.svg', txt: 'Cross platform app Development ', desc: 'We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices..' },
-        { img: '/support/thirdparty.svg', txt: 'Third Party Integration', desc: 'Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality.' },
-
+        { img: '/assets/images/mobile-app/support/mobDev.svg', txt: 'Custom Mobile App Development', desc: 'We specialize in developing, updating, and managing secure, custom Android apps using Java, Kotlin, and Android SDK.' },
+        { img: '/assets/images/mobile-app/support/fullstack.svg', txt: 'Full-stack App Development', desc: 'Hire skilled app developers to build secure, scalable, and feature-rich applications that drive efficiency and profitability from concept to launch.' },
+        { img: '/assets/images/mobile-app/support/appSol.svg', txt: 'Enterprise App Solutions', desc: 'Hire app developers to build adaptable enterprise solutions powered by smart data analytics, enhancing customer experience and workflow efficiency.' },
+        { img: '/assets/images/mobile-app/support/appdecv.svg', txt: 'Cross platform app Development ', desc: 'We specialize in developing, updating, & managing secure, custom cross-platform apps using Flutter, React Native for seamless performance across devices..' },
+        { img: '/assets/images/mobile-app/support/thirdparty.svg', txt: 'Third Party Integration', desc: 'Hire expert developers to integrate third-party APIs for seamless connectivity and enhanced app functionality.' },
 
     ]
 
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(5);
 
-    // Set itemsPerPage dynamically based on screen width
     useEffect(() => {
         const updateItemsPerPage = () => {
             const width = window.innerWidth;
-            if (width >= 1680) setItemsPerPage(5); // 2xl
-            else if (width >= 1564) setItemsPerPage(4); // xl
-            else if (width >= 1356) setItemsPerPage(3); // lg
-            else if (width >= 952) setItemsPerPage(2); // md
-            else setItemsPerPage(1); // sm and below
+            if (width >= 1680) setItemsPerPage(5);
+            else if (width >= 1564) setItemsPerPage(4)
+            else if (width >= 1356) setItemsPerPage(3);
+            else if (width >= 952) setItemsPerPage(2);
+            else setItemsPerPage(1);
         };
 
         updateItemsPerPage();
@@ -47,14 +38,13 @@ export default function Support() {
     const startIndex = currentPage * itemsPerPage;
     const visibleServices = Services.slice(startIndex, startIndex + itemsPerPage);
 
-    // Reset page if currentPage exceeds totalPages after resize
     useEffect(() => {
         if (currentPage >= totalPages) setCurrentPage(totalPages - 1);
     }, [totalPages]);
 
     return (
         <div
-            className="relative container section container_content mx-auto h-[570px] 2xl:h-[690px] rounded-[24px]"
+            className="relative container section container_content mx-auto min-h-[570px] 2xl:h-[690px] rounded-[24px]"
         >
             <div
                 className="w-full max-w-[1620px] mx-auto rounded-[26px] p-4 sm:p-8 md:p-10 lg:p-14"
@@ -62,7 +52,7 @@ export default function Support() {
                     background: "linear-gradient(96.57deg, rgba(255, 255, 255, 0.8) 0.24%, #FCE6FF 99.76%)",
                 }}
             >
-                <div className='max-w-[930px] mx-auto pt-[30px] 2xl:pt-[113px]'>
+                <div className='max-w-[930px] mx-auto pt-[30px]'>
                     <h1
                         className="
                             text-[28px] sm:text-[34px] md:text-[40px] 2xl:text-[48px]
@@ -70,13 +60,12 @@ export default function Support() {
                             text-center 
                             leading-snug
                         "
-                        style={{ fontFamily: "'Funnel Display', sans-serif" }}
                     >
                         Hire Mobile App Programmers to Deliver{" "}
                         <span className="
                         bg-gradient-to-r from-[#5D59EA] to-[#B4B2FF] 
                         font-bold text-white 
-                        rounded-md px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3
+                        rounded-md px-2 py-1
                         inline-block
                         "
                         >
@@ -87,12 +76,20 @@ export default function Support() {
 
                 </div>
 
-                <div className="mt-[48px]">
-                    {/* Animated Service Cards */}
+                <div className="max-w-[700px] mx-auto text-center mt-[20px]">
+                    <span>
+                        Hire mobile app Developers  with expertise in custom app development, end-to-end full-stack solutions,
+                        enterprise applications, and cross-platform mobile development. We deliver reliable, efficient,
+                        and tailored app solutions that meet your unique business needs. Experience top-quality performance
+                        from idea to launch.
+                    </span>
+                </div>
+
+                <div className="mt-[28px]">
                     <div className="flex flex-wrap justify-center gap-[16px] relative overflow-hidden">
                         <AnimatePresence mode="wait">
                             <motion.div
-                                key={currentPage} // triggers animation on page change
+                                key={currentPage}
                                 initial={{ opacity: 0, y: 20, scale: 0.98 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: -20, scale: 0.98 }}
@@ -108,7 +105,7 @@ export default function Support() {
                                         className="w-[280px] 2xl:w-[279px] 2xl:h-[257px] border border-[#22222233] rounded-[12px] bg-[#FFFFFF] p-[20px]"
                                     >
                                         <div className="flex gap-[12px]">
-                                            <img src={item.img} className="bg-[#E1E0FF] p-2 rounded-full" />
+                                            <img src={item.img} loading="lazy" className="bg-[#E1E0FF] p-2 rounded-full" />
                                             <span className="text-[18px] text-[#02021E] font-semibold">{item.txt}</span>
                                         </div>
                                         <div className="mt-[15px]">
@@ -120,7 +117,6 @@ export default function Support() {
                         </AnimatePresence>
                     </div>
 
-                    {/* Pagination Dots */}
                     {totalPages > 1 && (
                         <div className="flex justify-center mt-6 gap-3">
                             {Array.from({ length: totalPages }).map((_, pageIndex) => (
@@ -147,7 +143,7 @@ export default function Support() {
                             boxShadow: "13px 14px 40px 0px #27628326",
                         }}
                     >
-                        <img src="/Qsupport.svg" alt="Quick Support" className="absolute -top-5" />
+                        <img src="/assets/images/mobile-app/Qsupport.svg" loading="lazy" alt="Quick Support" className="absolute -top-5" />
                         <span className="text-[20px] font-semibold text-[#020817] text-center absolute top-10">
                             Quick Support
                         </span>

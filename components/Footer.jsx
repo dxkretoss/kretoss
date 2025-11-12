@@ -18,7 +18,7 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-20 2xl:gap-24">
                     {/* Left Card */}
                     <div className="bg-[#FFFFFF1A] p-6 sm:p-8 md:p-10 border border-[#FFFFFF4D] rounded-[24px] flex-shrink-0 w-full md:w-[90%] lg:w-[420px] xl:w-[460px] 2xl:w-[500px]">
-                        <img src="/footerlogo.svg" alt="Kretoss Logo" className="w-[160px] sm:w-[180px]" />
+                        <img src="/assets/images/mobile-app/footerlogo.svg" alt="Kretoss Logo" className="w-[160px] sm:w-[180px]" />
                         <p className="mt-4 sm:mt-6 text-[#FFFFFF] text-[16px] sm:text-[18px] md:text-[20px] leading-relaxed">
                             Have a great idea? We're here to bring it to life with innovative & digital solutions.
                         </p>
@@ -55,7 +55,7 @@ export default function Footer() {
                                         rel="noopener noreferrer"
                                     >
                                         <img
-                                            src="/footer/linkedin.svg"
+                                            src="/assets/images/mobile-app//footer/linkedin.svg"
                                             alt="LinkedIn"
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
@@ -66,14 +66,14 @@ export default function Footer() {
                                         rel="noopener noreferrer"
                                     >
                                         <img
-                                            src="/footer/facebook.svg"
+                                            src="/assets/images/mobile-app//footer/facebook.svg"
                                             alt="Facebook"
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
                                     </a>
                                     <a href="#" target="_blank" rel="noopener noreferrer">
                                         <img
-                                            src="/footer/x.svg"
+                                            src="/assets/images/mobile-app//footer/x.svg"
                                             alt="X / Twitter"
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
@@ -84,7 +84,7 @@ export default function Footer() {
                                         rel="noopener noreferrer"
                                     >
                                         <img
-                                            src="/footer/insta.svg"
+                                            src="/assets/images/mobile-app//footer/insta.svg"
                                             alt="Instagram"
                                             className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
                                         />
@@ -125,7 +125,7 @@ export default function Footer() {
                                     </button>
                                     <div className="text-center py-8 sm:py-10">
                                         <img
-                                            src="/logo.svg"
+                                            src="/assets/images/mobile-app//logo.svg"
                                             alt="Thank You"
                                             className="mx-auto w-[60px] sm:w-[80px] mb-4"
                                         />

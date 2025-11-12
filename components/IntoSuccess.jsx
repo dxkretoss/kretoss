@@ -5,26 +5,28 @@ export default function IntoSuccess() {
         {
             title: "STARTUPS",
             subtitle: "Accelerate Your Launch. Maximize Your Seed.",
-            image: "/success/success-1.svg",
+            shortDesc: "With Kretoss Technology, global startups can hire a dedicated development team to fast-track their project development, supported by talented developers and efficient cost management.",
+            image: "/assets/images/mobile-app/success/success-1.svg",
         },
         {
             title: "Mid level Businesses",
             subtitle: "Scale with Confidence. Outpace Competitors.",
-            image: "/success/success-2.svg",
+            shortDesc: "With Kretoss Technology, mid-size businesses can hire dedicated developers to develop powerful, future-ready digital solutions that deliver innovation, stability, and a clear path to excellence.",
+            image: "/assets/images/mobile-app/success/success-2.svg",
         },
         {
             title: "Enterprise Level Businesses",
             subtitle: "Master Complexity. Drive Strategic Innovation.",
-            image: "/success/success-3.svg",
+            shortDesc: "Kretoss Technology supports large-scale enterprises by providing experienced developers who can expertly handle complex development projects and drive high-value, strategic innovation.",
+            image: "/assets/images/mobile-app/success/success-3.svg",
         },
     ];
 
     return (
-        <div className="container section container_content mx-auto px-4 xl:px-6 xl:px-12 py-12 sm:py-16">
+        <div className="container section container_content mx-auto px-4 xl:px-12 py-12 sm:py-16">
             <div className="max-w-[900px] mx-auto text-center px-2">
                 <h1
                     className="text-[26px] lg:text-[34px] xl:text-[42px] 2xl:text-[48px] font-semibold text-[#02021E] leading-snug"
-                    style={{ fontFamily: "'Funnel Display', sans-serif" }}
                 >
                     Hire Mobile App Developers To Turn Your{" "}
                     <span
@@ -39,7 +41,13 @@ export default function IntoSuccess() {
                 </h1>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-stretch gap-6 xl:gap-8 mt-10 xl:mt-14">
+            <div className="max-w-[700px] mx-auto text-center mt-[20px]">
+                <span>
+                    Hire app developers to gain top-tier technical support and outpace your competitors.
+                </span>
+            </div>
+
+            <div className="flex flex-col lg:flex-row items-stretch gap-6 xl:gap-8 mt-5 xl:mt-7">
                 {successCards.map((card, index) => (
                     <div
                         key={index}
@@ -52,13 +60,17 @@ export default function IntoSuccess() {
                             <p className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
                                 {card.subtitle}
                             </p>
+
+                            <p className="text-[14px] 2xl:text-[16px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
+                                {card.shortDesc}
+                            </p>
                         </div>
 
-                        {/* Bottom Image */}
                         <div className="bg-[#B2C7FF] rounded-[16px] p-4 2xl:p-6 mt-4 2xl:mt-8 w-full flex justify-center items-center">
                             <img
                                 src={card.image}
                                 alt={card.title}
+                                loading="lazy"
                                 className="object-contain"
                             />
                         </div>

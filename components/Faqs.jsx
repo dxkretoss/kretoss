@@ -39,8 +39,7 @@ export default function Faqs() {
 
     return (
         <div className="container section mx-auto container_content px-4 py-16">
-            {/* FAQ Section */}
-            <div className="max-w-[900px] mx-auto mb-20">
+            <div className=" max-w-[900px] mx-auto mb-20">
                 <h2 className="text-center text-[36px] sm:text-[42px] md:text-[48px] font-semibold text-[#000000] mb-10">
                     FAQs
                 </h2>
@@ -60,9 +59,9 @@ export default function Faqs() {
                                 </span>
                                 <span className="transition-transform duration-300 ml-4 flex-shrink-0">
                                     {activeIndex === index ? (
-                                        <img src="/downaero.svg" alt="collapse" />
+                                        <img src="/assets/images/mobile-app/downaero.svg" loading="lazy" alt="collapse" />
                                     ) : (
-                                        <img src="/rightaero.svg" alt="expand" />
+                                        <img src="/assets/images/mobile-app/rightaero.svg" loading="lazy" alt="expand" />
                                     )}
                                 </span>
                             </button>
@@ -77,14 +76,12 @@ export default function Faqs() {
                 </div>
             </div>
 
-            {/* Contact Section */}
             <div
                 className="w-full max-w-[1620px] mx-auto border border-[#5D59EACC] rounded-[24px] p-6 sm:p-10 md:p-14 flex flex-col items-center justify-between gap-6 md:gap-10 text-center md:text-left"
                 style={{
                     background: "linear-gradient(180deg, rgba(238, 239, 255, 0.5) 0%, #CFE6FF 100%)",
                 }}
             >
-                {/* Text Section */}
                 <div className="flex-1 flex-col max-w-[1000px]">
                     <h1 className="text-center text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] text-[#000000] font-semibold leading-snug">
                         Mobile App Development At Your{" "}
@@ -92,7 +89,6 @@ export default function Faqs() {
                     </h1>
                 </div>
 
-                {/* Button Section */}
                 <div className="flex justify-center md:justify-end w-full md:w-auto">
                     <button
                         className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-[15px] h-auto w-full sm:w-[350px] md:w-[400px] lg:w-[427px] transition-transform hover:scale-105 duration-300"

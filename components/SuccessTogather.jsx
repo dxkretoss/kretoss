@@ -10,7 +10,6 @@ export default function SuccessTogather() {
                         "linear-gradient(92.88deg, rgba(60, 131, 246, 0.2) 0%, rgba(124, 59, 237, 0.2) 49.86%)",
                 }}
             >
-                {/* Mission Floating Card */}
                 <div
                     className="
                             absolute 
@@ -30,7 +29,8 @@ export default function SuccessTogather() {
                         style={{ boxShadow: "13px 14px 40px 0px #27628326" }}
                     >
                         <img
-                            src="/misson.svg"
+                            src="/assets/images/mobile-app/misson.svg"
+                            loading="lazy"
                             alt="Mission"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
@@ -45,33 +45,31 @@ export default function SuccessTogather() {
                     </div>
                 </div>
 
-                {/* Main Text Section */}
                 <div className="max-w-[800px] lg:max-w-[710px] mx-auto">
                     <h1
                         className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-semibold text-[#02021E] leading-tight"
-                        style={{ fontFamily: "'Funnel Display', sans-serif" }}
                     >
                         Let’s Build{" "}
                         <span className="relative inline-block text-[#5D59EA]">
                             Success
                             <img
-                                src="/underline.svg"
+                                src="/assets/images/mobile-app/underline.svg"
+                                loading="lazy"
                                 alt=""
-                                className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[10px] w-[100px] sm:w-[130px] md:w-[160px]"
+                                className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[10px]"
                             />
                         </span>{" "}
                         Together.
                     </h1>
 
                     <p className="mt-4 sm:mt-5 text-[#02021E] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed">
-                        Share your project details to build your path toward success.
+                        Share your project details and begin your journey toward success.
                     </p>
                 </div>
 
-                {/* Button */}
                 <div className="flex justify-center items-center mt-8 sm:mt-10 md:mt-12">
                     <button
-                        className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 w-[240px] sm:w-[300px] md:w-[380px] lg:w-[427px] shadow-lg hover:scale-[1.03] transition-all duration-300"
+                        className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 w-[250px] sm:w-[300px] md:w-[380px] lg:w-[427px] shadow-lg hover:scale-[1.03] transition-all duration-300"
                         style={{ boxShadow: "0px 0px 18px 0px #5D59EA99" }}
                     >
                         Get in touch with us today

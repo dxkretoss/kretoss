@@ -22,17 +22,15 @@ export default function WhyKretoss() {
     ]
 
     return (
-        <div className="container section mx-auto container_content px-4 py-16">
+        <div className="relative container section mx-auto container_content px-4 py-16">
             <div
                 className="w-full max-w-[1620px] mx-auto rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-14"
                 style={{
                     background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #FFFFFF 99.76%)",
                 }}
             >
-                {/* Wrapper */}
                 <div className="flex flex-col lg:flex-row gap-8 xl:gap-[40px] justify-center items-stretch">
-                    {/* Left Card */}
-                    <div className="relative bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                    <div className="relative z-10 bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
                         <div>
                             <h1 className="text-[20px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
                                 Why Hire Mobile App Developers from{" "}
@@ -50,7 +48,8 @@ export default function WhyKretoss() {
                                         }}
                                     >
                                         <img
-                                            src="/points.svg"
+                                            src="/assets/images/mobile-app/points.svg"
+                                            loading="lazy"
                                             className="w-[24px] xl:w-[28px] 2xl:w-[32px] h-[24px] xl:h-[28px] 2xl:h-[32px]"
                                             alt="point"
                                         />
@@ -62,16 +61,15 @@ export default function WhyKretoss() {
                             </div>
                         </div>
 
-                        {/* Decorative Image */}
                         <img
-                            src="/points2.svg"
+                            src="/assets/images/mobile-app/points2.svg"
+                            loading="lazy"
                             className="absolute -top-6 -right-10 w-[100px] h-[100px]"
                             alt=""
                         />
                     </div>
 
-                    {/* Right Card */}
-                    <div className="relative bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
+                    <div className="relative z-10 bg-white border border-[#22222233] p-5 xl:p-8 2xl:p-10 rounded-[24px] flex-1 flex flex-col justify-between shadow-sm">
                         <div>
                             <h1 className="text-[20px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] text-[#02021E] font-semibold leading-snug mb-6">
                                 Kretoss Technology’s Dedicated Team — Your Partner in{" "}
@@ -89,7 +87,8 @@ export default function WhyKretoss() {
                                         }}
                                     >
                                         <img
-                                            src="/points.svg"
+                                            src="/assets/images/mobile-app/points.svg"
+                                            loading="lazy"
                                             className="w-[24px] xl:w-[28px] 2xl:w-[32px] h-[24px] xl:h-[28px] 2xl:h-[32px]"
                                             alt="point"
                                         />
@@ -101,15 +100,17 @@ export default function WhyKretoss() {
                             </div>
                         </div>
 
-                        {/* Decorative Image */}
                         <img
-                            src="/points1.svg"
+                            src="/assets/images/mobile-app/points1.svg"
+                            loading="lazy"
                             className="absolute -top-6 -right-10 w-[100px] h-[100px]"
                             alt=""
                         />
                     </div>
                 </div>
             </div>
+            <div className=" w-[122px] h-[229px] bg-[#0060F0] rounded-[144px] blur-[182px] absolute bottom-[250px] right-0"></div>
+
         </div>
     )
 }
