@@ -134,12 +134,12 @@ button {
 
 .right-aero {
   top: 370px;
-  left: -20px;
+  left: -30px;
 }
 
 .left-aero {
   top: 370px;
-  right: -20px;
+  right: -30px;
 }
 
 @media (max-width: 1024px) {

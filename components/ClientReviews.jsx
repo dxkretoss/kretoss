@@ -222,7 +222,7 @@ export default function ClientReviews() {
 
                 <button
                     onClick={handlePrev}
-                    className="absolute right-aero  bg-[#1A1A1A] border-[4px] border-[#FFFFFF] rounded-full px-4 py-3 cursor-pointer hover:scale-105 transition-transform"
+                    className="absolute right-aero  bg-[#1A1A1A] border-[4px] border-[#FFFFFF] rounded-full px-4 py-4 cursor-pointer hover:scale-105 transition-transform"
                     style={{
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
@@ -232,7 +232,7 @@ export default function ClientReviews() {
 
                 <button
                     onClick={handleNext}
-                    className="absolute left-aero bg-[#1A1A1A] border-4 border-[#FFFFFF] rounded-full px-4 py-3 cursor-pointer hover:scale-105 transition-transform"
+                    className="absolute left-aero bg-[#1A1A1A] border-4 border-[#FFFFFF] rounded-full px-4 py-4 cursor-pointer hover:scale-105 transition-transform"
                     style={{
                         boxShadow: "0px 6px 20px -6px #1E2E4826",
                     }}
