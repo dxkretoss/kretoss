@@ -150,8 +150,8 @@ export default function Hero() {
                                 </h2>
 
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                                    <div className="flex flex-col gap-[20px]">
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
+                                    <div className="flex flex-col gap-[20px] text-[#333]">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] text-[#333]">
                                             <div>
                                                 <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
                                                     Name
@@ -159,7 +159,7 @@ export default function Hero() {
                                                 <input
                                                     type="text"
                                                     placeholder="John Deo"
-                                                    className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                                    className="w-full h-[48px] px-[12px] rounded-[6px] text-[#333]  border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
                                                 />
                                             </div>
                                             <div>
