@@ -47,13 +47,16 @@ export default function TopHeader() {
                             className="w-[18px] h-[18px] cursor-pointer hover:opacity-80 transition"
                         /> */}
 
-                        <div className="flex items-center gap-2 cursor-pointer">
+                        {/* <div className="flex items-center gap-2 cursor-pointer">
                             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                             <span className="text-[13px] font-medium text-[#222]">
                                 Black Friday Sale — Flat 20% OFF
                             </span>
+                        </div> */}
+                        <div className="flex items-center gap-2 bg-gradient-to-r from-[#5D59EA] to-[#A05BFF] text-white px-3 py-1 rounded-lg shadow-md cursor-pointer">
+                            <span className="font-semibold text-[13px]">Black Friday Sale</span>
+                            <span className="text-[12px]">20% OFF</span>
                         </div>
-
                     </div>
                 </div>
             </div>
