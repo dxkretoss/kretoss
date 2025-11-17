@@ -30,7 +30,7 @@ export default function SuccessTogather() {
                     >
                         <img
                             src="/assets/images/mobile-app/misson.svg"
-                            loading="lazy"
+
                             alt="Mission"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
@@ -54,7 +54,7 @@ export default function SuccessTogather() {
                             Success
                             <img
                                 src="/assets/images/mobile-app/underline.svg"
-                                loading="lazy"
+
                                 alt=""
                                 className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[10px]"
                             />

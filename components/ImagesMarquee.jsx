@@ -10,7 +10,7 @@ export function ImagesMarquee({ images }) {
                     key={i}
                     src={src}
                     alt={`mob-${i}`}
-                    loading="lazy"
+
                     className="h-[400px] shrink-0"
                 />
             ))}

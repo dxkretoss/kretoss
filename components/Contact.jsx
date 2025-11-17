@@ -101,7 +101,7 @@ export default function Contact() {
 
                         <div className="flex flex-col gap-[25px]">
                             <div className="flex gap-[16px] items-start">
-                                <img src="/assets/images/mobile-app/email.svg" loading="lazy" alt="email" />
+                                <img src="/assets/images/mobile-app/email.svg" alt="email" />
                                 <div>
                                     <p className="text-[18px] font-semibold text-[#000]">Email Us</p>
                                     <span className="text-[#323233] text-[16px]">info@kretoss.com</span>
@@ -109,7 +109,7 @@ export default function Contact() {
                             </div>
 
                             <div className="flex gap-[16px] items-start">
-                                <img src="/assets/images/mobile-app/wp.svg" loading="lazy" alt="whatsapp" />
+                                <img src="/assets/images/mobile-app/wp.svg" alt="whatsapp" />
                                 <div>
                                     <p className="text-[18px] font-semibold text-[#000]">WhatsApp Us</p>
                                     <span className="text-[#323233] text-[16px]">(+91) 63534-23473</span>
@@ -117,7 +117,7 @@ export default function Contact() {
                             </div>
 
                             <div className="flex gap-[16px] items-start">
-                                <img src="/assets/images/mobile-app/loc.svg" loading="lazy" alt="location" />
+                                <img src="/assets/images/mobile-app/loc.svg" alt="location" />
                                 <div className="flex flex-col gap-[10px] w-full">
                                     <div className="flex flex-col">
                                         <p className="text-[18px] font-semibold text-[#000]">Visit Us</p>
@@ -126,7 +126,7 @@ export default function Contact() {
                                     <div className='flex flex-col  gap-[15px]'>
                                         <div className="flex flex-col">
                                             <div className="flex items-center gap-2 mt-1">
-                                                <img src="/assets/images/mobile-app/india.svg" loading="lazy" alt="india" />
+                                                <img src="/assets/images/mobile-app/india.svg" alt="india" />
                                                 <span className="text-[#323233] text-[16px]">India</span>
                                             </div>
                                             <span className="text-[#323233] text-[15px] mt-3 max-w-[400px]">
@@ -136,7 +136,7 @@ export default function Contact() {
 
                                         <div className="flex flex-col mt-[15px]">
                                             <div className="flex items-center gap-2 mt-[25px] sm:mt-0">
-                                                <img src="/assets/images/mobile-app/usa.svg" loading="lazy" alt="usa" />
+                                                <img src="/assets/images/mobile-app/usa.svg" alt="usa" />
                                                 <span className="text-[#323233] text-[16px]">United States</span>
                                             </div>
                                             <span className="text-[#323233] text-[15px] mt-3 max-w-[400px]">

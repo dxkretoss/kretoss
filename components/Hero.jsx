@@ -95,7 +95,7 @@ export default function Hero() {
                         </span>
                         <img
                             src="/assets/images/mobile-app/clock.svg"
-                            loading="lazy"
+
                             className="ml-[5px] 2xl:ml-[15px] w-[20px] sm:w-[28px]"
                         />
                         <span className="text-[#02021E] text-[16px] md:text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold ml-1">
@@ -134,7 +134,7 @@ export default function Hero() {
                                 <img
                                     src={item.icon}
                                     alt={item.label}
-                                    loading="lazy"
+
                                     className="w-[24px] sm:w-[32px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">
@@ -167,7 +167,7 @@ export default function Hero() {
                                 >
                                     <img
                                         src={src}
-                                        loading="lazy"
+
                                         className="w-[50px] sm:w-[100px] h-[35px] sm:h-[50px]"
                                         alt="trusted brand"
                                     />
@@ -191,12 +191,12 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
-                                    loading="lazy"
+
                                     className="w-[60px] sm:w-[70px]"
                                 />
                                 <img
                                     src="/assets/images/mobile-app/logo.svg"
-                                    loading="lazy"
+
                                     className="w-[100px] sm:w-[130px] md:w-[150px]"
                                     alt="logo"
                                 />
@@ -206,7 +206,7 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.mapLogo}
                                     alt={currentCountry.countryName}
-                                    loading="lazy"
+
                                     className="w-[150px] sm:w-[180px] md:w-[200px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">

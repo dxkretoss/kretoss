@@ -13,7 +13,7 @@ export default function GlobalExp() {
                     <img
                         src="/assets/images/mobile-app/logo.svg"
                         alt="Logo"
-                        loading="lazy"
+
                         className="mx-auto lg:mx-0 w-[120px] sm:w-[140px] lg:w-[160px]"
                     />
 
@@ -57,7 +57,7 @@ export default function GlobalExp() {
                     <img
                         src="/assets/images/mobile-app/GlobalExp.svg"
                         alt="Global Expertise"
-                        loading="lazy"
+
                         className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-full max-w-[600px] 
                                    h-auto object-contain"
                     />

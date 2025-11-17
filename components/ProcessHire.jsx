@@ -35,7 +35,7 @@ export default function ProcessHire() {
                         Process to Hire
                         <img
                             src="/assets/images/mobile-app/underline.svg"
-                            loading="lazy"
+
                             alt=""
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[12px]"
                         />
@@ -56,7 +56,7 @@ export default function ProcessHire() {
                     >
                         <img
                             src="/assets/images/mobile-app/Vision.svg"
-                            loading="lazy"
+
                             alt="Vision"
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
@@ -81,7 +81,7 @@ export default function ProcessHire() {
                         <img
                             src={item.img}
                             alt={item.txt}
-                            loading="lazy"
+
                             className="w-[64px] h-auto"
                         />
                         <p className="mt-3 sm:mt-5 text-[#000000] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-snug">

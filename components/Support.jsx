@@ -129,7 +129,7 @@ export default function Support() {
                                     <div className="flex items-start gap-[12px]">
                                         <img
                                             src={item.img}
-                                            loading="lazy"
+
                                             className="bg-[#E1E0FF] p-2 rounded-full"
                                         />
                                         <span className="text-[14px] 2xl:text-[18px] text-[#02021E] font-semibold">
@@ -173,7 +173,7 @@ export default function Support() {
                     >
                         <img
                             src="/assets/images/mobile-app/Qsupport.svg"
-                            loading="lazy"
+
                             alt="Quick Support"
                             className="absolute -top-5"
                         />

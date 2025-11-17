@@ -55,7 +55,7 @@ export default function Plans() {
                         Estimated Cost
                         <img
                             src="/assets/images/mobile-app/underline.svg"
-                            loading="lazy"
+
                             alt=""
                             className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3"
                         />
@@ -82,7 +82,7 @@ export default function Plans() {
                             <img
                                 src={plan.img}
                                 alt={plan.name}
-                                loading="lazy"
+
                                 className="bg-[#E1E0FF] rounded-full p-4 sm:p-5 w-20 h-20 "
                             />
                             <span className="text-[18px] sm:text-[22px] md:text-[28px] 2xl:text-[38px] text-[#02021E] font-semibold mt-4 sm:mt-5">

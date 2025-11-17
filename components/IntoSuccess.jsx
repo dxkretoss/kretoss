@@ -70,7 +70,7 @@ export default function IntoSuccess() {
                             <img
                                 src={card.image}
                                 alt={card.title}
-                                loading="lazy"
+
                                 className="object-contain"
                             />
                         </div>

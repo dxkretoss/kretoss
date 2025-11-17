@@ -21,7 +21,7 @@ export default function Solution() {
                     Mobile Solutions.
                     <img
                         src="/assets/images/mobile-app/underline.svg"
-                        loading="lazy"
+
                         alt=""
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[8px] sm:translate-y-[12px]"
                     />
@@ -43,7 +43,7 @@ export default function Solution() {
                         className="flex flex-col items-center  bg-white border border-[#22222224] rounded-[22px] p-5 sm:p-6 w-full h-[160px] sm:h-[180px]"
                         style={{ boxShadow: '0px 0px 21px 0px #0000001A' }}
                     >
-                        <img src={item.img} loading="lazy" className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
+                        <img src={item.img} className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
                         <span className="text-[#02021E] font-medium text-[14px] sm:text-[16px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
                             {item.txt}
                         </span>
