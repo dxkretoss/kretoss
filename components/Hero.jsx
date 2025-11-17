@@ -84,7 +84,7 @@ export default function Hero() {
                         Developers
                     </h1>
 
-                    <p className="text-[#FFFFFF] text-[16px] sm:text-[18px] md:text-[20px] 2xl:text-[24px] mt-4 sm:mt-6 mb-8 sm:mb-10 max-w-[600px]">
+                    <p className="text-[#FFFFFF] text-[16px] sm:text-[18px] md:text-[20px] 2xl:text-[24px]  sm:mt-6 mb-8 sm:mb-10 max-w-[600px]">
                         Hire a skilled team of app developers to deliver top-quality,
                         user-friendly app solutions tailored to your project needs.
                     </p>

@@ -33,6 +33,9 @@ body {
   .container_content {
     width: 100%;
   }
+  body {
+    font-size: 14px;
+  }
 }
 
 .scroll-column {
@@ -114,7 +117,7 @@ html {
   width: max-content;
   animation: scroll-seamless 20s linear infinite;
   will-change: transform;
-  -webkit-transform: translateZ(0); /* Force GPU rendering */
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;

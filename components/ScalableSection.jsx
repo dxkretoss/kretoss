@@ -72,7 +72,7 @@ export default function ScalableSection() {
                         </span>
                     </div>
 
-                    <div className='lg:hidden flex overflow-hidden'>
+                    <div className='lg:hidden flex'>
                         <div className="overflow-hidden">
                             <div className="flex gap-6 mt-[40px] marquee-track">
                                 {[...stats, ...stats].map((item, index) => (
@@ -146,15 +146,15 @@ export default function ScalableSection() {
                     </div>
                 </div>
 
-                <div className="flex lg:hidden justify-center overflow-hidden">
-                    <div className="relative w-full overflow-hidden h-[400px]">
-                        <div className="marquee-track">
+                <div className="flex lg:hidden justify-center">
+                    <div className="relative w-full h-[400px] overflow-hidden">
+                        <div className="marquee-track ios-marquee">
                             {[...images, ...images].map((src, i) => (
                                 <img
                                     key={i}
                                     src={src}
                                     alt={`scroll-${i}`}
-                                    className="h-[400px] w-auto shrink-0"
+                                    className="h-[400px] w-auto shrink-0 pointer-events-none"
                                 />
                             ))}
                         </div>
