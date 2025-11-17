@@ -4,14 +4,14 @@ import SmoothMarquee from "./SmoothMarquee";
 
 export function StatsMarquee({ stats }) {
     return (
-        <SmoothMarquee speed={80} gapPx={24} className="lg:hidden mt-[40px]">
+        <SmoothMarquee speed={80} className="lg:hidden mt-[40px]">
             {stats.map((item, i) => (
-                <div key={i} className="flex flex-col items-center shrink-0" style={{ width: 160 }}>
+                <div key={i} className="flex flex-col items-center shrink-0" style={{ width: 220 }}>
                     <img src={item.icon} alt="" loading="lazy" />
                     <p className="text-[28px] font-semibold mt-[5px]">
                         {item.prefix}{item.value}{item.suffix}
                     </p>
-                    <p className="text-[15px] text-center">{item.label}</p>
+                    <p className="text-[14px] text-start">{item.label}</p>
                 </div>
             ))}
         </SmoothMarquee>

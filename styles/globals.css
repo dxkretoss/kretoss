@@ -114,6 +114,14 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+
+  /* iOS scroll jump fix */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* track holds two copies side-by-side */
@@ -121,40 +129,47 @@ body {
   display: flex;
   flex-wrap: nowrap; /* prevent wrapping in Safari */
   align-items: center;
-  width: max-content; /* allow measuring real width */
+  width: max-content;
+
+  /* iOS stability */
   will-change: transform;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  /* animation defined below uses CSS vars set from JS */
+
+  /* animation */
   animation-name: marquee-scroll;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: var(--duration, 12s);
 }
 
-/* Each item shouldn't shrink */
+/* items should not shrink */
 .marquee-track > * {
   flex: 0 0 auto;
 }
 
-/* Keyframes move left by the exact pixel width of the first copy */
+/* ---------------------------------------
+   FIXED KEYFRAMES (use translate3d, not translateX)
+   --------------------------------------- */
 @keyframes marquee-scroll {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(calc(-1 * var(--shift, 0px)));
+    transform: translate3d(calc(-1 * var(--shift, 0px)), 0, 0);
+    -webkit-transform: translate3d(calc(-1 * var(--shift, 0px)), 0, 0);
   }
 }
 
-/* optional: pause on hover using a helper class toggled in JS (also nice fallback) */
+/* pause on hover class */
 .marquee--paused .marquee-track {
   animation-play-state: paused;
 }
 
-/* small niceties */
+/* gap between items */
 .marquee-item-gap {
   margin-right: 24px;
-} /* default gap between items (override as needed) */
+}

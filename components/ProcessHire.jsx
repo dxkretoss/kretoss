@@ -76,7 +76,7 @@ export default function ProcessHire() {
                 {Process.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col items-center text-center sm:items-start sm:text-start bg-white rounded-[20px] p-6 sm:p-8 w-full sm:w-[300px] md:w-[320px] lg:w-[280px] xl:w-[320px] transition-all duration-300"
+                        className="flex flex-col items-center text-center sm:items-start sm:text-start bg-white rounded-[20px] py-5 px-3 sm:p-8 w-full sm:w-[300px] md:w-[320px] lg:w-[280px] xl:w-[320px] transition-all duration-300"
                     >
                         <img
                             src={item.img}
@@ -84,10 +84,10 @@ export default function ProcessHire() {
                             loading="lazy"
                             className="w-[64px] h-auto"
                         />
-                        <p className="mt-5 text-[#000000] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-snug">
+                        <p className="mt-3 sm:mt-5 text-[#000000] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-snug">
                             {item.txt}
                         </p>
-                        <p className="mt-4 text-[#000000CC] text-[14px] sm:text-[16px] md:text-[17px] leading-relaxed">
+                        <p className="mt-2 sm:mt-4 text-[#000000CC] text-[14px] sm:text-[16px] md:text-[17px] leading-relaxed">
                             {item.desc}
                         </p>
                     </div>
