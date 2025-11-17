@@ -6,22 +6,11 @@ export default function Header() {
     const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        project: "",
-    });
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setTimeout(() => {
             setIsOpen(false);
-            setFormData({ name: "", email: "", phone: "", project: "" });
             router.push('/thankyou');
         }, 2000);
     };
@@ -130,7 +119,7 @@ export default function Header() {
 
             {isOpen && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60]">
-                    <div className="bg-white w-[450px] max-w-[90%] rounded-[12px] p-8 shadow-lg relative overflow-auto max-h-[90vh]">
+                    <div className="bg-white w-[650px] max-w-[90%] rounded-[12px] p-8 shadow-lg relative overflow-auto max-h-[90vh]">
                         <button
                             onClick={() => setIsOpen(false)}
                             className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
@@ -144,41 +133,67 @@ export default function Header() {
                         </h2>
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="border border-gray-300 rounded-[8px] px-4 py-2 focus:outline-none focus:border-[#5D59EA]"
-                                required
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="border border-gray-300 rounded-[8px] px-4 py-2 focus:outline-none focus:border-[#5D59EA]"
-                                required
-                            />
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                className="border border-gray-300 rounded-[8px] px-4 py-2 focus:outline-none focus:border-[#5D59EA]"
-                                required
-                            />
-                            <textarea
-                                name="project"
-                                placeholder="Project Description"
-                                value={formData.project}
-                                onChange={handleChange}
-                                className="border border-gray-300 rounded-[8px] px-4 py-2 focus:outline-none focus:border-[#5D59EA] min-h-[100px]"
-                                required
-                            />
+                            <div className="flex flex-col gap-[20px]">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
+                                    <div>
+                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                            Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="John Deo"
+                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                            Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            placeholder="john.doe@gmail.com"
+                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
+                                    <div>
+                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                            Phone Number
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="123 432 3432"
+                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                            Budget
+                                        </label>
+                                        <select
+                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] text-[#666] outline-none"
+                                        >
+                                            <option>Select project budget</option>
+                                            <option>$1,000 - $5,000</option>
+                                            <option>$5,000 - $10,000</option>
+                                            <option>$10,000 - $50,000</option>
+                                            <option>$50,000+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        placeholder="Tell us about your requirements..."
+                                        className="w-full h-[120px] px-[12px] py-[10px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] resize-none outline-none"
+                                    ></textarea>
+                                </div>
+                            </div>
                             <button
                                 type="submit"
                                 className="bg-[#5D59EA] text-white font-semibold py-2 rounded-full mt-2 hover:bg-[#4a47d1] transition"
