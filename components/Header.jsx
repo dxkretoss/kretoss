@@ -37,9 +37,9 @@ export default function Header() {
                     <ul className="flex items-center gap-8 text-[#222222] text-[16px] font-medium">
                         {[
                             { label: "About Us", target: "about" },
+                            { label: "Industries", target: "industries" },
                             { label: "Services", target: "services" },
                             { label: "Hire Resources", target: "hire" },
-                            { label: "Industries", target: "industries" },
                             { label: "Contact Us", target: "contact" },
                         ].map((item, index) => (
                             <li key={index}>
@@ -94,20 +94,25 @@ export default function Header() {
                         </div>
 
                         <ul className="flex flex-col gap-5 text-[#222222] text-[16px] font-medium">
-                            {["About Us", "Services", "Hire Resources", "Industries", "Contact Us"].map(
-                                (item, index) => (
-                                    <li key={index}>
-                                        <a
-                                            href="#"
-                                            className="block hover:text-[#5D59EA] transition"
-                                            onClick={() => setIsSidebarOpen(false)}
-                                        >
-                                            {item}
-                                        </a>
-                                    </li>
-                                )
-                            )}
+                            {[
+                                { label: "About Us", target: "about" },
+                                { label: "Services", target: "services" },
+                                { label: "Hire Resources", target: "hire" },
+                                { label: "Industries", target: "industries" },
+                                { label: "Contact Us", target: "contact" },
+                            ].map((item, index) => (
+                                <li key={index}>
+                                    <a
+                                        href={`/#${item.target}`}
+                                        className="block hover:text-[#5D59EA] transition"
+                                        onClick={() => setIsSidebarOpen(false)}
+                                    >
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
+
 
                         <button
                             onClick={() => {

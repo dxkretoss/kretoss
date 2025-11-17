@@ -88,7 +88,7 @@ export default function Support() {
 
                 {/* Subtext */}
                 <div className="max-w-[850px] mx-auto text-center mt-[20px]">
-                    <span className="text-[14px] sm:text-[16px]">
+                    <span className="text-[15px] sm:text-[16px]">
                         Hire mobile app developers with expertise in custom app development,
                         full-stack solutions, enterprise applications, and cross-platform
                         mobile development. We deliver reliable, efficient, and tailored app
@@ -116,7 +116,7 @@ export default function Support() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.05 }}
-                                    className="border border-[#22222233] rounded-[12px] bg-[#FFFFFF] p-[20px] flex-shrink-0"
+                                    className="border border-[#22222233] h-[250px] sm:h-auto rounded-[12px] bg-[#FFFFFF] p-[15px] flex-shrink-0"
                                     style={{
                                         width:
                                             itemsPerPage === 1
@@ -127,17 +127,16 @@ export default function Support() {
                                     }}
                                 >
                                     <div className="flex items-start gap-[12px]">
-                                        <img
+                                        {/* <img
                                             src={item.img}
-
                                             className="bg-[#E1E0FF] p-2 rounded-full"
-                                        />
-                                        <span className="text-[14px] 2xl:text-[18px] text-[#02021E] font-semibold">
+                                        /> */}
+                                        <span className="text-[19px] 2xl:text-[18px] text-[#02021E] font-semibold">
                                             {item.txt}
                                         </span>
                                     </div>
-                                    <div className="mt-[15px]">
-                                        <span className="text-[#4C586F] text-[14px] 2xl:text-[16px]">
+                                    <div className="mt-[10px] lg:mt-[15px]">
+                                        <span className="text-[#4C586F] text-[16px] 2xl:text-[16px]">
                                             {item.desc}
                                         </span>
                                     </div>

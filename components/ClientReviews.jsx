@@ -114,6 +114,26 @@ export default function ClientReviews() {
         }),
     };
 
+    const [touchStartX, setTouchStartX] = useState(null);
+
+    const handleTouchStart = (e) => {
+        setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = (e) => {
+        if (touchStartX === null) return;
+
+        const diff = touchStartX - e.changedTouches[0].clientX;
+
+        if (diff > 50) {
+            handleNext();
+        } else if (diff < -50) {
+            handlePrev();
+        }
+
+        setTouchStartX(null);
+    };
+
     return (
         <div className="container section max-auto container_content">
             <h1
@@ -138,6 +158,8 @@ export default function ClientReviews() {
                         background:
                             "linear-gradient(96.57deg, #FCE6FF 0.24%, rgba(255, 255, 255, 0.8) 99.76%)",
                     }}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
                 >
                     <AnimatePresence custom={direction} mode="wait">
                         <motion.div
@@ -155,11 +177,11 @@ export default function ClientReviews() {
                                 </h1>
 
                                 <div className="flex items-center mt-[9px]">
-                                    <p className="text-[14px] font-bold flex flex-wrap gap-2 mt-2">
+                                    <p className="text-[15px] font-bold flex flex-wrap gap-2 mt-2">
                                         {review.appUsed.map((tech, index) => (
                                             <span
                                                 key={index}
-                                                className="bg-[#486FEB]/10 text-[#486FEB] text-[14px] font-semibold px-3 py-1 rounded-full"
+                                                className="bg-[#486FEB]/10 text-[#486FEB] text-[15px] font-semibold px-3 py-1 rounded-full"
                                             >
                                                 {tech}
                                             </span>
@@ -169,7 +191,7 @@ export default function ClientReviews() {
                                 </div>
 
                                 <div className="mt-[22px]">
-                                    <p className="text-[14px] 2xl:text-[16px] text-[#000000CC] max-w-[480px] leading-[28px]">
+                                    <p className="text-[15px] 2xl:text-[16px] text-[#000000CC] max-w-[480px] leading-[28px]">
                                         “{review.description}”
                                     </p>
                                 </div>
@@ -201,7 +223,7 @@ export default function ClientReviews() {
                                         <p className="text-[16px] font-semibold text-[#000000]">
                                             {review.clientName}
                                         </p>
-                                        <span className="text-[14px] text-[#000000CC]">
+                                        <span className="text-[15px] text-[#000000CC]">
                                             {review.clientPosition}
                                         </span>
                                     </div>

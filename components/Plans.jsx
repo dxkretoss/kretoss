@@ -5,6 +5,7 @@ export default function Plans() {
         {
             id: 1,
             name: "Monthly Plan",
+            mobbuttonduration: "Monthly",
             price: "$2499.00",
             duration: "/Month",
             shortDesc: "Hire best app developers on a flexible monthly plan designed to support ongoing development, updates, and feature enhancements. Ideal for businesses that need continuous support without long-term commitments.",
@@ -18,6 +19,7 @@ export default function Plans() {
         {
             id: 2,
             name: "Quarterly Plan",
+            mobbuttonduration: "Quarterly",
             price: "$6999.00",
             duration: "/Quarter",
             shortDesc: "Hire mobile app developers on a quarterly basis for strategic development cycles, improved planning, and consistent progress. Perfect for scaling projects with predictable timelines and smooth execution.",
@@ -31,6 +33,7 @@ export default function Plans() {
         {
             id: 3,
             name: "Yearly Plan",
+            mobbuttonduration: "Yearly",
             price: "$19,999.00",
             duration: "/Year",
             shortDesc: "Hire mobile app developers with a yearly plan to maximize value, optimize performance, and ensure long-term stability. Best for businesses committed to continuous innovation and sustained growth.",
@@ -67,20 +70,20 @@ export default function Plans() {
                 </p>
             </div>
 
-            <div className="flex justify-center gap-[10px] lg:hidden h-15 mt-10">
+            <div className="flex justify-center gap-[10px] lg:hidden h-12 mt-10">
                 {plans.map((plan) => (
                     <button
                         key={plan.id}
                         onClick={() => setActivePlan(plan.name)}
                         className={`
-                px-4 py-2 rounded-full text-[14px] font-medium transition-all duration-300
+                px-6 py-2 rounded-full text-[15px] font-medium transition-all duration-300
                 ${activePlan === plan.name
                                 ? "bg-[#5D59EA] text-white shadow-md"
                                 : "border border-[#5D59EA] text-[#5D59EA] bg-transparent"
                             }
             `}
                     >
-                        {plan.name}
+                        {plan.mobbuttonduration}
                     </button>
                 ))}
             </div>
@@ -95,10 +98,12 @@ export default function Plans() {
             </div>
 
             <div className="hidden lg:flex justify-center gap-6 w-full">
-                {plans
-                    .map((plan) => (
-                        <PlanCard key={plan.id} plan={plan} isActive={true} setActivePlan={setActivePlan} />
-                    ))}
+                {plans.map((plan) => {
+                    const isActive = plan.name === activePlan;
+                    return (
+                        <PlanCard key={plan.id} plan={plan} isActive={isActive} setActivePlan={setActivePlan} />
+                    );
+                })}
             </div>
 
             <div className=" w-[122px] h-[229px] bg-[#0060F0] rounded-[144px] blur-[182px] absolute bottom-[10px] right-0"></div>
@@ -144,7 +149,7 @@ function PlanCard({ plan, isActive, setActivePlan }) {
                 {plan.shortDesc}
             </span>
 
-            <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-[16px] sm:text-base md:text-lg">
+            <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-[16px] font-medium md:text-text-[18px]">
                 {plan.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
                 ))}

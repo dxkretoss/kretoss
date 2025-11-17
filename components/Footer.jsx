@@ -42,7 +42,7 @@ export default function Footer() {
                                             section.scrollIntoView({ behavior: "smooth" });
                                         }
                                     }}
-                                    className="text-white text-[14px] lg:text-[18px] 2xl:text-[22px] hover:text-[#A9A7FF] transition-all bg-transparent border-none outline-none cursor-pointer"
+                                    className="text-white text-[15px] lg:text-[18px] 2xl:text-[22px] hover:text-[#A9A7FF] transition-all bg-transparent border-none outline-none cursor-pointer"
                                 >
                                     {link.label}
                                 </button>
@@ -52,10 +52,10 @@ export default function Footer() {
                         <hr className="mt-6 sm:mt-8 border-t border-[#FFFFFF4D]" />
 
                         {/* Bottom Section */}
-                        <div className="mt-6 sm:mt-8 flex flex-col xl:flex-row justify-between gap-8 sm:gap-10 xl:gap-16 2xl:gap-20">
+                        <div className="mt-6 sm:mt-8 flex flex-col xl:flex-row justify-between sm:gap-10 xl:gap-16 2xl:gap-20">
                             {/* Social Media */}
                             <div className="flex flex-col items-center lg:items-start">
-                                <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px] font-medium text-white">
+                                <h3 className="text-[15px] xl:text-[18px] 2xl:text-[22px] font-medium text-white">
                                     Social Media
                                 </h3>
                                 <div className="flex gap-2 2xl:gap-6 mt-3 sm:mt-4">
@@ -67,7 +67,7 @@ export default function Footer() {
                                         <img
                                             src="/assets/images/mobile-app//footer/linkedin.svg"
                                             alt="LinkedIn"
-                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
+                                            className="cursor-pointer hover:scale-110 transition-transform w-[30px] lg:w-[40px]"
                                         />
                                     </a>
                                     <a
@@ -78,7 +78,7 @@ export default function Footer() {
                                         <img
                                             src="/assets/images/mobile-app//footer/facebook.svg"
                                             alt="Facebook"
-                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
+                                            className="cursor-pointer hover:scale-110 transition-transform w-[30px] lg:w-[40px]"
                                         />
                                     </a>
                                     {/* <a href="#" target="_blank" rel="noopener noreferrer">
@@ -96,7 +96,7 @@ export default function Footer() {
                                         <img
                                             src="/assets/images/mobile-app//footer/insta.svg"
                                             alt="Instagram"
-                                            className="cursor-pointer hover:scale-110 transition-transform xl:w-[40px]"
+                                            className="cursor-pointer hover:scale-110 transition-transform w-[30px] lg:w-[40px]"
                                         />
                                     </a>
                                 </div>
@@ -104,11 +104,11 @@ export default function Footer() {
 
                             {/* Newsletter */}
                             <div className="flex flex-col w-full xl:w-auto">
-                                {/* <h3 className="text-[14px] xl:text-[18px] 2xl:text-[22px]  font-medium text-white">
+                                {/* <h3 className="text-[15px] xl:text-[18px] 2xl:text-[22px]  font-medium text-white">
                                     Subscribe To Our Newsletter
                                 </h3> */}
                                 <div className="mt-6 sm:mt-12 text-center">
-                                    <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
+                                    <p className="text-white text-[15px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
                                         © 2025 | Designed By Kretoss Technology.
                                     </p>
                                 </div>
@@ -120,7 +120,7 @@ export default function Footer() {
                                     />
                                     <button
                                         onClick={handleSend}
-                                        className="bg-white rounded-full w-full  h-[36px] xl:h-[46px] 2xl:h-[52px] sm:w-[120px] 2xl:w-[158px] px-6 sm:px-8 text-[14px] xl:text-[18px] 2xl:text-[20px] text-[#5D59EA] font-medium hover:bg-[#eaeaff] transition-all"
+                                        className="bg-white rounded-full w-full  h-[36px] xl:h-[46px] 2xl:h-[52px] sm:w-[120px] 2xl:w-[158px] px-6 sm:px-8 text-[15px] xl:text-[18px] 2xl:text-[20px] text-[#5D59EA] font-medium hover:bg-[#eaeaff] transition-all"
                                     >
                                         Submit
                                     </button>
@@ -160,7 +160,7 @@ export default function Footer() {
                 {/* Divider & Copyright */}
                 {/* <hr className="mt-10 sm:mt-12 border-t border-[#FFFFFF4D]" />
                 <div className="mt-6 sm:mt-8 text-center">
-                    <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
+                    <p className="text-white text-[15px] sm:text-[16px] md:text-[18px] xl:text-[20px]">
                         © 2025 | Designed By Kretoss Technology.
                     </p>
                 </div> */}

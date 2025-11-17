@@ -44,7 +44,7 @@ export default function Solution() {
                         style={{ boxShadow: '0px 0px 21px 0px #0000001A' }}
                     >
                         <img src={item.img} className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
-                        <span className="text-[#02021E] font-medium text-[14px] sm:text-[16px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
+                        <span className="text-[#02021E] font-medium text-[15px] sm:text-[16px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
                             {item.txt}
                         </span>
                     </div>

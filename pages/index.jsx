@@ -26,13 +26,17 @@ export default function index() {
       <div id="about">
         <ScalableSection />
       </div>
-      <Solution />
+      <div id="industries">
+        <Solution />
+      </div>
       <div id="services">
         <Support />
       </div>
       <Plans />
       <GlobalExp />
-      <Devlopment />
+      <div id="hire">
+        <Devlopment />
+      </div>
       <SkillsSolutions />
       <IntoSuccess />
       <ClientReviews />

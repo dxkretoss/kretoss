@@ -95,7 +95,7 @@ export default function Contact() {
                         <h2 className="text-[22px] sm:text-[24px] font-bold text-[#5D59EA] mb-[20px]">
                             Get in Touch
                         </h2>
-                        <p className="text-[#000000B2] text-[16px] sm:text-[18px] leading-relaxed mb-[20px]">
+                        <p className="text-[#000000B2] text-[14px] sm:text-[18px] leading-relaxed mb-[20px]">
                             Our skilled mobile app developers are ready to help you streamline your processes and elevate your business performance.
                         </p>
 
@@ -134,7 +134,7 @@ export default function Contact() {
                                             </span>
                                         </div>
 
-                                        <div className="flex flex-col mt-[15px]">
+                                        <div className="flex flex-col mt-[0px] lg:mt-[15px]">
                                             <div className="flex items-center gap-2 mt-[25px] sm:mt-0">
                                                 <img src="/assets/images/mobile-app/usa.svg" alt="usa" />
                                                 <span className="text-[#323233] text-[16px]">United States</span>

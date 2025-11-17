@@ -4,7 +4,7 @@ import SmoothMarquee from "./SmoothMarquee";
 
 export function ImagesMarquee({ images }) {
     return (
-        <SmoothMarquee speed={120} gapPx={0} className="lg:hidden mt-[40px]">
+        <SmoothMarquee speed={40} gapPx={5} className="lg:hidden mt-[40px]">
             {images.map((src, i) => (
                 <img
                     key={i}

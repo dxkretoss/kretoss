@@ -61,10 +61,10 @@ export default function ProcessHire() {
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
                         <div className="absolute top-8 flex flex-col items-center">
-                            <span className="text-[14px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
+                            <span className="text-[15px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
                                 Vision
                             </span>
-                            <span className="text-[#4B4D4C] text-[12px] xl:text-[14px] 2xl:text-[15px]">
+                            <span className="text-[#4B4D4C] text-[12px] xl:text-[15px] 2xl:text-[15px]">
                                 Empower Businesses With Innovative
                             </span>
                         </div>
@@ -87,7 +87,7 @@ export default function ProcessHire() {
                         <p className="mt-3 sm:mt-5 text-[#000000] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-snug">
                             {item.txt}
                         </p>
-                        <p className="mt-2 sm:mt-4 text-[#000000CC] text-[14px] sm:text-[16px] md:text-[17px] leading-relaxed">
+                        <p className="mt-2 sm:mt-4 text-[#000000CC] text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed">
                             {item.desc}
                         </p>
                     </div>

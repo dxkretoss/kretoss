@@ -35,10 +35,10 @@ export default function SuccessTogather() {
                             className="absolute -top-6 sm:-top-7 w-[40px] sm:w-[50px] md:w-[55px]"
                         />
                         <div className="absolute top-5 md:top-8 flex flex-col items-center">
-                            <span className="text-[14px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
+                            <span className="text-[15px] xl:text-[18px] 2xl:text-[23px] font-bold text-[#020817] text-center">
                                 Mission
                             </span>
-                            <span className="text-[#4B4D4C] text-[12px] xl:text-[14px] 2xl:text-[15px]">
+                            <span className="text-[#4B4D4C] text-[12px] xl:text-[15px] 2xl:text-[15px]">
                                 Innovate. Develop. Deliver.
                             </span>
                         </div>

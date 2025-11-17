@@ -7,7 +7,7 @@ export default function TopHeader() {
                 <div className="flex justify-center md:justify-between items-center w-full relative">
 
                     <div className="flex gap-4 items-center">
-                        <span className="text-[#222222] text-[14px] whitespace-nowrap">
+                        <span className="text-[#222222] text-[15px] whitespace-nowrap">
                             Our Office
                         </span>
                         <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ export default function TopHeader() {
                     </div>
 
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 text-center max-w-[80%] md:max-w-none">
-                        <span className="text-[#222222] text-[18px] md:text-[16px] sm:text-[14px] font-medium whitespace-nowrap">
+                        <span className="text-[#222222] text-[18px] md:text-[16px] sm:text-[15px] font-medium whitespace-nowrap">
                             “User Friendly Apps Tailored To Your Project”
                         </span>
                     </div>

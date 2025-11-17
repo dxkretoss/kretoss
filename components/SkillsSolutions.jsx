@@ -125,7 +125,7 @@ export default function SkillsSolutions() {
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`h-[51px] 2xl:h-[61px] px-4 py-2 rounded-full text-[14px] xl:text-[16px] 2xl:text-[18px] cursor-pointer font-medium whitespace-nowrap transition-all duration-300 ${activeTab === tab
+                            className={`h-[51px] 2xl:h-[61px] px-4 py-2 rounded-full text-[15px] xl:text-[16px] 2xl:text-[18px] cursor-pointer font-medium whitespace-nowrap transition-all duration-300 ${activeTab === tab
                                 ? "bg-white text-[#5D59EA] shadow-md"
                                 : "hover:bg-[#6C68F5] text-white"
                                 }`}
@@ -145,7 +145,7 @@ export default function SkillsSolutions() {
                             <div className='w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] flex justify-center items-center bg-[#FFFFFF] border border-[#02021E33] shadow-[#9E9E9E40] rounded-full px-3 py-2 2xl:px-5 2xl:py-4'>
                                 <img src={item.icon} />
                             </div>
-                            <span className="text-[14px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px] text-center">{item.name}</span>
+                            <span className="text-[15px] xl:text-[16px] 2xl:text-[20px] font-medium text-[#02021E] mt-[11px] text-center">{item.name}</span>
                         </div>
                     ))}
                 </div>
