@@ -185,19 +185,19 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.6 }}
-                            className="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[600px] xl:max-w-[700px] bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] border border-[#22222224] rounded-2xl p-6 sm:p-8 shadow-xl text-center"
+                            className="relative h-[450px] w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[600px] xl:max-w-[700px] bg-gradient-to-b from-[#FFFFFF] to-[#CFE6FF] border border-[#22222224] rounded-2xl p-6 sm:p-8 shadow-xl text-center"
                         >
                             <div className="flex justify-between items-center">
                                 <img
                                     src={currentCountry.smallLogo}
                                     alt={currentCountry.countryName}
 
-                                    className="w-[60px] sm:w-[70px]"
+                                    className="w-[30px] sm:w-[70px]"
                                 />
                                 <img
                                     src="/assets/images/mobile-app/logo.svg"
 
-                                    className="w-[100px] sm:w-[130px] md:w-[150px]"
+                                    className="w-[120px] md:w-[150px]"
                                     alt="logo"
                                 />
                             </div>
@@ -206,7 +206,6 @@ export default function Hero() {
                                 <img
                                     src={currentCountry.mapLogo}
                                     alt={currentCountry.countryName}
-
                                     className="w-[150px] sm:w-[180px] md:w-[200px]"
                                 />
                                 <div className="flex flex-col text-center sm:text-left">

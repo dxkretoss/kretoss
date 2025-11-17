@@ -4,7 +4,7 @@ export default function TopHeader() {
     return (
         <div className="bg-[#E6F0FF] h-[40px] xl:h-[50px] 2xl:h-[60px] flex items-center relative w-full">
             <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center w-full relative">
+                <div className="flex justify-center md:justify-between items-center w-full relative">
 
                     <div className="flex gap-4 items-center">
                         <span className="text-[#222222] text-[14px] whitespace-nowrap">

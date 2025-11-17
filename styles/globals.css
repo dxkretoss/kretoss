@@ -114,20 +114,21 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-
-  /* iOS scroll jump fix */
+  /* iOS scroll jump fixes */
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  -webkit-overflow-scrolling: touch;
+
+  /* FIX: disable bouncy scrolling */
+  -webkit-overflow-scrolling: auto !important;
 }
 
 /* track holds two copies side-by-side */
 .marquee-track {
   display: flex;
-  flex-wrap: nowrap; /* prevent wrapping in Safari */
+  flex-wrap: nowrap;
   align-items: center;
   width: max-content;
 
@@ -145,14 +146,12 @@ body {
   animation-duration: var(--duration, 12s);
 }
 
-/* items should not shrink */
+/* No shrinking inside the row */
 .marquee-track > * {
   flex: 0 0 auto;
 }
 
-/* ---------------------------------------
-   FIXED KEYFRAMES (use translate3d, not translateX)
-   --------------------------------------- */
+/* iOS-safe keyframes */
 @keyframes marquee-scroll {
   from {
     transform: translate3d(0, 0, 0);
@@ -164,12 +163,18 @@ body {
   }
 }
 
-/* pause on hover class */
+/* Pause on hover class */
 .marquee--paused .marquee-track {
   animation-play-state: paused;
 }
 
-/* gap between items */
+/* Gap */
 .marquee-item-gap {
   margin-right: 24px;
+}
+
+/* GLOBAL iOS scroll-anchor fix */
+html,
+body {
+  overflow-anchor: none;
 }
