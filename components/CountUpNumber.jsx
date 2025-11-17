@@ -1,46 +1,57 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function CountUpNumber({ target, duration = 2000, decimals = 0 }) {
+export default function CountUpNumber({
+    target,
+    duration = 2000,
+    decimals = 0
+}) {
     const [count, setCount] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false);
     const ref = useRef(null);
 
+    /** Track if animation already started */
+    const hasAnimatedRef = useRef(false);
+
+    // ---- Intersection Observer (iOS Safe) ----
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                const entry = entries[0];
-                if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true);
+                if (entries[0].isIntersecting && !hasAnimatedRef.current) {
+                    hasAnimatedRef.current = true;
+                    startAnimation();
+                    observer.disconnect(); // important for iOS
                 }
             },
-            { threshold: 0.4 }
+            {
+                threshold: 0.1,
+                rootMargin: "0px 0px -20% 0px" // prevents early iOS trigger
+            }
         );
 
         if (ref.current) observer.observe(ref.current);
+
         return () => observer.disconnect();
-    }, [hasAnimated]);
+    }, []);
 
-    useEffect(() => {
-        if (!hasAnimated) return;
-
-        let start = 0;
+    // ---- RAF animation ----
+    const startAnimation = () => {
+        let startTimestamp = null;
         const end = parseFloat(target);
-        const frameRate = 16; // ~60fps
-        const totalFrames = Math.round(duration / frameRate);
-        const increment = end / totalFrames;
 
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= end) {
-                setCount(end);
-                clearInterval(timer);
-            } else {
-                setCount(start);
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const current = end * progress;
+
+            setCount(current);
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
             }
-        }, frameRate);
+        };
 
-        return () => clearInterval(timer);
-    }, [hasAnimated, target, duration]);
+        requestAnimationFrame(step);
+    };
 
     return (
         <span ref={ref}>

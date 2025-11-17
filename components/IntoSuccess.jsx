@@ -34,7 +34,7 @@ export default function IntoSuccess() {
                             background:
                                 "linear-gradient(180deg, #FFFFFF 0%, #BBB9FF 130.23%)",
                         }}
-                        className="font-bold text-[#5D59EA] rounded-md px-1 xl:px-2"
+                        className="font-bold text-[#5D59EA] rounded-md px-1 xl:px-2 whitespace-nowrap"
                     >
                         Idea Into Success.
                     </span>
@@ -66,7 +66,7 @@ export default function IntoSuccess() {
                             </p>
                         </div>
 
-                        <div className="bg-[#B2C7FF] rounded-[16px] p-4 2xl:p-6 mt-4 2xl:mt-8 w-full flex justify-center items-center">
+                        <div className="bg-[#B2C7FF] min-h-[185px] rounded-[16px] p-4 2xl:p-6 mt-4 2xl:mt-8 w-full flex justify-center items-center">
                             <img
                                 src={card.image}
                                 alt={card.title}
