@@ -95,6 +95,7 @@ export default function ScalableSection() {
                         </div>
                     </div>
 
+
                     <div className='lg:hidden  flex justify-center'>
                         <button className="w-[270px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
                             style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
@@ -146,9 +147,9 @@ export default function ScalableSection() {
                     </div>
                 </div>
 
-                <div className="flex lg:hidden justify-center">
-                    <div className="relative w-full h-[400px] overflow-hidden">
-                        <div className="marquee-track ios-marquee">
+                <div className="flex lg:hidden">
+                    <div className="relative w-full overflow-hidden">
+                        <div className="marquee-track">
                             {[...images, ...images].map((src, i) => (
                                 <img
                                     key={i}

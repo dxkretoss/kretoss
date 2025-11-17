@@ -129,15 +129,13 @@ html {
     -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(
-      -50%
-    ); /* Use -50% instead of -100% for doubled content */
+    transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
   }
 }
 
 @supports not (width: max-content) {
   .marquee-track {
-    width: fit-content; /* Fallback for Safari */
+    width: fit-content;
   }
 }
