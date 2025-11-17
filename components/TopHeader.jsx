@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function TopHeader() {
     return (
@@ -6,7 +7,7 @@ export default function TopHeader() {
             <div className="container mx-auto px-4">
                 <div className="flex justify-center md:justify-between items-center w-full relative">
 
-                    <div className="flex gap-4 items-center">
+                    <div className="hidden md:flex gap-4 items-center">
                         <span className="text-[#222222] text-[15px] whitespace-nowrap">
                             Our Office
                         </span>
@@ -45,6 +46,14 @@ export default function TopHeader() {
                             alt="Mail"
                             className="w-[18px] h-[18px] cursor-pointer hover:opacity-80 transition"
                         /> */}
+
+                        <div className="flex items-center gap-2 cursor-pointer">
+                            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                            <span className="text-[13px] font-medium text-[#222]">
+                                Black Friday Sale — Flat 20% OFF
+                            </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
