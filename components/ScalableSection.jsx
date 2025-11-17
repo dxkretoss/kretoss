@@ -74,27 +74,21 @@ export default function ScalableSection() {
                         </span>
                     </div>
 
-                    <div className="scroll-wrapper">
+                    <div className="scroll-wrapper lg:hidden mt-[40px]">
                         <div className="scroll-track">
-                            <div className="lg:hidden overflow-hidden flex gap-6 mt-[40px]">
-                                {[...stats, ...stats].map((item, index) => (
-                                    <div key={index} className="flex flex-col items-center shrink-0">
-                                        <img
-                                            src={item.icon}
-                                            alt=""
-                                            loading="lazy"
-                                            className="w-12 h-12"
-                                        />
-                                        <p className="text-[28px] font-semibold text-[#000000] mt-[5px]">
-                                            {item.prefix}
-                                            {item.value}
-                                            {item.suffix}
-                                        </p>
-                                        <p className="text-[#000000] text-[15px]">{item.label}</p>
-                                    </div>
-                                ))}
-                            </div>
-
+                            {[...stats, ...stats].map((item, index) => (
+                                <div key={index} className="flex flex-col items-center shrink-0 mx-6">
+                                    <img
+                                        src={item.icon}
+                                        alt=""
+                                        className="w-12 h-12"
+                                    />
+                                    <p className="text-[28px] font-semibold mt-[5px]">
+                                        {item.prefix}{item.value}{item.suffix}
+                                    </p>
+                                    <p className="text-[15px]">{item.label}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
@@ -107,18 +101,16 @@ export default function ScalableSection() {
                         </button>
                     </div>
 
-                    <div className="scroll-wrapper">
+                    <div className="scroll-wrapper lg:hidden mt-[40px]">
                         <div className="scroll-track">
-                            <div className="flex mt-[40px] lg:hidden w-full overflow-hidden">
-                                {[...images, ...images].map((src, i) => (
-                                    <img
-                                        key={i}
-                                        src={src}
-                                        alt={`scroll-${i}`}
-                                        className="h-[400px]"
-                                    />
-                                ))}
-                            </div>
+                            {[...images, ...images].map((src, i) => (
+                                <img
+                                    key={i}
+                                    src={src}
+                                    alt=""
+                                    className="h-[400px] w-auto shrink-0"
+                                />
+                            ))}
                         </div>
                     </div>
 

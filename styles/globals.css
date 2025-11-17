@@ -109,20 +109,17 @@ body {
 }
 
 .scroll-wrapper {
-  width: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .scroll-track {
   display: flex;
-  gap: 40px;
   animation: scroll 14s linear infinite;
   width: max-content;
 }
 
 .mob-img {
-  width: 260px;
   user-select: none;
   pointer-events: none;
 }
@@ -134,4 +131,13 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.scroll-wrapper,
+.scroll-track,
+img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
