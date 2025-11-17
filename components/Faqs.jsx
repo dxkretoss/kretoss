@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 
 export default function Faqs() {
     const faqs = [
@@ -35,6 +36,17 @@ export default function Faqs() {
 
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
+    };
+
+    const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setTimeout(() => {
+            setIsOpen(false);
+            router.push('/thankyou');
+        }, 2000);
     };
 
     return (
@@ -91,12 +103,102 @@ export default function Faqs() {
 
                 <div className="flex justify-center md:justify-end w-full md:w-auto">
                     <button
+                        onClick={() => setIsOpen(true)}
                         className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-[15px] h-auto w-full sm:w-[350px] md:w-[400px] lg:w-[427px] transition-transform hover:scale-105 duration-300"
                         style={{ boxShadow: "0px 0px 18px 0px #5D59EA99" }}
                     >
                         Get in touch with us today
                     </button>
                 </div>
+
+                {isOpen && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60]">
+                        <div className="bg-white w-[650px] max-w-[90%] rounded-[12px] p-8 shadow-lg relative overflow-auto max-h-[90vh]">
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
+                            >
+                                ✕
+                            </button>
+
+
+                            <h2 className="text-[24px] font-semibold text-[#02021E] mb-6 text-center">
+                                Get in touch with us today
+                            </h2>
+
+                            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-[20px]">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
+                                        <div>
+                                            <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                                Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                placeholder="John Deo"
+                                                className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                                Email
+                                            </label>
+                                            <input
+                                                type="email"
+                                                placeholder="john.doe@gmail.com"
+                                                className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
+                                        <div>
+                                            <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                                Phone Number
+                                            </label>
+                                            <input
+                                                type="text"
+                                                placeholder="123 432 3432"
+                                                className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                                Budget
+                                            </label>
+                                            <select
+                                                className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] text-[#666] outline-none"
+                                            >
+                                                <option>Select project budget</option>
+                                                <option>$1,000 - $5,000</option>
+                                                <option>$5,000 - $10,000</option>
+                                                <option>$10,000 - $50,000</option>
+                                                <option>$50,000+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label className="text-start block text-[#000000] text-[16px] font-medium mb-[6px]">
+                                            Message
+                                        </label>
+                                        <textarea
+                                            placeholder="Tell us about your requirements..."
+                                            className="w-full h-[120px] px-[12px] py-[10px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] resize-none outline-none"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <button
+                                    type="submit"
+                                    className="bg-[#5D59EA] text-[16px] sm:text-[18px] md:text-[20px] rounded-full text-white px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 w-full shadow-lg hover:scale-[1.03] transition-all duration-300"
+                                    style={{ boxShadow: "0px 0px 18px 0px #5D59EA99" }}
+                                >
+                                    Get in touch with us today
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     )

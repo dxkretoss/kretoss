@@ -16,7 +16,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-[#FFFFFF] h-[80px] 2xl:h-[100px] flex items-center relative shadow-sm w-full z-50">
+        <header className="bg-[#FFFFFF] h-[80px] 2xl:h-[100px] flex items-center relative shadow-sm w-full">
             <div className="container mx-auto px-4 flex justify-between items-center w-full">
                 <div className="flex items-center">
                     <img src="/assets/images/mobile-app//logo.svg" alt="Kretoss" className="w-[160px]" />
