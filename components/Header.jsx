@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useRouter } from 'next/router';
+import Form from "./Form";
 
 export default function Header() {
-    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setTimeout(() => {
-            setIsOpen(false);
-            router.push('/thankyou');
-        }, 2000);
-    };
 
     return (
         <header className="bg-[#FFFFFF] h-[80px] 2xl:h-[100px] flex items-center relative shadow-sm w-full">
@@ -102,7 +93,6 @@ export default function Header() {
                             ))}
                         </ul>
 
-
                         <button
                             onClick={() => {
                                 setIsSidebarOpen(false);
@@ -118,92 +108,7 @@ export default function Header() {
             )}
 
             {isOpen && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60]">
-                    <div className="bg-white w-[650px] max-w-[90%] rounded-[12px] p-8 shadow-lg relative overflow-auto max-h-[90vh]">
-                        <button
-                            onClick={() => setIsOpen(false)}
-                            className="absolute top-3 right-4 text-gray-500 text-xl cursor-pointer"
-                        >
-                            ✕
-                        </button>
-
-
-                        <h2 className="text-[24px] font-semibold text-[#02021E] mb-6 text-center">
-                            Get A Free Quote
-                        </h2>
-
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
-                                    <div>
-                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
-                                            Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            placeholder="John Deo"
-                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
-                                            Email
-                                        </label>
-                                        <input
-                                            type="email"
-                                            placeholder="john.doe@gmail.com"
-                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
-                                    <div>
-                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            type="text"
-                                            placeholder="123 432 3432"
-                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
-                                            Budget
-                                        </label>
-                                        <select
-                                            className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] text-[#666] outline-none"
-                                        >
-                                            <option>Select project budget</option>
-                                            <option>$1,000 - $5,000</option>
-                                            <option>$5,000 - $10,000</option>
-                                            <option>$10,000 - $50,000</option>
-                                            <option>$50,000+</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block text-[#000000] text-[16px] font-medium mb-[6px]">
-                                        Message
-                                    </label>
-                                    <textarea
-                                        placeholder="Tell us about your requirements..."
-                                        className="w-full h-[120px] px-[12px] py-[10px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] resize-none outline-none"
-                                    ></textarea>
-                                </div>
-                            </div>
-                            <button
-                                type="submit"
-                                className="bg-[#5D59EA] text-white font-semibold py-2 rounded-full mt-2 hover:bg-[#4a47d1] transition"
-                                style={{ boxShadow: "0px 0px 22px 0px #5D59EA99" }}
-                            >
-                                Get Quote
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                <Form title={'Get A Free Quote'} buttontext={"Get Quote"} onClose={() => setIsOpen(false)} />
             )}
         </header>
     );

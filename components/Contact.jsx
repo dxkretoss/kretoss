@@ -1,12 +1,48 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import toast from 'react-hot-toast';
+import axios from "axios";
+
 export default function Contact() {
     const router = useRouter();
-    // const [showThankYou, setShowThankYou] = useState(false);
 
-    // const handleSend = () => setShowThankYou(true);
-    // const closePopup = () => setShowThankYou(false);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        budget: "",
+        message: "",
+        plan: ""
+    });
 
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async () => {
+        if (!formData.name.trim()) return toast.error("Name is required");
+        if (!formData.email.trim()) return toast.error("Email is required");
+        if (!formData.phone.trim()) return toast.error("Phone number is required");
+        if (!formData.budget.trim()) return toast.error("Budget is required");
+        if (!formData.message.trim()) return toast.error("Message is required");
+        try {
+            const fillForm = await axios.post(
+                "https://shopifycustom.kretosstechnology.com/api/v1/kretoss/form",
+                formData
+            );
+            if (fillForm?.data?.success) {
+                toast.success('Form submitted successfully.');
+                setTimeout(() => {
+                    router.push("/thankyou");
+                }, 2000);
+            }
+        } catch (error) {
+            console.log("error:", error);
+        }
+    };
     return (
         <div
             className="section w-full py-[80px] md:py-[100px] bg-gradient-to-r from-[#F8F8F8] to-[#E6F0FF]"
@@ -28,8 +64,12 @@ export default function Contact() {
                                         Name
                                     </label>
                                     <input
+                                        name="name"
                                         type="text"
+                                        required
                                         placeholder="John Deo"
+                                        onChange={handleChange}
+                                        value={formData.name}
                                         className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
                                     />
                                 </div>
@@ -38,8 +78,12 @@ export default function Contact() {
                                         Email
                                     </label>
                                     <input
+                                        name="email"
                                         type="email"
+                                        required
                                         placeholder="john.doe@gmail.com"
+                                        onChange={handleChange}
+                                        value={formData.email}
                                         className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
                                     />
                                 </div>
@@ -51,8 +95,12 @@ export default function Contact() {
                                         Phone Number
                                     </label>
                                     <input
+                                        name="phone"
                                         type="text"
                                         placeholder="123 432 3432"
+                                        onChange={handleChange}
+                                        required
+                                        value={formData.phone}
                                         className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] outline-none"
                                     />
                                 </div>
@@ -61,6 +109,9 @@ export default function Contact() {
                                         Budget
                                     </label>
                                     <select
+                                        name="budget"
+                                        onChange={handleChange}
+                                        value={formData.budget}
                                         className="w-full h-[48px] px-[12px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] text-[#666] outline-none"
                                     >
                                         <option>Select project budget</option>
@@ -77,13 +128,16 @@ export default function Contact() {
                                     Message
                                 </label>
                                 <textarea
+                                    name="message"
+                                    onChange={handleChange}
+                                    value={formData.message}
                                     placeholder="Tell us about your requirements..."
                                     className="w-full h-[120px] px-[12px] py-[10px] rounded-[6px] border border-[#E0E0E0] bg-[#F5F8FC] resize-none outline-none"
                                 ></textarea>
                             </div>
 
                             <button
-                                onClick={() => router.push('thankyou')}
+                                onClick={() => handleSubmit()}
                                 className="w-[160px] sm:w-[180px] h-[48px] sm:h-[50px] rounded-[8px] bg-[#5D59EA] text-white font-semibold hover:bg-[#4a46d4] transition-all shadow-[0_4px_10px_rgba(93,89,234,0.4)] cursor-pointer"
                             >
                                 Send Message

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Form from "./Form";
 
 export default function Plans() {
+
     const plans = [
         {
             id: 1,
@@ -106,12 +108,16 @@ export default function Plans() {
                 })}
             </div>
 
+
+
             <div className=" w-[122px] h-[229px] bg-[#0060F0] rounded-[144px] blur-[182px] absolute bottom-[10px] right-0"></div>
         </div>
     );
 }
 
 function PlanCard({ plan, isActive, setActivePlan }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div
             className={`w-full lg:w-[30%] mt-10 sm:mt-16 rounded-2xl bg-white border p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 
@@ -156,7 +162,10 @@ function PlanCard({ plan, isActive, setActivePlan }) {
             </ul>
 
             <button
-                onClick={() => setActivePlan(plan.name)}
+                onClick={() => {
+                    setActivePlan(plan.name)
+                    setIsOpen(true)
+                }}
                 className={`mt-4 sm:mt-6 w-full h-12 sm:h-[60px] text-sm sm:text-[20px] rounded-full transition-all duration-300 flex items-center justify-center
                     ${isActive
                         ? "bg-[#5D59EA] text-white"
@@ -166,6 +175,10 @@ function PlanCard({ plan, isActive, setActivePlan }) {
             >
                 Hire {plan.name.split(" ")[0]}
             </button>
+
+            {isOpen && (
+                <Form title={'Get in touch with us today'} buttontext={"Get in touch with us today"} onClose={() => setIsOpen(false)} plan={plan.name} />
+            )}
         </div>
     );
 }
