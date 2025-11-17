@@ -20,7 +20,7 @@ export default function thankyou() {
                 We will get back to you soon.
             </h1>
 
-            <a
+            {/* <a
                 href="https://www.linkedin.com/company/kretoss"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,7 +28,7 @@ export default function thankyou() {
             >
                 <Linkedin className="text-[#6E56CF]" size={18} />
                 LinkedIn
-            </a>
+            </a> */}
 
             <a
                 href="/"

@@ -41,6 +41,32 @@ export default function Support() {
     const startIndex = currentPage * itemsPerPage;
     const visibleServices = Services.slice(startIndex, startIndex + itemsPerPage);
 
+    const [touchStartX, setTouchStartX] = useState(null);
+    const [touchEndX, setTouchEndX] = useState(null);
+
+    const handleTouchStart = (e) => {
+        setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEndX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX || !touchEndX) return;
+
+        const difference = touchStartX - touchEndX;
+
+        if (difference > 50) {
+            setCurrentPage((prev) => (prev + 1 < totalPages ? prev + 1 : 0));
+        } else if (difference < -50) {
+            setCurrentPage((prev) => (prev - 1 >= 0 ? prev - 1 : totalPages - 1));
+        }
+
+        setTouchStartX(null);
+        setTouchEndX(null);
+    };
+
     return (
         <div className="relative container section container_content mx-auto min-h-[570px] 2xl:h-[690px] rounded-[24px]">
             <div
@@ -71,7 +97,10 @@ export default function Support() {
                 </div>
 
                 {/* Cards Section */}
-                <div className="mt-[28px] relative overflow-hidden">
+                <div className="mt-[28px] relative overflow-hidden"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}>
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentPage}

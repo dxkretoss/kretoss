@@ -36,15 +36,15 @@ export default function Solution() {
                 </span>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 2xl:grid-cols-8 gap-[10px] justify-items-center">
+            <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 2xl:grid-cols-8 gap-[5px] justify-items-center">
                 {solutionData.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col items-center bg-white border border-[#22222224] rounded-[22px] p-5 sm:p-6 w-[160px] sm:w-[150px] 2xl:w-[180px] h-[160px] sm:h-[180px]"
+                        className="flex flex-col items-center  bg-white border border-[#22222224] rounded-[22px] p-5 sm:p-6 w-full h-[160px] sm:h-[180px]"
                         style={{ boxShadow: '0px 0px 21px 0px #0000001A' }}
                     >
                         <img src={item.img} loading="lazy" className="w-[50px] sm:w-[42px] 2xl:w-[62px] h-[50px] sm:h-[62px]" />
-                        <span className="text-[#02021E] font-medium text-[14px] sm:text-[18px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
+                        <span className="text-[#02021E] font-medium text-[14px] sm:text-[16px] 2xl:text-[22px] mt-4 sm:mt-5 text-center">
                             {item.txt}
                         </span>
                     </div>

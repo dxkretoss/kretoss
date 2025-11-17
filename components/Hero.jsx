@@ -149,8 +149,8 @@ export default function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex  items-center gap-4 mt-[30px] text-[#FFFFFF]">
-                        <p className="text-[14px] sm:text-[24px] md:text-[28px] font-light">
+                    <div className="flex  items-center mt-[30px] text-[#FFFFFF]">
+                        <p className="text-[14px] sm:text-[22px] 2xl:text-[28px] font-light">
                             <span className="font-bold">Trusted</span> by:
                         </p>
                         <div className="flex  items-center">
@@ -162,7 +162,7 @@ export default function Hero() {
                             ].map((src, index) => (
                                 <div
                                     key={index}
-                                    className={`flex items-center p-[5px] sm:px-[20px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
+                                    className={`flex items-center p-[5px] sm:px-[10px] ${index !== 0 ? "border-l border-[#FFFFFF80]" : ""
                                         }`}
                                 >
                                     <img
