@@ -108,21 +108,30 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.marquee-track {
+.scroll-track {
   display: flex;
-  animation: scroll-seamless 5s linear infinite;
-  min-width: fit-content;
+  gap: 40px;
+  animation: scroll 14s linear infinite;
+  width: max-content;
 }
 
-@keyframes scroll-seamless {
-  from {
+.mob-img {
+  width: 260px;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes scroll {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import CountUpNumber from './CountUpNumber'
 import { MoveRight } from "lucide-react";
+
 export default function ScalableSection() {
     const stats = [
         {
@@ -43,6 +44,7 @@ export default function ScalableSection() {
         <div
             className="container section container_content overflow-hidden"
         >
+
             <div className='flex flex-col lg:flex-row gap-5 h-[1000px] sm:h-[800px] rounded-[24px]'
                 style={{
                     background: "linear-gradient(96.57deg, #E6F0FF 0.24%, #F8F8F8 99.76%)",
@@ -72,10 +74,10 @@ export default function ScalableSection() {
                         </span>
                     </div>
 
-                    <div className='lg:hidden flex'>
-                        <div className="overflow-hidden">
-                            <div className="flex gap-6 mt-[40px] marquee-track">
-                                {[...stats].map((item, index) => (
+                    <div className="scroll-wrapper">
+                        <div className="scroll-track">
+                            <div className="lg:hidden overflow-hidden flex gap-6 mt-[40px]">
+                                {[...stats, ...stats].map((item, index) => (
                                     <div key={index} className="flex flex-col items-center shrink-0">
                                         <img
                                             src={item.icon}
@@ -92,8 +94,10 @@ export default function ScalableSection() {
                                     </div>
                                 ))}
                             </div>
+
                         </div>
                     </div>
+
 
                     <div className='lg:hidden flex justify-center'>
                         <button className="w-[270px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
@@ -103,15 +107,15 @@ export default function ScalableSection() {
                         </button>
                     </div>
 
-                    <div className="flex mt-[40px] lg:hidden">
-                        <div className="relative w-full overflow-hidden">
-                            <div className="marquee-track">
-                                {[...images].map((src, i) => (
+                    <div className="scroll-wrapper">
+                        <div className="scroll-track">
+                            <div className="flex mt-[40px] lg:hidden w-full overflow-hidden">
+                                {[...images, ...images].map((src, i) => (
                                     <img
                                         key={i}
                                         src={src}
                                         alt={`scroll-${i}`}
-                                        className="h-[400px] w-auto shrink-0 pointer-events-none"
+                                        className="h-[400px]"
                                     />
                                 ))}
                             </div>
