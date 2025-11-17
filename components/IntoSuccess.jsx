@@ -61,7 +61,7 @@ export default function IntoSuccess() {
                                 {card.subtitle}
                             </p>
 
-                            <p className="text-[14px] xl:text-[15px] text-white font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
+                            <p className="text-[14px] xl:text-[15px] text-[#dee4f0] font-medium mt-3 sm:mt-4 leading-snug max-w-[90%] mx-auto">
                                 {card.shortDesc}
                             </p>
                         </div>

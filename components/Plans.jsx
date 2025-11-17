@@ -144,7 +144,7 @@ function PlanCard({ plan, isActive, setActivePlan }) {
                 {plan.shortDesc}
             </span>
 
-            <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-sm sm:text-base md:text-lg">
+            <ul className="list-disc pl-5 sm:pl-6 mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-[#4C586F] text-[16px] sm:text-base md:text-lg">
                 {plan.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
                 ))}
