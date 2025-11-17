@@ -136,7 +136,7 @@ export default function SkillsSolutions() {
                 </div>
 
 
-                <div className="relative z-0 w-[85%] 2xl:w-[85%] h-auto 2xl:h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
+                <div className="relative z-0 w-[85%] lg:w-[93%] 2xl:w-[87%] h-auto 2xl:h-[247px] -mt-2  justify-center items-center mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 justify-items-center bg-white border rounded-b-[24px] border-[#02021E33]  py-6">
                     {categories[activeTab].map((item) => (
                         <div
                             key={item.name}

@@ -114,28 +114,15 @@ html {
 
 .marquee-track {
   display: flex;
-  width: max-content;
-  animation: scroll-seamless 20s linear infinite;
-  will-change: transform;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  animation: scroll-seamless 5s linear infinite;
+  min-width: fit-content;
 }
 
 @keyframes scroll-seamless {
   from {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-  }
-}
-
-@supports not (width: max-content) {
-  .marquee-track {
-    width: fit-content;
   }
 }

@@ -75,7 +75,7 @@ export default function ScalableSection() {
                     <div className='lg:hidden flex'>
                         <div className="overflow-hidden">
                             <div className="flex gap-6 mt-[40px] marquee-track">
-                                {[...stats, ...stats].map((item, index) => (
+                                {[...stats].map((item, index) => (
                                     <div key={index} className="flex flex-col items-center shrink-0">
                                         <img
                                             src={item.icon}
@@ -95,13 +95,27 @@ export default function ScalableSection() {
                         </div>
                     </div>
 
-
-                    <div className='lg:hidden  flex justify-center'>
+                    <div className='lg:hidden flex justify-center'>
                         <button className="w-[270px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
                             style={{ boxShadow: '0px 0px 22px 0px #5D59EA99' }}>
                             Hire App Developer
                             <MoveRight />
                         </button>
+                    </div>
+
+                    <div className="flex mt-[40px] lg:hidden">
+                        <div className="relative w-full overflow-hidden">
+                            <div className="marquee-track">
+                                {[...images].map((src, i) => (
+                                    <img
+                                        key={i}
+                                        src={src}
+                                        alt={`scroll-${i}`}
+                                        className="h-[400px] w-auto shrink-0 pointer-events-none"
+                                    />
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
                     <div className='hidden lg:flex lg:flex-col'>
@@ -144,21 +158,6 @@ export default function ScalableSection() {
                             Hire App Developer
                             <MoveRight />
                         </button>
-                    </div>
-                </div>
-
-                <div className="flex lg:hidden">
-                    <div className="relative w-full overflow-hidden">
-                        <div className="marquee-track">
-                            {[...images, ...images].map((src, i) => (
-                                <img
-                                    key={i}
-                                    src={src}
-                                    alt={`scroll-${i}`}
-                                    className="h-[400px] w-auto shrink-0 pointer-events-none"
-                                />
-                            ))}
-                        </div>
                     </div>
                 </div>
 
