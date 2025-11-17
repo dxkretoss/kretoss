@@ -108,36 +108,53 @@ body {
   overflow-x: hidden;
 }
 
-.scroll-wrapper {
+/* ---------- marquee globals ---------- */
+
+.marquee {
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.scroll-track {
+/* track holds two copies side-by-side */
+.marquee-track {
   display: flex;
-  animation: scroll 14s linear infinite;
-  width: max-content;
-}
-
-.mob-img {
-  user-select: none;
-  pointer-events: none;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.scroll-wrapper,
-.scroll-track,
-img {
+  flex-wrap: nowrap; /* prevent wrapping in Safari */
+  align-items: center;
+  width: max-content; /* allow measuring real width */
+  will-change: transform;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  /* animation defined below uses CSS vars set from JS */
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--duration, 12s);
 }
+
+/* Each item shouldn't shrink */
+.marquee-track > * {
+  flex: 0 0 auto;
+}
+
+/* Keyframes move left by the exact pixel width of the first copy */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--shift, 0px)));
+  }
+}
+
+/* optional: pause on hover using a helper class toggled in JS (also nice fallback) */
+.marquee--paused .marquee-track {
+  animation-play-state: paused;
+}
+
+/* small niceties */
+.marquee-item-gap {
+  margin-right: 24px;
+} /* default gap between items (override as needed) */

@@ -1,6 +1,8 @@
 import React from 'react'
 import CountUpNumber from './CountUpNumber'
 import { MoveRight } from "lucide-react";
+import { StatsMarquee } from './StatsMarquee';
+import { ImagesMarquee } from './ImagesMarquee';
 
 export default function ScalableSection() {
     const stats = [
@@ -74,7 +76,7 @@ export default function ScalableSection() {
                         </span>
                     </div>
 
-                    <div className="scroll-wrapper lg:hidden mt-[40px]">
+                    {/* <div className="scroll-wrapper lg:hidden mt-[40px]">
                         <div className="scroll-track">
                             {[...stats, ...stats].map((item, index) => (
                                 <div key={index} className="flex flex-col items-center shrink-0 mx-6">
@@ -90,8 +92,9 @@ export default function ScalableSection() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
 
+                    <StatsMarquee stats={stats} />
 
                     <div className='lg:hidden flex justify-center'>
                         <button className="w-[270px] h-[61px] mt-[40px] text-[20px] items-center flex gap-2 rounded-full bg-[#5D59EA] text-white px-6 font-medium  hover:opacity-90 transition"
@@ -101,7 +104,7 @@ export default function ScalableSection() {
                         </button>
                     </div>
 
-                    <div className="scroll-wrapper lg:hidden mt-[40px]">
+                    {/* <div className="scroll-wrapper lg:hidden mt-[40px]">
                         <div className="scroll-track">
                             {[...images, ...images].map((src, i) => (
                                 <img
@@ -112,7 +115,9 @@ export default function ScalableSection() {
                                 />
                             ))}
                         </div>
-                    </div>
+                    </div> */}
+
+                    <ImagesMarquee images={images} />
 
                     <div className='hidden lg:flex lg:flex-col'>
                         <div className="flex lg:mt-[20px] 2xl:mt-[30px]">
