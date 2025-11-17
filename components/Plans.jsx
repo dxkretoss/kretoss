@@ -177,7 +177,7 @@ function PlanCard({ plan, isActive, setActivePlan }) {
             </button>
 
             {isOpen && (
-                <Form title={'Get in touch with us today'} buttontext={"Get in touch with us today"} onClose={() => setIsOpen(false)} plan={plan.name} />
+                <Form title={'Hire Mobile App Developer'} buttontext={"Hire"} onClose={() => setIsOpen(false)} plan={plan.name} />
             )}
         </div>
     );
